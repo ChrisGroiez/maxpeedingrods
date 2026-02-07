@@ -1,0 +1,305 @@
+{
+  "slug": "mxr1500",
+  "reviews": [
+    {
+      "id": "rev-mxr1500-fr-1",
+      "author": "Pierre",
+      "date": "2025-03-10",
+      "rating": 5,
+      "title": "Parfait pour le camping",
+      "content": "Je l'utilise chaque week-end en camping et il est vraiment silencieux. Il alimente sans problème mon frigo portable et quelques lumières. Très content de cet achat.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-fr-2",
+      "author": "Marie",
+      "date": "2025-06-22",
+      "rating": 4,
+      "title": "Bon rapport qualité-prix",
+      "content": "Générateur compact et léger, facile à transporter. Le démarrage est simple. Seul petit bémol : la capacité du réservoir est un peu juste pour de longues sessions, il faut le remplir assez souvent.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-fr-3",
+      "author": "Thomas",
+      "date": "2024-09-05",
+      "rating": 5,
+      "title": "Idéal pour les sorties en nature",
+      "content": "Très satisfait. Je le prends pour mes week-ends pêche et il fait tourner ma glacière électrique sans souci. Le niveau sonore est vraiment bas comparé à mon ancien générateur.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-fr-4",
+      "author": "Sophie",
+      "date": "2025-01-18",
+      "rating": 4,
+      "title": "Pratique et portable",
+      "content": "Acheté pour alimenter mes outils lors de petits travaux dans le jardin. Fait le job pour des appareils légers. La poignée de transport est bien pensée.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-fr-5",
+      "author": "Laurent",
+      "date": "2024-11-30",
+      "rating": 3,
+      "title": "Correct mais limité",
+      "content": "Pour un usage basique c'est bien, mais attention à ne pas trop le charger. J'ai essayé de brancher un petit radiateur et il a vite décroché. Pour le camping léger, c'est suffisant.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-en-1",
+      "author": "James",
+      "date": "2025-04-12",
+      "rating": 5,
+      "title": "Great little generator",
+      "content": "Perfect for weekend camping trips. Powers my phone chargers, LED lights, and a small fan with no issues. Incredibly quiet compared to other generators I've owned.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-en-2",
+      "author": "Sarah",
+      "date": "2025-07-08",
+      "rating": 4,
+      "title": "Solid portable power",
+      "content": "Bought this for tailgating and it works great. Easy to carry, starts on the first pull every time. I wish the fuel tank were a bit larger, but for the size it's understandable.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-en-3",
+      "author": "David",
+      "date": "2024-08-19",
+      "rating": 5,
+      "title": "Exceeded my expectations",
+      "content": "I use this to power my CPAP machine while camping and it runs all night without a hitch. The inverter technology keeps the power clean and steady. Highly recommend for anyone needing reliable portable power.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-en-4",
+      "author": "Emma",
+      "date": "2025-10-03",
+      "rating": 4,
+      "title": "Nice and compact",
+      "content": "Easy to store in my RV. It handles the basics well. Not powerful enough for the AC obviously, but keeps the lights and fridge going during short outages.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-en-5",
+      "author": "Michael",
+      "date": "2024-06-25",
+      "rating": 3,
+      "title": "Decent for light use",
+      "content": "It does what it says for small loads. Tried to push it with a power tool and it struggled. Keep your expectations in check and it's a fine unit for basic needs.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-de-1",
+      "author": "Klaus",
+      "date": "2025-05-14",
+      "rating": 5,
+      "title": "Hervorragend für Campingausflüge",
+      "content": "Nutze den Generator seit drei Monaten beim Camping. Er ist leise, zuverlässig und verbraucht wenig Benzin. Betreibt problemlos Kühlbox und Handyladegeräte.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-de-2",
+      "author": "Anna",
+      "date": "2025-08-30",
+      "rating": 4,
+      "title": "Kompakt und zuverlässig",
+      "content": "Gutes Gerät für den mobilen Einsatz. Leicht genug, dass ich ihn alleine tragen kann. Der Geräuschpegel ist angenehm niedrig. Einzig die Tankgröße könnte etwas größer sein.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-de-3",
+      "author": "Stefan",
+      "date": "2024-10-11",
+      "rating": 5,
+      "title": "Top Preis-Leistung",
+      "content": "Für den Preis bekommt man hier einen wirklich soliden Stromerzeuger. Ich verwende ihn im Garten für die elektrische Heckenschere und kleinere Geräte. Startet zuverlässig beim ersten Zug.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-de-4",
+      "author": "Petra",
+      "date": "2025-02-20",
+      "rating": 4,
+      "title": "Gut für leichte Anwendungen",
+      "content": "Haben den Generator als Notstromlösung für kleinere Geräte gekauft. Funktioniert einwandfrei für Beleuchtung und Laptop. Für größere Verbraucher muss man sich allerdings ein stärkeres Modell anschauen.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-de-5",
+      "author": "Hans",
+      "date": "2024-07-06",
+      "rating": 3,
+      "title": "Solide Grundausstattung",
+      "content": "Der Generator erfüllt seinen Zweck bei kleinen Lasten. Bei höherer Belastung merkt man schnell die Grenzen. Für Campingzwecke aber völlig ausreichend.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-es-1",
+      "author": "Carlos",
+      "date": "2025-04-28",
+      "rating": 5,
+      "title": "Perfecto para acampadas",
+      "content": "Lo llevo en el maletero del coche cuando vamos de camping. Es muy silencioso y arranca a la primera. Alimenta la nevera portátil y las luces sin ningún problema.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-es-2",
+      "author": "María",
+      "date": "2025-09-15",
+      "rating": 4,
+      "title": "Buen generador portátil",
+      "content": "Compacto y fácil de transportar. Lo uso para cargar dispositivos y alimentar pequeños electrodomésticos cuando estamos en la furgoneta. El consumo de gasolina es bastante bajo.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-es-3",
+      "author": "Pablo",
+      "date": "2024-11-02",
+      "rating": 5,
+      "title": "Muy recomendable",
+      "content": "Llevo medio año usándolo y estoy muy contento. Es ligero, no hace apenas ruido y cumple perfectamente para mis necesidades de camping. La calidad de construcción es notable para su precio.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-es-4",
+      "author": "Carmen",
+      "date": "2025-01-09",
+      "rating": 4,
+      "title": "Cumple su función",
+      "content": "Lo compramos para tener electricidad en nuestra parcela del huerto. Para cosas básicas va genial. No esperéis conectar herramientas potentes porque no da para tanto.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-es-5",
+      "author": "Alejandro",
+      "date": "2024-08-20",
+      "rating": 3,
+      "title": "Correcto para uso ligero",
+      "content": "Hace lo que promete pero nada más. Para cargas pequeñas funciona bien, pero se queda corto si intentas exigirle. El depósito se vacía rápido a plena carga.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-it-1",
+      "author": "Marco",
+      "date": "2025-06-10",
+      "rating": 5,
+      "title": "Ottimo per il campeggio",
+      "content": "Lo porto sempre nelle uscite in campeggio. Silenziosissimo e con consumi ridotti. Alimenta il frigo portatile e le luci senza problemi. Davvero soddisfatto dell'acquisto.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-it-2",
+      "author": "Giulia",
+      "date": "2025-11-25",
+      "rating": 4,
+      "title": "Compatto e affidabile",
+      "content": "Generatore leggero e facile da trasportare. Lo uso per alimentare il mio laptop e il caricatore del telefono quando sono fuori casa. Si avvia facilmente e il rumore è contenuto.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-it-3",
+      "author": "Luca",
+      "date": "2024-10-18",
+      "rating": 5,
+      "title": "Rapporto qualità-prezzo eccellente",
+      "content": "Per il prezzo pagato è un prodotto davvero valido. Lo uso nel mio orto per alimentare piccoli attrezzi elettrici. Partenza sempre al primo colpo e funzionamento regolare.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-it-4",
+      "author": "Francesca",
+      "date": "2025-03-07",
+      "rating": 4,
+      "title": "Buon prodotto per uso leggero",
+      "content": "Acquistato come soluzione di emergenza per piccole esigenze. Funziona bene per illuminazione e dispositivi elettronici. Non è adatto per elettrodomestici pesanti, ma per il resto è perfetto.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-it-5",
+      "author": "Alessandro",
+      "date": "2024-07-29",
+      "rating": 3,
+      "title": "Sufficiente per carichi leggeri",
+      "content": "Fa quello che deve fare con carichi ridotti. Ho provato a collegare un trapano e ha faticato parecchio. Per campeggio e uso basico va bene, ma non aspettatevi miracoli.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-nl-1",
+      "author": "Jan",
+      "date": "2025-05-20",
+      "rating": 5,
+      "title": "Ideaal voor kamperen",
+      "content": "Neem hem elke keer mee op de camping. Superstil en zuinig in verbruik. Mijn koelbox en telefoonladers draaien er probleemloos op. Echt een aanrader.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-nl-2",
+      "author": "Annemieke",
+      "date": "2025-08-14",
+      "rating": 4,
+      "title": "Fijn compact apparaat",
+      "content": "Licht genoeg om alleen te dragen en past makkelijk in de auto. Werkt prima voor basisbehoeften. Het tankje is wat klein, dus je moet regelmatig bijvullen bij langdurig gebruik.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-nl-3",
+      "author": "Pieter",
+      "date": "2024-09-22",
+      "rating": 5,
+      "title": "Uitstekende prijs-kwaliteit",
+      "content": "Voor deze prijs kun je niet beter krijgen. Gebruik hem in de volkstuin voor kleine elektrische apparaten. Start altijd in één keer en loopt soepel. Zeer tevreden.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-nl-4",
+      "author": "Sanne",
+      "date": "2025-02-11",
+      "rating": 4,
+      "title": "Goed voor licht gebruik",
+      "content": "Doet precies wat hij moet doen voor kleine verbruikers. Verlichting, laptop en telefoon laden gaat prima. Voor zwaardere apparaten heb je een groter model nodig.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr1500-nl-5",
+      "author": "Willem",
+      "date": "2024-06-15",
+      "rating": 3,
+      "title": "Voldoende voor basisgebruik",
+      "content": "Werkt goed voor lichte belasting maar bereikt snel zijn limiet. Heb geprobeerd er een elektrisch gereedschap op aan te sluiten en toen viel hij uit. Voor kamperen is het prima.",
+      "lang": "nl",
+      "verified": true
+    }
+  ]
+}

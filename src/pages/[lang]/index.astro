@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/home/Hero.astro';
+import FeaturedProducts from '../../components/home/FeaturedProducts.astro';
+import WhyChoose from '../../components/home/WhyChoose.astro';
+import StructuredData from '../../components/seo/StructuredData.astro';
+import { locales, type Locale } from '../../i18n/utils';
+import { homeSEO } from '../../config/seo';
+import { siteConfig } from '../../config/site';
+
+export function getStaticPaths() {
+  return locales.map(lang => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const locale = lang as Locale;
+const seo = homeSEO[locale];
+
+const seoTexts: Record<string, string> = {
+  fr: "Maxpeedingrods.lu est votre guide indépendant pour les générateurs portables Maxpeedingrods. Nos experts analysent chaque modèle — du compact MXR1500 idéal pour le camping au puissant MXR5500 pour les chantiers — afin de vous aider à choisir le groupe électrogène adapté à vos besoins. Technologie inverter, faible consommation et fiabilité éprouvée : découvrez pourquoi des milliers d'utilisateurs en Europe font confiance à Maxpeedingrods.",
+  en: "Maxpeedingrods.lu is your independent guide to Maxpeedingrods portable generators. Our experts review every model — from the compact MXR1500 perfect for camping to the powerful MXR5500 for job sites — to help you choose the right generator for your needs. Inverter technology, fuel efficiency, and proven reliability: discover why thousands of users across Europe trust Maxpeedingrods.",
+  de: "Maxpeedingrods.lu ist Ihr unabhängiger Ratgeber für tragbare Maxpeedingrods Stromerzeuger. Unsere Experten analysieren jedes Modell — vom kompakten MXR1500 ideal für Camping bis zum leistungsstarken MXR5500 für Baustellen — um Ihnen bei der Wahl des richtigen Notstromaggregats zu helfen. Inverter-Technologie, Sparsamkeit und bewährte Zuverlässigkeit: Entdecken Sie, warum tausende Nutzer in Europa auf Maxpeedingrods vertrauen.",
+  es: "Maxpeedingrods.lu es su guía independiente de generadores portátiles Maxpeedingrods. Nuestros expertos analizan cada modelo — desde el compacto MXR1500 ideal para acampar hasta el potente MXR5500 para obras — para ayudarle a elegir el grupo electrógeno adecuado. Tecnología inverter, bajo consumo y fiabilidad probada: descubra por qué miles de usuarios en Europa confían en Maxpeedingrods.",
+  it: "Maxpeedingrods.lu è la vostra guida indipendente ai generatori portatili Maxpeedingrods. I nostri esperti analizzano ogni modello — dal compatto MXR1500 ideale per il campeggio al potente MXR5500 per i cantieri — per aiutarvi a scegliere il gruppo elettrogeno giusto. Tecnologia inverter, basso consumo e affidabilità comprovata: scoprite perché migliaia di utenti in Europa scelgono Maxpeedingrods.",
+  nl: "Maxpeedingrods.lu is uw onafhankelijke gids voor draagbare Maxpeedingrods generatoren. Onze experts beoordelen elk model — van de compacte MXR1500 ideaal voor kamperen tot de krachtige MXR5500 voor bouwplaatsen — om u te helpen de juiste generator te kiezen. Inverter-technologie, zuinig verbruik en bewezen betrouwbaarheid: ontdek waarom duizenden gebruikers in Europa vertrouwen op Maxpeedingrods.",
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: seo.description,
+};
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  locale={locale}
+  canonicalPath={`/${locale}/`}
+>
+  <StructuredData data={websiteSchema} />
+  <Hero locale={locale} />
+  <FeaturedProducts locale={locale} />
+  <WhyChoose locale={locale} />
+
+  <!-- SEO Text -->
+  <section class="py-12 bg-ui-light">
+    <div class="container-main">
+      <p class="text-text-secondary text-sm leading-relaxed max-w-4xl mx-auto">
+        {seoTexts[locale] || seoTexts.fr}
+      </p>
+    </div>
+  </section>
+</BaseLayout>

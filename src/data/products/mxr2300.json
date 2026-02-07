@@ -1,0 +1,44 @@
+{
+  "id": "mxr2300",
+  "model": "MXR2300",
+  "brand": "Maxpeedingrods",
+  "category": "generators",
+  "slug": "mxr2300",
+  "wattage": 2300,
+  "images": [
+    "/images/products/mxr2300/main.svg",
+    "/images/products/mxr2300/side.svg",
+    "/images/products/mxr2300/detail.svg"
+  ],
+  "specs": {
+    "rated_power_w": 1800,
+    "max_power_w": 2300,
+    "engine_type": "4-stroke OHV",
+    "engine_displacement_cc": 111,
+    "fuel_type": "Gasoline",
+    "fuel_tank_l": 3.8,
+    "runtime_hours": 10,
+    "noise_level_db": 55,
+    "weight_kg": 18.5,
+    "dimensions_cm": "50x30x44",
+    "outlets": [
+      "1x 230V AC",
+      "1x 12V DC",
+      "1x USB-A",
+      "1x USB-C"
+    ],
+    "inverter": true,
+    "electric_start": false,
+    "parallel_ready": true
+  },
+  "asins": {
+    "fr": "B0DLM8V3KR",
+    "en": "B0DLM8T7NQ",
+    "de": "B0DLM8W2JP",
+    "es": "B0DLM8X6HS",
+    "it": "B0DLM8Y9GT",
+    "nl": "B0DLM8Z1FV"
+  },
+  "rating": 4.5,
+  "reviewCount": 112
+}

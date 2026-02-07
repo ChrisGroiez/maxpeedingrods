@@ -1,0 +1,43 @@
+{
+  "id": "mxr5500",
+  "model": "MXR5500",
+  "brand": "Maxpeedingrods",
+  "category": "generators",
+  "slug": "mxr5500",
+  "wattage": 5500,
+  "images": [
+    "/images/products/mxr5500/main.svg",
+    "/images/products/mxr5500/side.svg",
+    "/images/products/mxr5500/detail.svg"
+  ],
+  "specs": {
+    "rated_power_w": 5000,
+    "max_power_w": 5500,
+    "engine_type": "4-stroke OHV",
+    "engine_displacement_cc": 302,
+    "fuel_type": "Gasoline",
+    "fuel_tank_l": 14,
+    "runtime_hours": 12,
+    "noise_level_db": 65,
+    "weight_kg": 45,
+    "dimensions_cm": "72x46x58",
+    "outlets": [
+      "2x 230V AC",
+      "1x 30A twist-lock",
+      "1x 12V DC"
+    ],
+    "inverter": false,
+    "electric_start": true,
+    "parallel_ready": false
+  },
+  "asins": {
+    "fr": "B0DXMV14YR",
+    "en": "B0DXMV25XQ",
+    "de": "B0DXMV36WP",
+    "es": "B0DXMV47VN",
+    "it": "B0DXMV58UM",
+    "nl": "B0DXMV69TL"
+  },
+  "rating": 4.1,
+  "reviewCount": 28
+}

@@ -1,0 +1,110 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getHomeUrl, getCategoryUrl } from '../../utils/url';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+---
+
+<header class="bg-ui-dark sticky top-0 z-50 shadow-lg">
+  <div class="container-main">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href={getHomeUrl(locale)} class="flex items-center gap-2 shrink-0">
+        <span class="text-brand-yellow font-heading font-bold text-xl lg:text-2xl">MXR</span>
+        <span class="text-text-inverse font-heading font-semibold text-lg lg:text-xl hidden sm:inline">Maxpeedingrods</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a
+          href={getHomeUrl(locale)}
+          class:list={[
+            'font-heading font-semibold text-[15px] lg:text-base transition-colors duration-200',
+            currentPath === getHomeUrl(locale)
+              ? 'text-brand-yellow'
+              : 'text-text-inverse hover:text-brand-yellow',
+          ]}
+        >
+          {t(locale, 'nav.home')}
+        </a>
+        <a
+          href={getCategoryUrl(locale)}
+          class:list={[
+            'font-heading font-semibold text-[15px] lg:text-base transition-colors duration-200',
+            currentPath.includes('/generators/')
+              ? 'text-brand-yellow'
+              : 'text-text-inverse hover:text-brand-yellow',
+          ]}
+        >
+          {t(locale, 'nav.generators')}
+        </a>
+      </nav>
+
+      <!-- Right side: Language + Mobile Menu -->
+      <div class="flex items-center gap-4">
+        <LanguageSwitcher locale={locale} currentPath={currentPath} />
+
+        <!-- Mobile hamburger -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="md:hidden text-text-inverse hover:text-brand-yellow transition-colors p-2"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav
+      id="mobile-menu"
+      class="md:hidden hidden pb-4 border-t border-ui-border-dark mt-2 pt-4"
+    >
+      <a
+        href={getHomeUrl(locale)}
+        class:list={[
+          'block py-3 px-2 font-heading font-semibold text-base rounded-lg transition-colors',
+          currentPath === getHomeUrl(locale)
+            ? 'text-brand-yellow bg-white/5'
+            : 'text-text-inverse hover:text-brand-yellow hover:bg-white/5',
+        ]}
+      >
+        {t(locale, 'nav.home')}
+      </a>
+      <a
+        href={getCategoryUrl(locale)}
+        class:list={[
+          'block py-3 px-2 font-heading font-semibold text-base rounded-lg transition-colors',
+          currentPath.includes('/generators/')
+            ? 'text-brand-yellow bg-white/5'
+            : 'text-text-inverse hover:text-brand-yellow hover:bg-white/5',
+        ]}
+      >
+        {t(locale, 'nav.generators')}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+</script>

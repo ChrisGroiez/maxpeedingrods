@@ -1,0 +1,44 @@
+{
+  "id": "mxr3500",
+  "model": "MXR3500",
+  "brand": "Maxpeedingrods",
+  "category": "generators",
+  "slug": "mxr3500",
+  "wattage": 3500,
+  "images": [
+    "/images/products/mxr3500/main.svg",
+    "/images/products/mxr3500/side.svg",
+    "/images/products/mxr3500/detail.svg"
+  ],
+  "specs": {
+    "rated_power_w": 3300,
+    "max_power_w": 3500,
+    "engine_type": "4-stroke OHV",
+    "engine_displacement_cc": 212,
+    "fuel_type": "Gasoline",
+    "fuel_tank_l": 4.5,
+    "runtime_hours": 8.5,
+    "noise_level_db": 58,
+    "weight_kg": 23.5,
+    "dimensions_cm": "55x33x49",
+    "outlets": [
+      "2x 230V AC",
+      "1x 12V DC",
+      "1x USB-A",
+      "1x USB-C"
+    ],
+    "inverter": true,
+    "electric_start": false,
+    "parallel_ready": true
+  },
+  "asins": {
+    "fr": "B0DQHP42XN",
+    "en": "B0DQHP53YM",
+    "de": "B0DQHP61ZL",
+    "es": "B0DQHP78WK",
+    "it": "B0DQHP89VJ",
+    "nl": "B0DQHP97UH"
+  },
+  "rating": 4.4,
+  "reviewCount": 73
+}

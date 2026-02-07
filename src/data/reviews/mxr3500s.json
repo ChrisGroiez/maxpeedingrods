@@ -1,0 +1,305 @@
+{
+  "slug": "mxr3500s",
+  "reviews": [
+    {
+      "id": "rev-mxr3500s-fr-1",
+      "author": "Antoine",
+      "date": "2024-09-10",
+      "rating": 5,
+      "title": "Le mode silencieux est bluffant",
+      "content": "J'ai choisi la version S pour son fonctionnement plus silencieux et je ne suis pas déçu. En camping, les voisins ne se sont même pas rendu compte qu'on avait un générateur. Puissance suffisante pour tous nos besoins. Un vrai plaisir à utiliser.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-fr-2",
+      "author": "Sophie",
+      "date": "2025-01-14",
+      "rating": 5,
+      "title": "Idéal pour mon food truck",
+      "content": "Après avoir essayé plusieurs générateurs pour mon food truck, le MXR3500S est clairement au-dessus du lot. Il est silencieux, ce qui est essentiel quand on sert des clients toute la journée. La puissance est largement suffisante pour mes plaques, mon frigo et mon éclairage. Investissement rentabilisé en quelques semaines.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-fr-3",
+      "author": "Nicolas",
+      "date": "2025-04-02",
+      "rating": 4,
+      "title": "Très bon générateur de secours",
+      "content": "Installé dans mon garage comme solution de secours pour la maison. Démarre rapidement et alimente sans souci le réfrigérateur, la chaudière et quelques prises. Le niveau sonore est vraiment contenu par rapport à d'autres modèles que j'ai testés. Juste un petit point : le manuel pourrait être plus détaillé.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-fr-4",
+      "author": "Isabelle",
+      "date": "2025-07-19",
+      "rating": 4,
+      "title": "Satisfaite de mon achat",
+      "content": "Utilisé pendant nos vacances en camping-car en Espagne. Le générateur est compact et se range facilement. Il alimente la climatisation et les appareils de cuisine. J'aurais aimé une autonomie un peu plus longue, mais globalement c'est un très bon produit.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-fr-5",
+      "author": "Éric",
+      "date": "2025-10-08",
+      "rating": 3,
+      "title": "Bien mais pas parfait",
+      "content": "Je l'utilise sur mes chantiers en extérieur. La puissance est correcte pour mes outils électriques. Le côté silencieux est appréciable comparé à mon ancien générateur. Par contre, j'ai trouvé le système de vidange d'huile un peu compliqué d'accès. Ça reste un bon produit dans l'ensemble.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-en-1",
+      "author": "Robert",
+      "date": "2024-06-28",
+      "rating": 5,
+      "title": "Whisper quiet and incredibly reliable",
+      "content": "I've owned several generators over the years and the MXR3500S is hands down the quietest one I've used. My neighbours didn't even notice it running during our last power outage. It powered our entire kitchen, lights, and even the TV without any hiccup. Worth every penny.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-en-2",
+      "author": "Jessica",
+      "date": "2024-10-05",
+      "rating": 4,
+      "title": "Perfect for our RV lifestyle",
+      "content": "My husband and I are full-time RVers and the MXR3500S fits our needs perfectly. It handles the AC, microwave, and all our electronics. The reduced noise level compared to the standard model is a real game changer at campgrounds. Only wish the fuel tank were slightly larger for longer overnight runs.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-en-3",
+      "author": "Brian",
+      "date": "2025-02-22",
+      "rating": 5,
+      "title": "Best generator I've ever owned",
+      "content": "Running a food truck means I need power I can depend on and the MXR3500S delivers. It runs all day long without missing a beat. The noise reduction is fantastic because the last thing customers want is a loud generator drowning out conversation. Fuel efficient too. Can't recommend it enough.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-en-4",
+      "author": "Amanda",
+      "date": "2025-06-17",
+      "rating": 4,
+      "title": "Solid backup power solution",
+      "content": "Bought this after a bad storm knocked out power for two days. It's easy to start and provides clean, stable power for sensitive electronics. The noise level is much lower than I expected. Docking a star only because the initial oil fill instructions could be clearer, but otherwise a great product.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-en-5",
+      "author": "Kevin",
+      "date": "2025-11-10",
+      "rating": 3,
+      "title": "Good generator, slightly overpriced",
+      "content": "It does everything it promises. I use it on construction sites and it powers my tools without issue. The silent mode is noticeably quieter than competitors. My only gripe is the price premium over the standard model feels a bit steep for what is essentially better sound insulation. Still, it's a quality machine.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-de-1",
+      "author": "Hans",
+      "date": "2024-07-18",
+      "rating": 5,
+      "title": "Flüsterleise und leistungsstark",
+      "content": "Der MXR3500S ist unglaublich leise. Ich benutze ihn auf dem Campingplatz und die Nachbarn haben sich noch nie beschwert. Die Leistung reicht problemlos für Kühlschrank, Beleuchtung und Ladegeräte. Qualität made to last, wie man so schön sagt. Absolute Empfehlung.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-de-2",
+      "author": "Petra",
+      "date": "2024-12-01",
+      "rating": 4,
+      "title": "Sehr guter Stromerzeuger fürs Wohnmobil",
+      "content": "Wir haben den Generator für unser Wohnmobil angeschafft und sind sehr zufrieden. Er ist deutlich leiser als unser vorheriges Modell und liefert stabile Leistung für Klimaanlage und Küchengeräte. Der Kraftstoffverbrauch ist auch in Ordnung. Ein Stern Abzug weil die Bedienungsanleitung nur auf Englisch war.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-de-3",
+      "author": "Felix",
+      "date": "2025-03-15",
+      "rating": 5,
+      "title": "Perfekt für meinen Imbisswagen",
+      "content": "Endlich ein Generator, der meinen Imbisswagen mit Strom versorgt, ohne die Kunden zu vertreiben. Der MXR3500S läuft den ganzen Tag zuverlässig und leise. Bratpfanne, Kühlschrank, Beleuchtung – alles kein Problem. Nach sechs Monaten täglichem Einsatz läuft er wie am ersten Tag.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-de-4",
+      "author": "Monika",
+      "date": "2025-08-06",
+      "rating": 4,
+      "title": "Zuverlässige Notstromversorgung",
+      "content": "Als Absicherung gegen Stromausfälle gekauft. Der Generator startet sofort und versorgt unser Haus mit dem Nötigsten. Besonders der leise Betrieb ist ein großer Pluspunkt, da wir in einem Wohngebiet leben. Nur das Gewicht macht den Transport etwas mühsam.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-de-5",
+      "author": "Tobias",
+      "date": "2025-10-29",
+      "rating": 3,
+      "title": "Gut, aber Preis ist hoch",
+      "content": "Auf der Baustelle macht der Generator einen guten Job. Er ist tatsächlich leiser als vergleichbare Modelle und die Leistung stimmt. Allerdings finde ich den Aufpreis gegenüber der Standardversion etwas happig. Wer es leise braucht, bekommt hier ein solides Gerät, muss aber tiefer in die Tasche greifen.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-es-1",
+      "author": "Pablo",
+      "date": "2024-08-22",
+      "rating": 5,
+      "title": "Silencioso y potente, perfecto",
+      "content": "Llevo meses buscando un generador silencioso para mi caravana y el MXR3500S es exactamente lo que necesitaba. Apenas se oye cuando está en marcha y tiene potencia de sobra para el aire acondicionado y todos los electrodomésticos. Estoy encantado con la compra.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-es-2",
+      "author": "Carmen",
+      "date": "2025-01-07",
+      "rating": 4,
+      "title": "Muy buena opción para food truck",
+      "content": "Lo uso en mi food truck de comida mexicana y funciona fenomenal. Es mucho más silencioso que el generador que tenía antes, lo cual agradecen tanto yo como los clientes. Alimenta la plancha, el refrigerador y las luces sin problema. Solo le falta un poco más de autonomía.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-es-3",
+      "author": "Fernando",
+      "date": "2025-04-20",
+      "rating": 5,
+      "title": "El mejor generador que he tenido",
+      "content": "Soy electricista y necesito un generador fiable en cada obra. El MXR3500S supera todas mis expectativas: arranca siempre a la primera, el ruido es mínimo y la potencia es constante todo el día. Mis compañeros de obra ya se están planteando comprar el mismo modelo. Totalmente recomendable.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-es-4",
+      "author": "Ana",
+      "date": "2025-08-14",
+      "rating": 5,
+      "title": "Tranquilidad en casa",
+      "content": "Vivimos en una zona rural donde los cortes de luz son frecuentes. Con el MXR3500S tenemos la tranquilidad de saber que la nevera, la calefacción y las luces seguirán funcionando. Además, al ser tan silencioso, lo podemos dejar encendido por la noche sin que moleste. Gran inversión.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-es-5",
+      "author": "Diego",
+      "date": "2025-11-01",
+      "rating": 3,
+      "title": "Bueno pero caro",
+      "content": "Funciona bien para camping, es bastante silencioso y tiene buena potencia. Pero sinceramente, la diferencia de precio con el modelo estándar me parece excesiva. Si el presupuesto no es un problema, es una buena elección. Si buscas algo más económico, el modelo base también cumple.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-it-1",
+      "author": "Giovanni",
+      "date": "2024-07-12",
+      "rating": 5,
+      "title": "Silenzioso e potente, una garanzia",
+      "content": "Ho acquistato il MXR3500S per il mio camper e devo dire che è un prodotto eccezionale. La riduzione del rumore rispetto ai generatori tradizionali è notevole. Lo uso per alimentare il climatizzatore e tutti gli elettrodomestici della cucina. Dopo quattro mesi di utilizzo intenso, funziona come il primo giorno.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-it-2",
+      "author": "Elena",
+      "date": "2024-11-30",
+      "rating": 4,
+      "title": "Ottima scelta per il mio chiosco",
+      "content": "Gestisco un chiosco di panini ai mercati rionali e il MXR3500S mi ha cambiato la vita. Finalmente posso lavorare senza quel rumore assordante del vecchio generatore. I clienti apprezzano e io lavoro meglio. Tolgo una stella solo perché il manuale non era disponibile in italiano.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-it-3",
+      "author": "Roberto",
+      "date": "2025-02-08",
+      "rating": 5,
+      "title": "Indispensabile per le emergenze",
+      "content": "Abito in campagna e i blackout sono frequenti, soprattutto in inverno. Il MXR3500S è diventato indispensabile: si avvia in un attimo e alimenta riscaldamento, frigorifero e luci per ore. Il fatto che sia silenzioso è un bonus enorme, posso lasciarlo acceso anche di notte senza problemi.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-it-4",
+      "author": "Chiara",
+      "date": "2025-06-25",
+      "rating": 4,
+      "title": "Campeggio senza pensieri",
+      "content": "Lo abbiamo usato per tre settimane di campeggio in Croazia. Alimenta tutto quello che serve: frigo, luci, caricatori e persino un piccolo ventilatore. È discreto e non disturba gli altri campeggiatori. Avrei preferito un serbatoio leggermente più grande per evitare di fare rifornimento troppo spesso.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-it-5",
+      "author": "Davide",
+      "date": "2025-09-30",
+      "rating": 3,
+      "title": "Buono ma costoso",
+      "content": "Lo uso in cantiere per le mie attrezzature elettriche. Funziona bene ed è effettivamente più silenzioso di altri modelli. La potenza è adeguata e l'avviamento è affidabile. Il mio unico dubbio riguarda il prezzo: il sovrapprezzo rispetto alla versione standard è significativo. Per il resto, nulla da eccepire.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-nl-1",
+      "author": "Pieter",
+      "date": "2024-09-14",
+      "rating": 5,
+      "title": "Fluisterstil en krachtig",
+      "content": "De MXR3500S is verreweg de stilste generator die ik ooit heb gebruikt. Op de camping in Zuid-Frankrijk merkten onze buren niet eens dat hij draaide. Koelkast, verlichting, telefoonopladers, alles draait er moeiteloos op. Absolute topkwaliteit en elke euro waard.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-nl-2",
+      "author": "Lotte",
+      "date": "2025-01-20",
+      "rating": 4,
+      "title": "Ideaal voor onze camper",
+      "content": "We zijn fulltime camperaars en hadden een stille generator nodig die de airco aankan. De MXR3500S doet dat prima. Het geluidsniveau is echt indrukwekkend laag, wat op campings een groot voordeel is. Enige minpuntje is het gewicht bij het in- en uitladen. Verder heel tevreden.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-nl-3",
+      "author": "Daan",
+      "date": "2025-04-12",
+      "rating": 5,
+      "title": "Onmisbaar voor mijn foodtruck",
+      "content": "Als foodtruckondernemer heb ik een betrouwbare en stille stroombron nodig. De MXR3500S is perfect. Mijn bakplaat, koeling en verlichting draaien er de hele dag probleemloos op. Klanten waarderen het dat ze niet hoeven te schreeuwen bij het bestellen. Na maanden dagelijks gebruik nog steeds vlekkeloos.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-nl-4",
+      "author": "Eva",
+      "date": "2025-07-28",
+      "rating": 4,
+      "title": "Betrouwbare noodstroom",
+      "content": "Gekocht als noodstroomoplossing voor ons huis na de stroomuitval vorige winter. De generator start direct en is opvallend stil voor zijn vermogen. Alle essentiële apparaten draaien er zonder problemen op. Het enige verbeterpunt is dat de handleiding wat uitgebreider mag zijn. Verder een prima product.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500s-nl-5",
+      "author": "Ruben",
+      "date": "2025-10-18",
+      "rating": 3,
+      "title": "Goed apparaat, forse meerprijs",
+      "content": "Ik gebruik hem op de bouwplaats en hij doet wat hij moet doen. Inderdaad stiller dan het standaardmodel, maar de meerprijs is behoorlijk. De kwaliteit is goed en het vermogen is constant. Als je bereid bent om meer te betalen voor minder geluid, dan is dit een goede keuze. Anders is het basismodel ook prima.",
+      "lang": "nl",
+      "verified": true
+    }
+  ]
+}

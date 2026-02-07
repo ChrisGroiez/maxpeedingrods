@@ -1,0 +1,90 @@
+{
+  "site": {
+    "name": "Maxpeedingrods",
+    "tagline": "Draagbare stroomgeneratoren van professionele kwaliteit"
+  },
+  "nav": {
+    "home": "Home",
+    "generators": "Generatoren"
+  },
+  "product": {
+    "see_offer": "Bekijk aanbieding",
+    "redirect_notice": "Bekijk de prijs en beschikbaarheid bij onze partner",
+    "specifications": "Technische specificaties",
+    "description": "Beschrijving",
+    "reviews": "Klantbeoordelingen",
+    "similar_products": "Misschien vind je dit ook interessant",
+    "rated_power": "Nominaal vermogen",
+    "max_power": "Piekvermogen",
+    "engine_type": "Motortype",
+    "engine_displacement": "Cilinderinhoud",
+    "fuel_type": "Brandstof",
+    "fuel_tank": "Tankinhoud",
+    "runtime": "Looptijd",
+    "noise_level": "Geluidsniveau",
+    "weight": "Gewicht",
+    "dimensions": "Afmetingen",
+    "outlets": "Aansluitingen",
+    "inverter": "Invertertechnologie",
+    "electric_start": "Elektrische start",
+    "parallel_ready": "Geschikt voor parallelschakeling",
+    "yes": "Ja",
+    "no": "Nee",
+    "in_stock": "Op voorraad",
+    "category_badge": "Invertergenerator"
+  },
+  "reviews_section": {
+    "title": "Klantbeoordelingen",
+    "write_review": "Schrijf een beoordeling",
+    "your_name": "Je voornaam",
+    "your_rating": "Je beoordeling",
+    "your_title": "Titel van je beoordeling",
+    "your_review": "Je uitgebreide beoordeling",
+    "submit": "Beoordeling plaatsen",
+    "based_on": "Gebaseerd op {count} beoordelingen",
+    "verified": "Geverifieerde aankoop",
+    "moderation_notice": "Je beoordeling wordt na controle gepubliceerd.",
+    "thank_you": "Bedankt voor je beoordeling!"
+  },
+  "home": {
+    "hero_title": "Maxpeedingrods Generatoren",
+    "hero_subtitle": "Draagbaar vermogen, professionele kwaliteit. Ontdek de beste invertergeneratoren voor de scherpste prijs.",
+    "hero_cta": "Bekijk generatoren",
+    "featured_title": "Onze populairste generatoren",
+    "why_title": "Waarom kiezen voor Maxpeedingrods?",
+    "why_quality": "Topkwaliteit",
+    "why_quality_desc": "Professionele componenten, getest onder de zwaarste omstandigheden.",
+    "why_price": "Beste prijs-kwaliteitverhouding",
+    "why_price_desc": "Topprestaties voor een fractie van de prijs van grote merken.",
+    "why_warranty": "Fabrieksgarantie",
+    "why_warranty_desc": "Snelle klantenservice en volledige fabrieksgarantie op alle producten.",
+    "why_shipping": "Snelle levering",
+    "why_shipping_desc": "Snel verzonden, bezorgd binnen 24 tot 48 uur."
+  },
+  "category": {
+    "title": "Maxpeedingrods Generatoren",
+    "intro": "Ontdek het volledige assortiment draagbare Maxpeedingrods-generatoren, van 1200 W tot 5500 W.",
+    "meta_title": "Maxpeedingrods Generatoren | Draagbare Inverter-Stroomaggregaten",
+    "meta_description": "Compleet assortiment Maxpeedingrods-generatoren: van 1200 W tot 5500 W. Draagbare, stille en betrouwbare invertergeneratoren voor de beste prijs.",
+    "filter_power": "Vermogen",
+    "filter_all": "Alle",
+    "filter_button": "Filteren",
+    "sort_by": "Sorteren op",
+    "sort_power_asc": "Vermogen oplopend",
+    "sort_power_desc": "Vermogen aflopend",
+    "sort_popular": "Populariteit"
+  },
+  "footer": {
+    "about_title": "Over ons",
+    "about_text": "Maxpeedingrods.lu is een onafhankelijke vergelijkingssite gespecialiseerd in draagbare generatoren. Wij helpen je het beste product te vinden voor de beste prijs.",
+    "legal": "Juridische informatie",
+    "privacy": "Privacybeleid",
+    "affiliate_disclaimer": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.",
+    "copyright": "© {year} maxpeedingrods.lu — Onafhankelijke website, niet verbonden aan Maxpeedingrods Inc."
+  },
+  "common": {
+    "back_to_home": "Terug naar home",
+    "page_not_found": "Pagina niet gevonden",
+    "page_not_found_text": "De pagina die je zoekt bestaat niet of is verplaatst."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "mxr4500i",
+  "model": "MXR4500i",
+  "brand": "Maxpeedingrods",
+  "category": "generators",
+  "slug": "mxr4500i",
+  "wattage": 4500,
+  "images": [
+    "/images/products/mxr4500i/main.svg",
+    "/images/products/mxr4500i/side.svg",
+    "/images/products/mxr4500i/detail.svg"
+  ],
+  "specs": {
+    "rated_power_w": 4000,
+    "max_power_w": 4500,
+    "engine_type": "4-stroke OHV",
+    "engine_displacement_cc": 223,
+    "fuel_type": "Gasoline",
+    "fuel_tank_l": 8,
+    "runtime_hours": 10,
+    "noise_level_db": 60,
+    "weight_kg": 34.5,
+    "dimensions_cm": "65x40x55",
+    "outlets": [
+      "2x 230V AC",
+      "1x 30A twist-lock",
+      "1x 12V DC",
+      "1x USB-A",
+      "1x USB-C"
+    ],
+    "inverter": true,
+    "electric_start": true,
+    "parallel_ready": true
+  },
+  "asins": {
+    "fr": "B0DWLT16XP",
+    "en": "B0DWLT27WN",
+    "de": "B0DWLT38VM",
+    "es": "B0DWLT49UL",
+    "it": "B0DWLT51TK",
+    "nl": "B0DWLT62SJ"
+  },
+  "rating": 4.5,
+  "reviewCount": 127
+}

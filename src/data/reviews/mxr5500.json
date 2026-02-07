@@ -1,0 +1,305 @@
+{
+  "slug": "mxr5500",
+  "reviews": [
+    {
+      "id": "rev-mxr5500-fr-1",
+      "author": "Pierre",
+      "date": "2025-05-22",
+      "rating": 5,
+      "title": "Une bête de puissance",
+      "content": "Ce générateur 5500W est une machine impressionnante. Sur le chantier, il fait tourner une scie à onglet, un compresseur et un projecteur en même temps. Rien ne le fait broncher. Le démarrage électrique est fiable et le moteur tourne comme une horloge.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-fr-2",
+      "author": "Marie",
+      "date": "2024-11-14",
+      "rating": 4,
+      "title": "Alimentation complète de la maison",
+      "content": "Après une tempête qui nous a privés de courant pendant trois jours, nous avons investi dans ce modèle. Il alimente quasiment toute la maison : chauffage, réfrigérateur, congélateur, éclairage et même la machine à laver. Un vrai groupe de secours familial.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-fr-3",
+      "author": "Thomas",
+      "date": "2025-09-08",
+      "rating": 5,
+      "title": "Indispensable sur chantier",
+      "content": "En tant que chef de chantier, j'ai besoin d'un générateur qui encaisse les charges lourdes toute la journée. Celui-ci ne m'a jamais laissé tomber. Bétonneuse, marteau-piqueur, éclairage de chantier : il gère tout sans faiblir. Construction solide et moteur endurant.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-fr-4",
+      "author": "Sophie",
+      "date": "2025-03-01",
+      "rating": 4,
+      "title": "Très puissant pour les gros besoins",
+      "content": "Nous l'utilisons pour notre gîte rural quand le réseau est instable. Il maintient le chauffage central, la cuisine complète et l'eau chaude sans difficulté. C'est clairement pas un modèle silencieux, mais pour la puissance qu'il délivre, c'est normal.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-fr-5",
+      "author": "Laurent",
+      "date": "2024-08-05",
+      "rating": 3,
+      "title": "Puissant mais gourmand",
+      "content": "Côté puissance, c'est le haut du panier. Il fait tourner tous mes outils lourds sur le chantier. Mais la consommation est conséquente à pleine charge, comptez environ 3-4 heures avec un réservoir plein. Aussi, il est vraiment bruyant. À réserver pour un usage professionnel.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-en-1",
+      "author": "James",
+      "date": "2025-07-03",
+      "rating": 5,
+      "title": "Powerhouse for the job site",
+      "content": "This 5500W generator is an absolute workhorse. I run it on construction sites powering miter saws, compressors, and jackhammers all day long. It handles heavy startup loads without flinching. Electric start works every time. Best heavy-duty generator I've used.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-en-2",
+      "author": "Sarah",
+      "date": "2024-12-28",
+      "rating": 5,
+      "title": "Whole house backup solution",
+      "content": "After last year's ice storm left us without power for a week, we bought this generator. It runs our furnace, well pump, fridge, freezer, and lights all at once. Having enough power to keep the whole house going is priceless. Worth every penny.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-en-3",
+      "author": "David",
+      "date": "2025-10-18",
+      "rating": 4,
+      "title": "Heavy-duty and dependable",
+      "content": "I use this on remote construction sites where grid power isn't available. It handles concrete mixers, heavy drills, and site lighting simultaneously. The engine is robust and fuel consumption is reasonable for the output. Wish it was a bit lighter, but that comes with the territory.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-en-4",
+      "author": "Emma",
+      "date": "2025-01-22",
+      "rating": 4,
+      "title": "Keeps everything running",
+      "content": "We live in a rural area prone to outages. This generator powers our entire home during blackouts — heating, kitchen appliances, water heater, the lot. It's loud, no question about it, but when the power goes out you just want something that works, and this delivers.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-en-5",
+      "author": "Michael",
+      "date": "2024-06-18",
+      "rating": 3,
+      "title": "Raw power, rough around the edges",
+      "content": "This generator has all the power you could need. I run heavy tools on it every day. The downsides are the noise level and fuel consumption — it drinks gas at full load. Also, not an inverter, so I wouldn't plug sensitive electronics into it directly. For raw power though, it's excellent.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-de-1",
+      "author": "Klaus",
+      "date": "2025-06-10",
+      "rating": 5,
+      "title": "Maximale Leistung für die Baustelle",
+      "content": "Dieser 5500W Generator ist ein echtes Kraftpaket. Auf der Baustelle betreibt er Kappsägen, Kompressoren und Betonmischer gleichzeitig ohne Probleme. Der Motor läuft stabil auch unter Volllast. Für schwere Einsätze gibt es nichts Besseres in dieser Preisklasse.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-de-2",
+      "author": "Anna",
+      "date": "2024-10-05",
+      "rating": 4,
+      "title": "Komplette Hausversorgung",
+      "content": "Wir haben den Generator als Notstromversorgung für unser ganzes Haus gekauft. Er betreibt Heizung, Kühlschrank, Gefrierschrank, Waschmaschine und Beleuchtung gleichzeitig. Sehr laut, aber dafür muss man sich um nichts sorgen bei einem Stromausfall.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-de-3",
+      "author": "Stefan",
+      "date": "2025-11-09",
+      "rating": 5,
+      "title": "Profi-Gerät für harte Einsätze",
+      "content": "Als Bauunternehmer brauche ich zuverlässige Technik. Dieser Generator liefert konstant hohe Leistung für Presslufthammer, Betonmischer und Baustrahler. Nach neun Monaten Dauereinsatz läuft er immer noch einwandfrei. Absolute Empfehlung für den professionellen Einsatz.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-de-4",
+      "author": "Petra",
+      "date": "2025-04-17",
+      "rating": 4,
+      "title": "Starkes Notstromaggregat",
+      "content": "Wir wohnen ländlich und hatten letzten Winter mehrere lange Stromausfälle. Dieser Generator versorgt unser gesamtes Haus zuverlässig. Heizung, Herd, Warmwasser — alles läuft. Er ist laut, aber bei Sturm und Schnee stört das niemanden.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-de-5",
+      "author": "Hans",
+      "date": "2024-07-28",
+      "rating": 3,
+      "title": "Leistung top, Verbrauch hoch",
+      "content": "Die Leistung ist beeindruckend, alle schweren Werkzeuge laufen problemlos. Allerdings ist der Kraftstoffverbrauch bei Volllast erheblich. Außerdem ist er sehr laut, Gehörschutz ist Pflicht. Kein Inverter, also Vorsicht mit empfindlicher Elektronik.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-es-1",
+      "author": "Carlos",
+      "date": "2025-04-30",
+      "rating": 5,
+      "title": "Potencia bruta para obras",
+      "content": "Este generador de 5500W es una bestia. En la obra mueve radiales grandes, hormigoneras y martillos percutores al mismo tiempo sin despeinarse. El motor es robusto y el arranque eléctrico funciona siempre. Imprescindible para trabajos pesados.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-es-2",
+      "author": "María",
+      "date": "2024-11-27",
+      "rating": 5,
+      "title": "Alimenta toda la casa",
+      "content": "Vivimos en el campo y los cortes de luz son habituales. Con este generador mantenemos toda la casa funcionando: calefacción, frigorífico, congelador, cocina y agua caliente. Nos da una tranquilidad enorme saber que no nos quedaremos sin nada esencial.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-es-3",
+      "author": "Pablo",
+      "date": "2025-08-06",
+      "rating": 4,
+      "title": "El más potente de la gama",
+      "content": "Lo uso en obras de construcción donde no hay acceso a la red eléctrica. Mueve todo el equipo pesado sin problemas. El motor aguanta jornadas completas de trabajo duro. Es pesado y ruidoso, pero para este nivel de potencia es lo esperado.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-es-4",
+      "author": "Carmen",
+      "date": "2025-02-12",
+      "rating": 4,
+      "title": "Seguridad total ante apagones",
+      "content": "Compramos este generador después de un apagón de cuatro días. Alimenta toda nuestra casa rural sin problemas: calefacción central, electrodomésticos de cocina, iluminación y hasta la bomba de agua. Es ruidoso pero enormemente útil.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-es-5",
+      "author": "Alejandro",
+      "date": "2024-09-10",
+      "rating": 3,
+      "title": "Mucha potencia, mucho ruido",
+      "content": "En cuanto a potencia no tiene rival en su rango de precio. Mueve cualquier herramienta pesada sin problemas. Pero es muy ruidoso y consume bastante combustible a plena carga. No es inverter, así que cuidado con aparatos electrónicos sensibles.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-it-1",
+      "author": "Marco",
+      "date": "2025-06-28",
+      "rating": 5,
+      "title": "Potenza inarrestabile",
+      "content": "Questo generatore da 5500W è una macchina seria. In cantiere alimenta troncatrici, betoniere e martelli demolitori contemporaneamente senza il minimo tentennamento. Il motore è robusto e l'avviamento elettrico sempre affidabile. Un vero strumento professionale.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-it-2",
+      "author": "Giulia",
+      "date": "2024-10-16",
+      "rating": 4,
+      "title": "Alimenta tutta la casa",
+      "content": "Viviamo in una zona rurale soggetta a frequenti blackout. Con questo generatore manteniamo tutta la casa in funzione: riscaldamento, frigorifero, congelatore, cucina e acqua calda. È rumoroso ma quando manca la corrente è un salvavita.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-it-3",
+      "author": "Luca",
+      "date": "2025-09-22",
+      "rating": 5,
+      "title": "Il top per cantieri pesanti",
+      "content": "Come impresario edile ho bisogno di generatori che non mi lascino a piedi. Questo 5500W alimenta martelli pneumatici, betoniere e illuminazione di cantiere tutto il giorno. Dopo dieci mesi di uso intensivo funziona ancora perfettamente. Qualità eccellente.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-it-4",
+      "author": "Francesca",
+      "date": "2025-03-19",
+      "rating": 4,
+      "title": "Sicurezza durante i blackout",
+      "content": "Dopo un blackout invernale di tre giorni abbiamo deciso di comprare questo generatore. Alimenta l'intera casa senza problemi. Riscaldamento, elettrodomestici, illuminazione — tutto funziona normalmente. È rumoroso ma per le emergenze è perfetto.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-it-5",
+      "author": "Alessandro",
+      "date": "2024-07-14",
+      "rating": 3,
+      "title": "Potente ma non per tutti",
+      "content": "La potenza è eccezionale, muove qualsiasi utensile pesante. Però consuma parecchio carburante a pieno carico e il livello di rumore è notevole. Non è un inverter, quindi non è adatto per elettronica sensibile. Per uso professionale in cantiere è perfetto.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-nl-1",
+      "author": "Jan",
+      "date": "2025-05-16",
+      "rating": 5,
+      "title": "Krachtpatser op de bouwplaats",
+      "content": "Deze 5500W generator is een echte krachtpatser. Op de bouwplaats drijft hij verstekzagen, compressoren en betonmolens tegelijk aan zonder enig probleem. De elektrische start werkt altijd betrouwbaar en de motor draait stabiel onder volle belasting.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-nl-2",
+      "author": "Annemieke",
+      "date": "2024-12-09",
+      "rating": 4,
+      "title": "Het hele huis van stroom voorzien",
+      "content": "Na een stroomstoring van drie dagen hebben we deze generator gekocht. Hij voedt ons hele huis: verwarming, koelkast, vriezer, wasmachine en verlichting. Behoorlijk luidruchtig, maar als de stroom uitvalt wil je gewoon dat alles blijft werken.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-nl-3",
+      "author": "Pieter",
+      "date": "2025-10-25",
+      "rating": 5,
+      "title": "Professionele kwaliteit",
+      "content": "Als aannemer heb ik een betrouwbare stroombron nodig op locatie. Deze generator levert constant hoog vermogen voor drilboren, slijpmachines en bouwlampen. Na maanden intensief gebruik draait hij nog steeds als een zonnetje. Absolute aanrader voor professionals.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-nl-4",
+      "author": "Sanne",
+      "date": "2025-02-28",
+      "rating": 4,
+      "title": "Noodstroom voor het hele huis",
+      "content": "We wonen landelijk en hadden afgelopen winter meerdere lange stroomstoringen. Deze generator houdt ons hele huis draaiende: verwarming, keukenapparatuur, warm water en verlichting. Het is luidruchtig maar bij storm en sneeuw stoort dat niemand.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr5500-nl-5",
+      "author": "Willem",
+      "date": "2024-08-20",
+      "rating": 3,
+      "title": "Veel vermogen, veel verbruik",
+      "content": "Qua vermogen is er niets beters in deze prijsklasse. Elk zwaar gereedschap draait er probleemloos op. Het nadeel is het hoge brandstofverbruik bij volle belasting en het geluidsniveau. Geen inverter, dus niet geschikt voor gevoelige elektronica. Voor bouwplaatsgebruik echter uitstekend.",
+      "lang": "nl",
+      "verified": true
+    }
+  ]
+}

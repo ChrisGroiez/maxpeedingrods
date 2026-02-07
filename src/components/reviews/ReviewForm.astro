@@ -1,0 +1,160 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  productSlug: string;
+}
+
+const { locale, productSlug } = Astro.props;
+---
+
+<div id="review-form-wrapper" class="bg-white rounded-xl border border-ui-border p-6">
+  <h3 class="font-heading font-semibold text-lg text-text-primary mb-4">
+    {t(locale, 'reviews_section.write_review')}
+  </h3>
+
+  <form id="review-form" class="space-y-4" data-product={productSlug} data-lang={locale}>
+    <!-- Honeypot -->
+    <div class="hidden" aria-hidden="true">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <!-- Name -->
+    <div>
+      <label for="review-name" class="block text-sm font-medium text-text-secondary mb-1.5">
+        {t(locale, 'reviews_section.your_name')}
+      </label>
+      <input
+        type="text"
+        id="review-name"
+        name="author"
+        required
+        class="w-full px-4 py-2.5 border border-ui-border rounded-lg text-sm focus:ring-2 focus:ring-brand-yellow/50 focus:border-brand-yellow outline-none transition-all"
+      />
+    </div>
+
+    <!-- Rating -->
+    <div>
+      <label class="block text-sm font-medium text-text-secondary mb-1.5">
+        {t(locale, 'reviews_section.your_rating')}
+      </label>
+      <div class="flex gap-1" id="star-rating">
+        {[1, 2, 3, 4, 5].map(star => (
+          <button
+            type="button"
+            class="star-btn text-star-empty hover:text-star-filled transition-colors"
+            data-value={star}
+          >
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </button>
+        ))}
+      </div>
+      <input type="hidden" name="rating" id="rating-value" value="5" />
+    </div>
+
+    <!-- Title -->
+    <div>
+      <label for="review-title" class="block text-sm font-medium text-text-secondary mb-1.5">
+        {t(locale, 'reviews_section.your_title')}
+      </label>
+      <input
+        type="text"
+        id="review-title"
+        name="title"
+        required
+        class="w-full px-4 py-2.5 border border-ui-border rounded-lg text-sm focus:ring-2 focus:ring-brand-yellow/50 focus:border-brand-yellow outline-none transition-all"
+      />
+    </div>
+
+    <!-- Content -->
+    <div>
+      <label for="review-content" class="block text-sm font-medium text-text-secondary mb-1.5">
+        {t(locale, 'reviews_section.your_review')}
+      </label>
+      <textarea
+        id="review-content"
+        name="content"
+        rows="4"
+        required
+        class="w-full px-4 py-2.5 border border-ui-border rounded-lg text-sm focus:ring-2 focus:ring-brand-yellow/50 focus:border-brand-yellow outline-none transition-all resize-y"
+      ></textarea>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn-cta-sm">
+      {t(locale, 'reviews_section.submit')}
+    </button>
+
+    <p class="text-xs text-text-muted">{t(locale, 'reviews_section.moderation_notice')}</p>
+
+    <!-- Success message (hidden by default) -->
+    <div id="review-success" class="hidden bg-status-success/10 text-status-success rounded-lg p-4 text-sm font-medium">
+      {t(locale, 'reviews_section.thank_you')}
+    </div>
+  </form>
+</div>
+
+<script>
+  // Star rating interaction
+  const starBtns = document.querySelectorAll('.star-btn');
+  const ratingInput = document.getElementById('rating-value') as HTMLInputElement;
+  let currentRating = 5;
+
+  function updateStars(value: number) {
+    starBtns.forEach(btn => {
+      const v = Number((btn as HTMLElement).dataset.value);
+      btn.classList.toggle('text-star-filled', v <= value);
+      btn.classList.toggle('text-star-empty', v > value);
+    });
+  }
+
+  starBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentRating = Number((btn as HTMLElement).dataset.value);
+      if (ratingInput) ratingInput.value = String(currentRating);
+      updateStars(currentRating);
+    });
+  });
+
+  updateStars(5);
+
+  // Form submission
+  const form = document.getElementById('review-form') as HTMLFormElement | null;
+  const successMsg = document.getElementById('review-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    // Honeypot check
+    if (formData.get('website')) return;
+
+    const body = {
+      product: form.dataset.product,
+      lang: form.dataset.lang,
+      author: formData.get('author'),
+      rating: Number(formData.get('rating')),
+      title: formData.get('title'),
+      content: formData.get('content'),
+    };
+
+    try {
+      const res = await fetch('/api/reviews', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+
+      if (res.ok) {
+        form.classList.add('hidden');
+        successMsg?.classList.remove('hidden');
+      }
+    } catch (err) {
+      // Silently fail - form stays visible
+    }
+  });
+</script>

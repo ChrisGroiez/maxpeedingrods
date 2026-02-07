@@ -1,0 +1,305 @@
+{
+  "slug": "mxr2300",
+  "reviews": [
+    {
+      "id": "rev-mxr2300-fr-1",
+      "author": "Nathalie",
+      "date": "2025-05-18",
+      "rating": 5,
+      "title": "Polyvalent et fiable",
+      "content": "J'utilise ce générateur pour mon camping-car et il est parfait. Il fait tourner le frigo, la télé et les lumières sans broncher. Le bruit est tout à fait acceptable, même le soir au camping.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-fr-2",
+      "author": "François",
+      "date": "2024-10-08",
+      "rating": 4,
+      "title": "Très bon générateur",
+      "content": "Acheté pour les coupures de courant à la maison. Il alimente facilement les équipements essentiels : frigo, éclairage, box internet. La consommation d'essence reste raisonnable. Un bon investissement.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-fr-3",
+      "author": "Isabelle",
+      "date": "2025-08-25",
+      "rating": 5,
+      "title": "Indispensable en camping-car",
+      "content": "Nous voyageons beaucoup en camping-car et ce générateur est devenu indispensable. Il est assez léger pour être manipulé facilement et suffisamment puissant pour nos besoins quotidiens.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-fr-4",
+      "author": "Julien",
+      "date": "2025-01-14",
+      "rating": 4,
+      "title": "Bon compromis puissance/portabilité",
+      "content": "Il offre un bon équilibre entre puissance et transport. Je l'utilise sur mes chantiers pour les outils légers et pour recharger les batteries. Le démarrage est facile et il tourne de manière régulière.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-fr-5",
+      "author": "Céline",
+      "date": "2024-07-20",
+      "rating": 3,
+      "title": "Bien mais un peu bruyant",
+      "content": "Fonctionne bien pour la plupart des usages. Je trouve qu'il est un peu plus bruyant que ce que j'attendais. Pour le prix c'est correct, mais prévoyez de l'éloigner un peu de votre espace de vie.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-en-1",
+      "author": "Robert",
+      "date": "2025-07-03",
+      "rating": 5,
+      "title": "Perfect RV companion",
+      "content": "This generator is ideal for our RV trips. It powers the fridge, microwave, and TV without breaking a sweat. Fuel efficient too. We used it for a two-week road trip and it performed flawlessly every single day.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-en-2",
+      "author": "Jennifer",
+      "date": "2025-03-19",
+      "rating": 4,
+      "title": "Reliable home backup",
+      "content": "Bought this as a backup for power outages. It handles the essentials well: fridge, lights, router, and phone charging. Not enough for the whole house but keeps the important things running.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-en-3",
+      "author": "William",
+      "date": "2024-11-28",
+      "rating": 5,
+      "title": "Excellent build quality",
+      "content": "I'm impressed with how well this unit is built. Sturdy frame, solid components, and it starts reliably every time. I use it for camping and occasional home backup. The parallel capability is a nice bonus if I ever need more power.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-en-4",
+      "author": "Ashley",
+      "date": "2025-09-10",
+      "rating": 4,
+      "title": "Good mid-range option",
+      "content": "Does everything I need without being overkill. Powers my food truck prep equipment when I'm setting up at events. Portable enough to move around easily.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-en-5",
+      "author": "Daniel",
+      "date": "2024-08-05",
+      "rating": 3,
+      "title": "Adequate performance",
+      "content": "Gets the job done for moderate loads. I tried running a small space heater along with other things and it was at its limit. Fine for camping and light home use but don't overload it.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-de-1",
+      "author": "Markus",
+      "date": "2025-04-22",
+      "rating": 5,
+      "title": "Perfekt fürs Wohnmobil",
+      "content": "Wir nutzen den Generator im Wohnmobil und er ist fantastisch. Kühlschrank, Beleuchtung und Fernseher laufen problemlos. Der Verbrauch ist sparsam und die Lautstärke absolut erträglich.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-de-2",
+      "author": "Sabine",
+      "date": "2024-12-15",
+      "rating": 4,
+      "title": "Zuverlässige Notstromversorgung",
+      "content": "Als Notstromversorgung für unser Haus gekauft. Bei einem Stromausfall letzten Monat hat er Kühlschrank, Router und Beleuchtung stundenlang versorgt. Bin sehr zufrieden mit der Leistung.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-de-3",
+      "author": "Thomas",
+      "date": "2025-06-08",
+      "rating": 5,
+      "title": "Starker Allrounder",
+      "content": "Vielseitig einsetzbar und robust gebaut. Ich nehme ihn zum Camping mit und nutze ihn auch für kleinere Arbeiten im Garten. Die Verarbeitungsqualität ist für den Preis wirklich beeindruckend.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-de-4",
+      "author": "Monika",
+      "date": "2025-02-28",
+      "rating": 4,
+      "title": "Gutes Mittelklassegerät",
+      "content": "Leistet gute Dienste bei mittlerer Belastung. Für den Dauereinsatz auf der Baustelle etwas knapp, aber für Camping und Heimgebrauch genau richtig. Guter Kompromiss aus Leistung und Gewicht.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-de-5",
+      "author": "Jürgen",
+      "date": "2024-09-12",
+      "rating": 3,
+      "title": "In Ordnung für den Preis",
+      "content": "Macht was er soll, nicht mehr und nicht weniger. Bei hoher Last wird er recht laut. Für gelegentlichen Einsatz beim Camping oder im Garten aber durchaus brauchbar.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-es-1",
+      "author": "Javier",
+      "date": "2025-03-30",
+      "rating": 5,
+      "title": "Ideal para la autocaravana",
+      "content": "Lo usamos en nuestra autocaravana y va de maravilla. Alimenta la nevera, la tele y las luces sin problema alguno. El consumo de gasolina es muy razonable y el ruido bastante contenido para lo que es.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-es-2",
+      "author": "Laura",
+      "date": "2025-10-17",
+      "rating": 4,
+      "title": "Buena compra",
+      "content": "Lo compramos como respaldo para cortes de luz en casa. Funciona muy bien para lo esencial. Es fácil de arrancar y bastante estable en el suministro de energía.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-es-3",
+      "author": "Fernando",
+      "date": "2024-10-25",
+      "rating": 5,
+      "title": "Muy versátil",
+      "content": "Lo uso tanto para camping como para trabajos en el campo. Tiene suficiente potencia para alimentar herramientas ligeras y electrodomésticos básicos. La calidad de construcción es excelente y se nota que está hecho para durar.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-es-4",
+      "author": "Isabel",
+      "date": "2025-07-05",
+      "rating": 4,
+      "title": "Buen equilibrio potencia-portabilidad",
+      "content": "Ni demasiado grande ni demasiado pequeño. Justo lo que necesitaba para mis salidas de fin de semana. Se transporta bien y tiene suficiente potencia para mis necesidades.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-es-5",
+      "author": "Diego",
+      "date": "2024-06-18",
+      "rating": 3,
+      "title": "Cumple pero justo",
+      "content": "Para cargas moderadas funciona bien. Intenté conectar demasiadas cosas a la vez y se notaba que iba al límite. Para un uso normal y sin excesos, es una buena opción por el precio.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-it-1",
+      "author": "Andrea",
+      "date": "2025-05-11",
+      "rating": 5,
+      "title": "Perfetto per il camper",
+      "content": "Lo utilizziamo nel nostro camper e funziona alla grande. Frigorifero, TV e illuminazione vanno senza problemi. Il consumo è contenuto e il rumore è accettabile anche di sera in campeggio.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-it-2",
+      "author": "Elena",
+      "date": "2025-11-08",
+      "rating": 4,
+      "title": "Affidabile e versatile",
+      "content": "Acquistato per emergenze domestiche e uscite in campeggio. In entrambi i casi si è dimostrato affidabile. Facile da avviare e con un buon livello di potenza per le esigenze quotidiane.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-it-3",
+      "author": "Giuseppe",
+      "date": "2024-12-01",
+      "rating": 5,
+      "title": "Qualità superiore alle aspettative",
+      "content": "Non mi aspettavo una qualità così buona a questo prezzo. Il motore gira regolare, i consumi sono bassi e la potenza è sufficiente per la maggior parte degli utilizzi. Lo consiglio vivamente a chi cerca un generatore versatile.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-it-4",
+      "author": "Chiara",
+      "date": "2025-08-19",
+      "rating": 4,
+      "title": "Buon compromesso",
+      "content": "Abbastanza potente per la maggior parte delle esigenze e abbastanza leggero da trasportare. Lo uso nel mio food truck per alimentare gli apparecchi di preparazione. Fa il suo lavoro senza problemi.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-it-5",
+      "author": "Roberto",
+      "date": "2024-08-14",
+      "rating": 3,
+      "title": "Discreto per uso medio",
+      "content": "Funziona bene con carichi medi. Se lo si carica troppo diventa rumoroso e si sente che fatica. Per un utilizzo normale e senza esagerare è un buon prodotto.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-nl-1",
+      "author": "Martijn",
+      "date": "2025-06-25",
+      "rating": 5,
+      "title": "Perfect voor de camper",
+      "content": "Gebruiken hem in onze camper en hij is geweldig. Koelkast, TV en verlichting draaien er moeiteloos op. Zuinig in verbruik en het geluidsniveau is prima te doen, zelfs 's avonds op de camping.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-nl-2",
+      "author": "Eline",
+      "date": "2024-11-10",
+      "rating": 4,
+      "title": "Betrouwbare noodstroom",
+      "content": "Gekocht als noodstroomoplossing voor ons huis. Tijdens een stroomstoring vorige maand heeft hij koelkast, router en verlichting urenlang draaiende gehouden. Doet precies wat hij moet doen.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-nl-3",
+      "author": "Daan",
+      "date": "2025-09-05",
+      "rating": 5,
+      "title": "Veelzijdig en stevig",
+      "content": "Gebruik hem zowel voor kamperen als voor klusjes in de tuin. Heeft genoeg vermogen voor licht gereedschap en basisapparaten. De bouwkwaliteit is indrukwekkend voor deze prijs. Zeer aan te bevelen.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-nl-4",
+      "author": "Fleur",
+      "date": "2025-01-30",
+      "rating": 4,
+      "title": "Goede middenklasser",
+      "content": "Niet te groot en niet te klein, precies goed voor ons gebruik. Makkelijk te vervoeren en voldoende vermogen voor dagelijkse behoeften. Goede balans tussen draagbaarheid en kracht.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2300-nl-5",
+      "author": "Kees",
+      "date": "2024-07-22",
+      "rating": 3,
+      "title": "Redelijk voor de prijs",
+      "content": "Doet wat hij moet doen bij gemiddelde belasting. Bij hoge belasting wordt hij behoorlijk luid. Voor af en toe gebruik bij het kamperen of in de tuin is het een prima apparaat.",
+      "lang": "nl",
+      "verified": true
+    }
+  ]
+}

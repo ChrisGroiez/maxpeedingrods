@@ -1,0 +1,59 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const features = [
+  {
+    titleKey: 'home.why_quality',
+    descKey: 'home.why_quality_desc',
+    icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+  },
+  {
+    titleKey: 'home.why_price',
+    descKey: 'home.why_price_desc',
+    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+  {
+    titleKey: 'home.why_warranty',
+    descKey: 'home.why_warranty_desc',
+    icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+  {
+    titleKey: 'home.why_shipping',
+    descKey: 'home.why_shipping_desc',
+    icon: 'M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0',
+  },
+];
+---
+
+<section class="py-12 md:py-16 lg:py-20 bg-white">
+  <div class="container-main">
+    <h2 class="font-heading font-bold text-2xl md:text-3xl text-text-primary text-center">
+      {t(locale, 'home.why_title')}
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-8 md:mt-12">
+      {features.map(feature => (
+        <div class="text-center p-6">
+          <div class="w-14 h-14 mx-auto rounded-full bg-brand-yellow/10 flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={feature.icon} />
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-text-primary text-lg">
+            {t(locale, feature.titleKey)}
+          </h3>
+          <p class="text-text-secondary text-sm mt-2 leading-relaxed">
+            {t(locale, feature.descKey)}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

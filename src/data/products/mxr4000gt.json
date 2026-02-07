@@ -1,0 +1,45 @@
+{
+  "id": "mxr4000gt",
+  "model": "MXR4000GT",
+  "brand": "Maxpeedingrods",
+  "category": "generators",
+  "slug": "mxr4000gt",
+  "wattage": 4000,
+  "images": [
+    "/images/products/mxr4000gt/main.svg",
+    "/images/products/mxr4000gt/side.svg",
+    "/images/products/mxr4000gt/detail.svg"
+  ],
+  "specs": {
+    "rated_power_w": 3500,
+    "max_power_w": 4000,
+    "engine_type": "4-stroke OHV",
+    "engine_displacement_cc": 223,
+    "fuel_type": "Gasoline",
+    "fuel_tank_l": 7.5,
+    "runtime_hours": 11,
+    "noise_level_db": 62,
+    "weight_kg": 32,
+    "dimensions_cm": "62x38x53",
+    "outlets": [
+      "2x 230V AC",
+      "1x 30A twist-lock",
+      "1x 12V DC",
+      "1x USB-A",
+      "1x USB-C"
+    ],
+    "inverter": true,
+    "electric_start": true,
+    "parallel_ready": true
+  },
+  "asins": {
+    "fr": "B0DVKR27TN",
+    "en": "B0DVKR38SM",
+    "de": "B0DVKR49RL",
+    "es": "B0DVKR51QK",
+    "it": "B0DVKR62PJ",
+    "nl": "B0DVKR73NH"
+  },
+  "rating": 4.4,
+  "reviewCount": 54
+}

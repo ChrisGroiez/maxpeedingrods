@@ -1,0 +1,31 @@
+export const siteConfig = {
+  name: 'Maxpeedingrods',
+  domain: 'maxpeedingrods.lu',
+  url: 'https://maxpeedingrods.lu',
+  defaultLocale: 'fr' as const,
+  locales: ['fr', 'en', 'de', 'es', 'it', 'nl'] as const,
+  currencies: {
+    fr: { code: 'EUR', symbol: '€' },
+    en: { code: 'GBP', symbol: '£' },
+    de: { code: 'EUR', symbol: '€' },
+    es: { code: 'EUR', symbol: '€' },
+    it: { code: 'EUR', symbol: '€' },
+    nl: { code: 'EUR', symbol: '€' },
+  },
+  localeNames: {
+    fr: 'Français',
+    en: 'English',
+    de: 'Deutsch',
+    es: 'Español',
+    it: 'Italiano',
+    nl: 'Nederlands',
+  },
+  localeFlags: {
+    fr: '🇫🇷',
+    en: '🇬🇧',
+    de: '🇩🇪',
+    es: '🇪🇸',
+    it: '🇮🇹',
+    nl: '🇳🇱',
+  },
+} as const;

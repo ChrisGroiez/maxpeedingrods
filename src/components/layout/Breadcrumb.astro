@@ -1,0 +1,51 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+import StructuredData from '../seo/StructuredData.astro';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  locale: Locale;
+}
+
+const { items, locale } = Astro.props;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    ...(item.href ? { item: `https://maxpeedingrods.lu${item.href}` } : {}),
+  })),
+};
+---
+
+<StructuredData data={structuredData} />
+
+<nav aria-label="Breadcrumb" class="container-main py-3">
+  <ol class="flex items-center gap-2 text-sm font-body">
+    {items.map((item, index) => (
+      <li class="flex items-center gap-2">
+        {index > 0 && (
+          <svg class="w-3.5 h-3.5 text-text-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        )}
+        {item.href ? (
+          <a href={item.href} class="text-text-secondary hover:text-brand-yellow transition-colors">
+            {item.label}
+          </a>
+        ) : (
+          <span class="text-text-primary font-medium truncate max-w-[200px]">{item.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

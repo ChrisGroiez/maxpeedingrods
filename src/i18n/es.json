@@ -1,0 +1,90 @@
+{
+  "site": {
+    "name": "Maxpeedingrods",
+    "tagline": "Generadores portátiles de calidad profesional"
+  },
+  "nav": {
+    "home": "Inicio",
+    "generators": "Generadores"
+  },
+  "product": {
+    "see_offer": "Ver oferta",
+    "redirect_notice": "Consulta el precio y la disponibilidad en nuestro partner",
+    "specifications": "Especificaciones técnicas",
+    "description": "Descripción",
+    "reviews": "Opiniones de clientes",
+    "similar_products": "También te puede interesar",
+    "rated_power": "Potencia nominal",
+    "max_power": "Potencia máxima",
+    "engine_type": "Tipo de motor",
+    "engine_displacement": "Cilindrada",
+    "fuel_type": "Combustible",
+    "fuel_tank": "Depósito",
+    "runtime": "Autonomía",
+    "noise_level": "Nivel de ruido",
+    "weight": "Peso",
+    "dimensions": "Dimensiones",
+    "outlets": "Tomas de corriente",
+    "inverter": "Tecnología Inverter",
+    "electric_start": "Arranque eléctrico",
+    "parallel_ready": "Compatible en paralelo",
+    "yes": "Sí",
+    "no": "No",
+    "in_stock": "En stock",
+    "category_badge": "Generador Inverter"
+  },
+  "reviews_section": {
+    "title": "Opiniones de clientes",
+    "write_review": "Escribir una opinión",
+    "your_name": "Tu nombre",
+    "your_rating": "Tu valoración",
+    "your_title": "Título de tu opinión",
+    "your_review": "Tu opinión detallada",
+    "submit": "Publicar opinión",
+    "based_on": "Basado en {count} opiniones",
+    "verified": "Compra verificada",
+    "moderation_notice": "Tu opinión se publicará tras ser revisada.",
+    "thank_you": "¡Gracias por tu opinión!"
+  },
+  "home": {
+    "hero_title": "Generadores Maxpeedingrods",
+    "hero_subtitle": "Potencia portátil con calidad profesional. Descubre los mejores generadores inverter al mejor precio.",
+    "hero_cta": "Ver generadores",
+    "featured_title": "Nuestros generadores más populares",
+    "why_title": "¿Por qué elegir Maxpeedingrods?",
+    "why_quality": "Calidad premium",
+    "why_quality_desc": "Componentes de grado profesional, probados en las condiciones más exigentes.",
+    "why_price": "La mejor relación calidad-precio",
+    "why_price_desc": "Rendimiento de gama alta a una fracción del precio de las grandes marcas.",
+    "why_warranty": "Garantía del fabricante",
+    "why_warranty_desc": "Atención al cliente ágil y garantía del fabricante en todos los productos.",
+    "why_shipping": "Envío rápido",
+    "why_shipping_desc": "Envío inmediato, entrega en 24 a 48 horas."
+  },
+  "category": {
+    "title": "Generadores Maxpeedingrods",
+    "intro": "Descubre nuestra gama completa de generadores portátiles Maxpeedingrods, de 1200 W a 5500 W.",
+    "meta_title": "Generadores Maxpeedingrods | Grupos Electrógenos Inverter Portátiles",
+    "meta_description": "Gama completa de generadores Maxpeedingrods: de 1200 W a 5500 W. Generadores inverter portátiles, silenciosos y fiables al mejor precio.",
+    "filter_power": "Potencia",
+    "filter_all": "Todos",
+    "filter_button": "Filtrar",
+    "sort_by": "Ordenar por",
+    "sort_power_asc": "Potencia ascendente",
+    "sort_power_desc": "Potencia descendente",
+    "sort_popular": "Popularidad"
+  },
+  "footer": {
+    "about_title": "Sobre nosotros",
+    "about_text": "Maxpeedingrods.lu es un comparador independiente especializado en generadores portátiles. Te ayudamos a encontrar el mejor producto al mejor precio.",
+    "legal": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "affiliate_disclaimer": "Como Afiliado de Amazon, obtenemos ingresos por las compras adscritas que cumplen los requisitos aplicables.",
+    "copyright": "© {year} maxpeedingrods.lu — Sitio independiente, sin vinculación con Maxpeedingrods Inc."
+  },
+  "common": {
+    "back_to_home": "Volver al inicio",
+    "page_not_found": "Página no encontrada",
+    "page_not_found_text": "La página que buscas no existe o ha sido trasladada."
+  }
+}

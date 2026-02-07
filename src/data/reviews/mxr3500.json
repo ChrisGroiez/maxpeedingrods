@@ -1,0 +1,305 @@
+{
+  "slug": "mxr3500",
+  "reviews": [
+    {
+      "id": "rev-mxr3500-fr-1",
+      "author": "Pierre",
+      "date": "2024-08-12",
+      "rating": 5,
+      "title": "Excellent générateur pour le camping",
+      "content": "J'ai utilisé ce générateur pendant deux semaines de camping dans les Alpes. Il est silencieux, fiable et consomme très peu d'essence. Je le recommande vivement à tous les campeurs.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-fr-2",
+      "author": "Marie",
+      "date": "2024-11-03",
+      "rating": 4,
+      "title": "Bon rapport qualité-prix",
+      "content": "Acheté pour alimenter mon food truck lors des marchés. La puissance est suffisante pour faire tourner mes équipements. Seul bémol, le poids est un peu élevé pour le déplacer seul, mais la qualité de fabrication est au rendez-vous.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-fr-3",
+      "author": "Thomas",
+      "date": "2025-02-18",
+      "rating": 5,
+      "title": "Parfait comme secours à la maison",
+      "content": "Après une coupure de courant de 3 jours l'hiver dernier, j'ai décidé d'investir dans un groupe électrogène. Le MXR3500 fait parfaitement le travail : frigo, chauffage et éclairage sans problème. Démarrage au quart de tour même par temps froid.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-fr-4",
+      "author": "Camille",
+      "date": "2025-06-22",
+      "rating": 3,
+      "title": "Correct mais un peu bruyant",
+      "content": "Il fait le boulot sur mon chantier, mais je m'attendais à un niveau sonore plus bas vu les spécifications annoncées. La puissance est là, c'est indéniable, mais pour du camping en zone calme, ça reste un peu juste côté bruit.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-fr-5",
+      "author": "Julien",
+      "date": "2025-09-05",
+      "rating": 5,
+      "title": "Indispensable pour mon camping-car",
+      "content": "Je parcours la France en camping-car et ce générateur m'accompagne partout. Compact, facile à ranger dans la soute, et assez puissant pour la clim et le micro-ondes. Trois mois d'utilisation et pas un seul souci. Bravo.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-en-1",
+      "author": "James",
+      "date": "2024-07-20",
+      "rating": 5,
+      "title": "Reliable backup power for the house",
+      "content": "We get occasional power outages in our area and this generator has been a lifesaver. Powers the fridge, a few lights, and the Wi-Fi router without breaking a sweat. Setup was straightforward right out of the box.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-en-2",
+      "author": "Sarah",
+      "date": "2024-10-11",
+      "rating": 4,
+      "title": "Great for weekend camping trips",
+      "content": "Took this on several camping weekends and it ran our portable heater, phone chargers, and a small cooler just fine. It's not the lightest unit out there, but the power output more than makes up for it. Fuel economy is decent too.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-en-3",
+      "author": "Michael",
+      "date": "2025-01-08",
+      "rating": 5,
+      "title": "Job site workhorse",
+      "content": "I'm a contractor and I need a generator I can count on every single day. The MXR3500 has been running my power tools on remote job sites for months now. Starts up fast, runs steady, and the fuel tank lasts a full work day. Couldn't ask for more.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-en-4",
+      "author": "Emily",
+      "date": "2025-05-30",
+      "rating": 4,
+      "title": "Solid generator, happy with the purchase",
+      "content": "Bought this for our RV and it handles the air conditioning and kitchen appliances with no issues. Wish it were a touch quieter at full load, but overall it's a really solid unit for the price.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-en-5",
+      "author": "David",
+      "date": "2025-11-02",
+      "rating": 3,
+      "title": "Does the job but nothing spectacular",
+      "content": "It works fine for basic needs. I use it as emergency backup at home. Build quality seems okay, though the pull cord felt a bit stiff at first. It loosened up after a few uses. Average noise level. Gets the job done.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-de-1",
+      "author": "Klaus",
+      "date": "2024-06-15",
+      "rating": 5,
+      "title": "Hervorragender Generator für Baustellen",
+      "content": "Ich setze den MXR3500 täglich auf meiner Baustelle ein. Er versorgt Bohrmaschinen, Kreissägen und Beleuchtung zuverlässig mit Strom. Der Verbrauch ist moderat und die Verarbeitung erstklassig. Klare Kaufempfehlung für Profis.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-de-2",
+      "author": "Anna",
+      "date": "2024-09-28",
+      "rating": 4,
+      "title": "Guter Notstromgenerator",
+      "content": "Nach dem letzten Stromausfall haben wir uns für den MXR3500 entschieden. Er startet problemlos und liefert genug Leistung für Kühlschrank, Heizung und Licht. Etwas schwer zum Tragen, aber dafür sehr stabil und robust gebaut.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-de-3",
+      "author": "Markus",
+      "date": "2025-03-10",
+      "rating": 5,
+      "title": "Perfekt fürs Wohnmobil",
+      "content": "Wir reisen viel mit dem Wohnmobil und der MXR3500 ist unser treuer Begleiter geworden. Klimaanlage, Mikrowelle, Kaffeemaschine – alles läuft einwandfrei. Auch nach Monaten intensiver Nutzung keine Probleme. Top Gerät!",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-de-4",
+      "author": "Sabine",
+      "date": "2025-07-14",
+      "rating": 4,
+      "title": "Zuverlässig beim Camping",
+      "content": "Haben den Generator für unseren Campingurlaub in Skandinavien gekauft. Er lief jeden Abend mehrere Stunden ohne Probleme. Die Lautstärke ist akzeptabel, nicht flüsterleise aber auch nicht störend. Gutes Preis-Leistungs-Verhältnis.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-de-5",
+      "author": "Stefan",
+      "date": "2025-10-22",
+      "rating": 3,
+      "title": "Solide, aber nicht überragend",
+      "content": "Der Generator funktioniert und liefert die angegebene Leistung. Für meinen Imbisswagen reicht er gerade so aus. Bei Volllast wird er ziemlich laut. Die Qualität ist in Ordnung, aber ich hätte mir für den Preis etwas mehr erwartet.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-es-1",
+      "author": "Carlos",
+      "date": "2024-07-05",
+      "rating": 5,
+      "title": "Excelente generador para mi food truck",
+      "content": "Llevo tres meses usando el MXR3500 en mi food truck y funciona de maravilla. Aguanta la plancha, el frigorífico y las luces sin ningún problema. El consumo de combustible es razonable y el arranque es instantáneo. Muy contento con la compra.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-es-2",
+      "author": "María",
+      "date": "2024-12-19",
+      "rating": 4,
+      "title": "Muy útil para emergencias en casa",
+      "content": "Lo compré después de sufrir un apagón largo en mi zona. Ahora me siento mucho más tranquila. Arranca fácilmente y mantiene los electrodomésticos básicos funcionando. Es un poco pesado para moverlo sola, pero cumple su función perfectamente.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-es-3",
+      "author": "Alejandro",
+      "date": "2025-04-08",
+      "rating": 5,
+      "title": "Imprescindible en la obra",
+      "content": "Trabajo en construcción y necesitaba un generador fiable para herramientas eléctricas. El MXR3500 no me ha fallado ni un solo día. Potencia de sobra para taladros, sierras y compresores. Además, el depósito dura toda la jornada laboral. Muy recomendable.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-es-4",
+      "author": "Laura",
+      "date": "2025-08-25",
+      "rating": 4,
+      "title": "Genial para acampadas",
+      "content": "Lo hemos llevado a varias acampadas familiares este verano. Carga los móviles, alimenta una nevera portátil y hasta un ventilador. No es el más silencioso del mercado, pero tampoco molesta demasiado. Buena relación calidad-precio.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-es-5",
+      "author": "Javier",
+      "date": "2025-10-30",
+      "rating": 3,
+      "title": "Cumple, pero esperaba más",
+      "content": "Para mi autocaravana funciona bien en general, aunque a plena carga se nota bastante el ruido. La potencia es la indicada y el arranque es correcto. Le doy tres estrellas porque creo que podría mejorar en el apartado de insonorización.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-it-1",
+      "author": "Marco",
+      "date": "2024-06-30",
+      "rating": 5,
+      "title": "Generatore eccellente per il camper",
+      "content": "Ho viaggiato per tutta l'Italia con il mio camper e il MXR3500 non mi ha mai deluso. Alimenta il condizionatore, il microonde e il frigorifero senza alcun problema. Silenzioso e affidabile, non potrei chiedere di meglio.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-it-2",
+      "author": "Giulia",
+      "date": "2024-10-17",
+      "rating": 4,
+      "title": "Ottimo acquisto per il mio chiosco",
+      "content": "Lo uso per alimentare il mio chiosco di street food durante i mercati. Ha potenza sufficiente per la piastra e il frigorifero. Consuma poco e si avvia facilmente. Un po' pesante da spostare, ma la qualità costruttiva è evidente.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-it-3",
+      "author": "Luca",
+      "date": "2025-01-25",
+      "rating": 5,
+      "title": "Salvavita durante i blackout",
+      "content": "Dopo i blackout dell'inverno scorso ho deciso di comprare un generatore. Il MXR3500 è stato la scelta giusta: avviamento rapido, autonomia eccellente e abbastanza potente per mantenere riscaldamento e luci accesi. Lo consiglio a tutti.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-it-4",
+      "author": "Francesca",
+      "date": "2025-05-12",
+      "rating": 4,
+      "title": "Buon generatore per il campeggio",
+      "content": "L'abbiamo portato in campeggio in Sardegna per due settimane. Ha alimentato il frigorifero portatile, le luci e i caricatori senza problemi. Il rumore è accettabile, soprattutto di sera quando si abbassa il carico. Soddisfatta dell'acquisto.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-it-5",
+      "author": "Alessandro",
+      "date": "2025-09-18",
+      "rating": 3,
+      "title": "Discreto, ma migliorabile",
+      "content": "Lo uso in cantiere per alimentare i miei attrezzi. Funziona bene ma a pieno carico è piuttosto rumoroso. La potenza è quella dichiarata e la qualità dei materiali sembra buona. Nel complesso fa il suo lavoro, ma mi aspettavo qualcosa in più sulla silenziosità.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-nl-1",
+      "author": "Jan",
+      "date": "2024-08-03",
+      "rating": 5,
+      "title": "Uitstekende generator voor de camping",
+      "content": "We hebben de MXR3500 meegenomen op vakantie naar Frankrijk en hij heeft drie weken lang perfect gefunctioneerd. Koelkast, verlichting en telefoonopladers draaiden er probleemloos op. Zuinig in verbruik en betrouwbaar. Aanrader!",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-nl-2",
+      "author": "Sanne",
+      "date": "2024-11-22",
+      "rating": 4,
+      "title": "Goede noodstroomvoorziening",
+      "content": "Gekocht als noodstroomvoorziening voor ons huis na de stormen van vorig jaar. Start makkelijk op en levert voldoende vermogen voor de basisbehoeften. Het gewicht is wel een aandachtspunt als je hem alleen moet verplaatsen. Verder zeer tevreden.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-nl-3",
+      "author": "Willem",
+      "date": "2025-03-28",
+      "rating": 5,
+      "title": "Perfect voor mijn foodtruck",
+      "content": "Ik gebruik de MXR3500 dagelijks in mijn foodtruck op festivals en evenementen. Hij draait mijn bakplaat, koeling en verlichting zonder problemen. Het brandstofverbruik is redelijk en hij start altijd meteen. Na een half jaar intensief gebruik nog steeds als nieuw.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-nl-4",
+      "author": "Fleur",
+      "date": "2025-07-09",
+      "rating": 4,
+      "title": "Fijne generator voor de camper",
+      "content": "Meegenomen op onze camperreis door Noorwegen. Werkt goed voor de airco en keukenapparatuur. Niet het stilste apparaat op vol vermogen, maar zeker acceptabel. De bouwkwaliteit voelt degelijk aan. Goede prijs-kwaliteitverhouding.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr3500-nl-5",
+      "author": "Bram",
+      "date": "2025-10-15",
+      "rating": 3,
+      "title": "Doet wat het moet doen",
+      "content": "Gebruik hem op de bouwplaats voor elektrisch gereedschap. Het vermogen is prima en hij draait stabiel. Wel wat luidruchtig bij zwaar gebruik. De startkabel voelde in het begin wat stug maar dat werd beter na een paar keer. Gewoon een degelijke generator, niets meer, niets minder.",
+      "lang": "nl",
+      "verified": true
+    }
+  ]
+}

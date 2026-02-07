@@ -1,0 +1,29 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+import { getAffiliateLink } from '../../config/affiliates';
+
+interface Props {
+  locale: Locale;
+  asin: string;
+  fullWidth?: boolean;
+  size?: 'default' | 'large';
+}
+
+const { locale, asin, fullWidth = false, size = 'default' } = Astro.props;
+
+const href = getAffiliateLink(locale, asin);
+const btnClass = size === 'large' ? 'btn-cta' : 'btn-cta-sm';
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="nofollow noopener sponsored"
+  class:list={[btnClass, fullWidth && 'w-full']}
+>
+  {t(locale, 'product.see_offer')}
+  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+  </svg>
+</a>

@@ -1,0 +1,90 @@
+{
+  "site": {
+    "name": "Maxpeedingrods",
+    "tagline": "Tragbare Stromerzeuger in Profiqualität"
+  },
+  "nav": {
+    "home": "Startseite",
+    "generators": "Stromerzeuger"
+  },
+  "product": {
+    "see_offer": "Zum Angebot",
+    "redirect_notice": "Preis und Verfügbarkeit bei unserem Partner prüfen",
+    "specifications": "Technische Daten",
+    "description": "Beschreibung",
+    "reviews": "Kundenbewertungen",
+    "similar_products": "Das könnte Ihnen auch gefallen",
+    "rated_power": "Nennleistung",
+    "max_power": "Maximalleistung",
+    "engine_type": "Motortyp",
+    "engine_displacement": "Hubraum",
+    "fuel_type": "Kraftstoff",
+    "fuel_tank": "Tankvolumen",
+    "runtime": "Laufzeit",
+    "noise_level": "Geräuschpegel",
+    "weight": "Gewicht",
+    "dimensions": "Abmessungen",
+    "outlets": "Anschlüsse",
+    "inverter": "Inverter-Technologie",
+    "electric_start": "Elektrostart",
+    "parallel_ready": "Parallelbetrieb möglich",
+    "yes": "Ja",
+    "no": "Nein",
+    "in_stock": "Auf Lager",
+    "category_badge": "Inverter-Stromerzeuger"
+  },
+  "reviews_section": {
+    "title": "Kundenbewertungen",
+    "write_review": "Bewertung schreiben",
+    "your_name": "Ihr Vorname",
+    "your_rating": "Ihre Bewertung",
+    "your_title": "Titel Ihrer Bewertung",
+    "your_review": "Ihre ausführliche Bewertung",
+    "submit": "Bewertung abschicken",
+    "based_on": "Basierend auf {count} Bewertungen",
+    "verified": "Verifizierter Kauf",
+    "moderation_notice": "Ihre Bewertung wird nach Prüfung veröffentlicht.",
+    "thank_you": "Vielen Dank für Ihre Bewertung!"
+  },
+  "home": {
+    "hero_title": "Maxpeedingrods Stromerzeuger",
+    "hero_subtitle": "Tragbare Leistung in Profiqualität. Entdecken Sie die besten Inverter-Stromerzeuger zum besten Preis.",
+    "hero_cta": "Stromerzeuger entdecken",
+    "featured_title": "Unsere beliebtesten Stromerzeuger",
+    "why_title": "Warum Maxpeedingrods?",
+    "why_quality": "Erstklassige Qualität",
+    "why_quality_desc": "Professionelle Komponenten, getestet unter anspruchsvollsten Bedingungen.",
+    "why_price": "Bestes Preis-Leistungs-Verhältnis",
+    "why_price_desc": "Hochleistung zu einem Bruchteil der Kosten führender Marken.",
+    "why_warranty": "Herstellergarantie",
+    "why_warranty_desc": "Schneller Kundenservice und volle Herstellergarantie auf alle Produkte.",
+    "why_shipping": "Schnelle Lieferung",
+    "why_shipping_desc": "Zügig versandt, Lieferung innerhalb von 24 bis 48 Stunden."
+  },
+  "category": {
+    "title": "Maxpeedingrods Stromerzeuger",
+    "intro": "Entdecken Sie das gesamte Sortiment tragbarer Maxpeedingrods-Stromerzeuger von 1200 W bis 5500 W.",
+    "meta_title": "Maxpeedingrods Stromerzeuger | Tragbare Inverter-Notstromaggregate",
+    "meta_description": "Das vollständige Sortiment an Maxpeedingrods-Stromerzeugern: von 1200 W bis 5500 W. Tragbare, leise und zuverlässige Inverter-Stromerzeuger zum besten Preis.",
+    "filter_power": "Leistung",
+    "filter_all": "Alle",
+    "filter_button": "Filtern",
+    "sort_by": "Sortieren nach",
+    "sort_power_asc": "Leistung aufsteigend",
+    "sort_power_desc": "Leistung absteigend",
+    "sort_popular": "Beliebtheit"
+  },
+  "footer": {
+    "about_title": "Über uns",
+    "about_text": "Maxpeedingrods.lu ist ein unabhängiges Vergleichsportal für tragbare Stromerzeuger. Wir helfen Ihnen, das richtige Produkt zum besten Preis zu finden.",
+    "legal": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "affiliate_disclaimer": "Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.",
+    "copyright": "© {year} maxpeedingrods.lu — Unabhängige Website, nicht verbunden mit Maxpeedingrods Inc."
+  },
+  "common": {
+    "back_to_home": "Zurück zur Startseite",
+    "page_not_found": "Seite nicht gefunden",
+    "page_not_found_text": "Die angeforderte Seite existiert nicht oder wurde verschoben."
+  }
+}

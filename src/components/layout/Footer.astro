@@ -1,0 +1,71 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+import { getHomeUrl, getCategoryUrl } from '../../utils/url';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ui-dark text-text-inverse">
+  <div class="container-main py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- About -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-brand-yellow font-heading font-bold text-xl">MXR</span>
+          <span class="font-heading font-semibold text-lg">Maxpeedingrods</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+          {t(locale, 'footer.about_text')}
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="font-heading font-semibold text-base mb-4">Navigation</h3>
+        <ul class="space-y-2.5">
+          <li>
+            <a href={getHomeUrl(locale)} class="text-gray-400 hover:text-brand-yellow text-sm transition-colors">
+              {t(locale, 'nav.home')}
+            </a>
+          </li>
+          <li>
+            <a href={getCategoryUrl(locale)} class="text-gray-400 hover:text-brand-yellow text-sm transition-colors">
+              {t(locale, 'nav.generators')}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="font-heading font-semibold text-base mb-4">{t(locale, 'footer.about_title')}</h3>
+        <ul class="space-y-2.5">
+          <li>
+            <span class="text-gray-400 text-sm">{t(locale, 'footer.legal')}</span>
+          </li>
+          <li>
+            <span class="text-gray-400 text-sm">{t(locale, 'footer.privacy')}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-ui-border-dark mt-10 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-text-muted text-xs text-center md:text-left">
+          {t(locale, 'footer.copyright').replace('{year}', String(year))}
+        </p>
+        <p class="text-text-muted text-[11px] text-center md:text-right max-w-md leading-relaxed">
+          {t(locale, 'footer.affiliate_disclaimer')}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

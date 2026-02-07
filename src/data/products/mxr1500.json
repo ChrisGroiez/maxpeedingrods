@@ -1,0 +1,44 @@
+{
+  "id": "mxr1500",
+  "model": "MXR1500",
+  "brand": "Maxpeedingrods",
+  "category": "generators",
+  "slug": "mxr1500",
+  "wattage": 1500,
+  "images": [
+    "/images/products/mxr1500/main.svg",
+    "/images/products/mxr1500/side.svg",
+    "/images/products/mxr1500/detail.svg"
+  ],
+  "specs": {
+    "rated_power_w": 1200,
+    "max_power_w": 1500,
+    "engine_type": "4-stroke OHV",
+    "engine_displacement_cc": 79,
+    "fuel_type": "Gasoline",
+    "fuel_tank_l": 1.2,
+    "runtime_hours": 6,
+    "noise_level_db": 52,
+    "weight_kg": 13,
+    "dimensions_cm": "45x25x38",
+    "outlets": [
+      "1x 230V AC",
+      "1x 12V DC",
+      "1x USB-A",
+      "1x USB-C"
+    ],
+    "inverter": true,
+    "electric_start": false,
+    "parallel_ready": true
+  },
+  "asins": {
+    "fr": "B0CRFV81YN",
+    "en": "B0CRFV72MK",
+    "de": "B0CRFV93QL",
+    "es": "B0CRFV64DP",
+    "it": "B0CRFV57HT",
+    "nl": "B0CRFV48JS"
+  },
+  "rating": 4.3,
+  "reviewCount": 87
+}

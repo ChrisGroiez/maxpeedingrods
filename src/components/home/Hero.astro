@@ -1,0 +1,40 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+import { getCategoryUrl } from '../../utils/url';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class="relative bg-ui-dark overflow-hidden">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 50%, #F5A623 0%, transparent 50%), radial-gradient(circle at 75% 50%, #F5A623 0%, transparent 50%);"></div>
+  </div>
+
+  <div class="container-main relative z-10 py-16 md:py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-inverse leading-tight">
+        {t(locale, 'home.hero_title')}
+      </h1>
+      <p class="mt-4 md:mt-6 text-base md:text-lg text-white/80 font-body leading-relaxed max-w-2xl mx-auto">
+        {t(locale, 'home.hero_subtitle')}
+      </p>
+      <div class="mt-8 md:mt-10">
+        <a href={getCategoryUrl(locale)} class="btn-cta text-base md:text-lg">
+          {t(locale, 'home.hero_cta')}
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom accent line -->
+  <div class="h-1 bg-gradient-to-r from-brand-yellow/0 via-brand-yellow to-brand-yellow/0"></div>
+</section>

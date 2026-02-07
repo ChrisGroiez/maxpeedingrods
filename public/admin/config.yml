@@ -1,0 +1,145 @@
+backend:
+  name: github
+  repo: "ChrisGroiez/maxpeedingrods.lu"
+  branch: main
+  base_url: https://maxpeedingrods.lu
+
+media_folder: "public/images"
+public_folder: "/images"
+
+publish_mode: editorial_workflow
+
+locale: "fr"
+
+collections:
+  - name: "products"
+    label: "Produits"
+    label_singular: "Produit"
+    folder: "src/data/products"
+    format: "json"
+    create: true
+    delete: true
+    slug: "{{id}}"
+    identifier_field: "id"
+    summary: "{{model}} — {{wattage}}W"
+    fields:
+      - { label: "ID (slug)", name: "id", widget: "string", hint: "Ex: mxr3500" }
+      - { label: "Modèle", name: "model", widget: "string", hint: "Ex: MXR3500" }
+      - { label: "Marque", name: "brand", widget: "hidden", default: "Maxpeedingrods" }
+      - { label: "Catégorie", name: "category", widget: "hidden", default: "generators" }
+      - { label: "Slug URL", name: "slug", widget: "string" }
+      - { label: "Puissance (W)", name: "wattage", widget: "number", value_type: "int" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+      - label: "Spécifications techniques"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Puissance nominale (W)", name: "rated_power_w", widget: "number", value_type: "int" }
+          - { label: "Puissance max (W)", name: "max_power_w", widget: "number", value_type: "int" }
+          - { label: "Type moteur", name: "engine_type", widget: "string" }
+          - { label: "Cylindrée (cc)", name: "engine_displacement_cc", widget: "number", value_type: "int" }
+          - { label: "Carburant", name: "fuel_type", widget: "string" }
+          - { label: "Réservoir (L)", name: "fuel_tank_l", widget: "number", value_type: "float" }
+          - { label: "Autonomie (h)", name: "runtime_hours", widget: "number", value_type: "float" }
+          - { label: "Niveau sonore (dB)", name: "noise_level_db", widget: "number", value_type: "int" }
+          - { label: "Poids (kg)", name: "weight_kg", widget: "number", value_type: "float" }
+          - { label: "Dimensions (cm)", name: "dimensions_cm", widget: "string" }
+          - label: "Prises de sortie"
+            name: "outlets"
+            widget: "list"
+            field: { label: "Prise", name: "outlet", widget: "string" }
+          - { label: "Inverter", name: "inverter", widget: "boolean" }
+          - { label: "Démarrage électrique", name: "electric_start", widget: "boolean" }
+          - { label: "Compatible parallèle", name: "parallel_ready", widget: "boolean" }
+      - label: "ASINs par pays"
+        name: "asins"
+        widget: "object"
+        fields:
+          - { label: "France (ASIN)", name: "fr", widget: "string", required: false }
+          - { label: "UK (ASIN)", name: "en", widget: "string", required: false }
+          - { label: "Allemagne (ASIN)", name: "de", widget: "string", required: false }
+          - { label: "Espagne (ASIN)", name: "es", widget: "string", required: false }
+          - { label: "Italie (ASIN)", name: "it", widget: "string", required: false }
+          - { label: "Pays-Bas (ASIN)", name: "nl", widget: "string", required: false }
+      - { label: "Note moyenne", name: "rating", widget: "number", value_type: "float", min: 0, max: 5, step: 0.1 }
+      - { label: "Nombre d'avis", name: "reviewCount", widget: "number", value_type: "int" }
+
+  - name: "reviews"
+    label: "Avis clients"
+    label_singular: "Fichier d'avis"
+    folder: "src/data/reviews"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "slug"
+    summary: "Avis — {{slug}}"
+    fields:
+      - { label: "Produit (slug)", name: "slug", widget: "string", hint: "Ex: mxr3500" }
+      - label: "Liste des avis"
+        name: "reviews"
+        widget: "list"
+        summary: "{{fields.author}} — {{fields.rating}}★ ({{fields.lang}})"
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Auteur", name: "author", widget: "string" }
+          - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+          - { label: "Note", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Contenu", name: "content", widget: "text" }
+          - { label: "Langue", name: "lang", widget: "select", options: ["fr", "en", "de", "es", "it", "nl"] }
+          - { label: "Achat vérifié", name: "verified", widget: "boolean", default: true }
+
+  - name: "translations"
+    label: "Traductions"
+    label_singular: "Langue"
+    files:
+      - label: "Français"
+        name: "fr"
+        file: "src/i18n/fr.json"
+        fields:
+          - { label: "Contenu JSON", name: "body", widget: "code", default_language: "json" }
+      - label: "English"
+        name: "en"
+        file: "src/i18n/en.json"
+        fields:
+          - { label: "Contenu JSON", name: "body", widget: "code", default_language: "json" }
+      - label: "Deutsch"
+        name: "de"
+        file: "src/i18n/de.json"
+        fields:
+          - { label: "Contenu JSON", name: "body", widget: "code", default_language: "json" }
+      - label: "Español"
+        name: "es"
+        file: "src/i18n/es.json"
+        fields:
+          - { label: "Contenu JSON", name: "body", widget: "code", default_language: "json" }
+      - label: "Italiano"
+        name: "it"
+        file: "src/i18n/it.json"
+        fields:
+          - { label: "Contenu JSON", name: "body", widget: "code", default_language: "json" }
+      - label: "Nederlands"
+        name: "nl"
+        file: "src/i18n/nl.json"
+        fields:
+          - { label: "Contenu JSON", name: "body", widget: "code", default_language: "json" }
+
+  - name: "config"
+    label: "Configuration"
+    files:
+      - label: "Liens d'affiliation"
+        name: "affiliates"
+        file: "src/config/affiliates.json"
+        fields:
+          - label: "Pays"
+            name: "countries"
+            widget: "list"
+            summary: "{{fields.locale}} — {{fields.domain}}"
+            fields:
+              - { label: "Code locale", name: "locale", widget: "select", options: ["fr", "en", "de", "es", "it", "nl"] }
+              - { label: "Tag affiliation", name: "tag", widget: "string" }
+              - { label: "Domaine", name: "domain", widget: "string" }
+              - { label: "URL de base", name: "baseUrl", widget: "string" }

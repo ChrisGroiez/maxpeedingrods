@@ -1,0 +1,133 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  powerRanges: Array<{ label: string; min: number; max: number }>;
+}
+
+const { locale, powerRanges } = Astro.props;
+---
+
+<aside id="filter-sidebar" class="hidden lg:block w-64 shrink-0">
+  <div class="bg-white rounded-xl border border-ui-border p-5 sticky top-24">
+    <h3 class="font-heading font-semibold text-text-primary text-base mb-4">
+      {t(locale, 'category.filter_power')}
+    </h3>
+    <div class="space-y-2">
+      <button
+        type="button"
+        class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm font-medium bg-brand-yellow/10 text-brand-yellow transition-colors"
+        data-min="0"
+        data-max="99999"
+      >
+        {t(locale, 'category.filter_all')}
+      </button>
+      {powerRanges.map(range => (
+        <button
+          type="button"
+          class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-gray-50 transition-colors"
+          data-min={range.min}
+          data-max={range.max}
+        >
+          {range.label}
+        </button>
+      ))}
+    </div>
+  </div>
+</aside>
+
+<!-- Mobile filter button + drawer -->
+<div class="lg:hidden mb-4">
+  <button
+    type="button"
+    id="mobile-filter-btn"
+    class="flex items-center gap-2 px-4 py-2.5 bg-white rounded-lg border border-ui-border text-sm font-medium text-text-primary hover:border-brand-yellow transition-colors"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+    </svg>
+    {t(locale, 'category.filter_button')}
+  </button>
+</div>
+
+<div
+  id="mobile-filter-drawer"
+  class="fixed inset-0 z-50 hidden lg:hidden"
+>
+  <div class="absolute inset-0 bg-black/40" id="filter-overlay"></div>
+  <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 max-h-[70vh] overflow-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="font-heading font-semibold text-lg">{t(locale, 'category.filter_power')}</h3>
+      <button type="button" id="close-filter" class="p-2 text-text-muted hover:text-text-primary">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="space-y-2">
+      <button
+        type="button"
+        class="filter-btn w-full text-left px-4 py-3 rounded-lg text-sm font-medium bg-brand-yellow/10 text-brand-yellow"
+        data-min="0"
+        data-max="99999"
+      >
+        {t(locale, 'category.filter_all')}
+      </button>
+      {powerRanges.map(range => (
+        <button
+          type="button"
+          class="filter-btn w-full text-left px-4 py-3 rounded-lg text-sm text-text-secondary hover:bg-gray-50"
+          data-min={range.min}
+          data-max={range.max}
+        >
+          {range.label}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mobile drawer
+  const mobileBtn = document.getElementById('mobile-filter-btn');
+  const drawer = document.getElementById('mobile-filter-drawer');
+  const overlay = document.getElementById('filter-overlay');
+  const closeBtn = document.getElementById('close-filter');
+
+  function openDrawer() { drawer?.classList.remove('hidden'); }
+  function closeDrawer() { drawer?.classList.add('hidden'); }
+
+  mobileBtn?.addEventListener('click', openDrawer);
+  overlay?.addEventListener('click', closeDrawer);
+  closeBtn?.addEventListener('click', closeDrawer);
+
+  // Filter logic
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const productCards = document.querySelectorAll('[data-wattage]');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const min = Number((btn as HTMLElement).dataset.min);
+      const max = Number((btn as HTMLElement).dataset.max);
+
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-brand-yellow/10', 'text-brand-yellow', 'font-medium');
+        b.classList.add('text-text-secondary');
+      });
+      // Update both sidebar and mobile buttons with same data-min/max
+      document.querySelectorAll(`.filter-btn[data-min="${min}"][data-max="${max}"]`).forEach(b => {
+        b.classList.add('bg-brand-yellow/10', 'text-brand-yellow', 'font-medium');
+        b.classList.remove('text-text-secondary');
+      });
+
+      productCards.forEach(card => {
+        const w = Number((card as HTMLElement).dataset.wattage);
+        (card as HTMLElement).style.display = (w >= min && w <= max) ? '' : 'none';
+      });
+
+      closeDrawer();
+    });
+  });
+</script>

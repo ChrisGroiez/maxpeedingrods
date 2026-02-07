@@ -1,0 +1,26 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+import ReviewStars from '../product/ReviewStars.astro';
+
+interface Props {
+  rating: number;
+  count: number;
+  locale: Locale;
+}
+
+const { rating, count, locale } = Astro.props;
+---
+
+<div class="flex items-center gap-4 p-5 bg-white rounded-xl border border-ui-border">
+  <div class="text-center">
+    <span class="block text-3xl font-heading font-bold text-text-primary">{rating.toFixed(1)}</span>
+    <span class="text-xs text-text-muted">/5</span>
+  </div>
+  <div>
+    <ReviewStars rating={rating} showCount={false} size="lg" />
+    <p class="text-sm text-text-secondary mt-1">
+      {t(locale, 'reviews_section.based_on').replace('{count}', String(count))}
+    </p>
+  </div>
+</div>

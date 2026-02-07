@@ -1,0 +1,87 @@
+---
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<div class="relative" id="sort-wrapper">
+  <button
+    type="button"
+    id="sort-btn"
+    class="flex items-center gap-2 px-4 py-2.5 bg-white rounded-lg border border-ui-border text-sm text-text-primary hover:border-brand-yellow transition-colors"
+  >
+    <span id="sort-label">{t(locale, 'category.sort_by')}: {t(locale, 'category.sort_popular')}</span>
+    <svg class="w-4 h-4 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <div
+    id="sort-dropdown"
+    class="hidden absolute right-0 top-full mt-1 bg-white rounded-lg shadow-xl border border-gray-100 py-1 min-w-[220px] z-20"
+  >
+    <button type="button" class="sort-option w-full text-left px-4 py-2.5 text-sm text-text-primary hover:bg-gray-50 font-medium" data-sort="popular">
+      {t(locale, 'category.sort_popular')}
+    </button>
+    <button type="button" class="sort-option w-full text-left px-4 py-2.5 text-sm text-text-secondary hover:bg-gray-50" data-sort="power-asc">
+      {t(locale, 'category.sort_power_asc')}
+    </button>
+    <button type="button" class="sort-option w-full text-left px-4 py-2.5 text-sm text-text-secondary hover:bg-gray-50" data-sort="power-desc">
+      {t(locale, 'category.sort_power_desc')}
+    </button>
+  </div>
+</div>
+
+<script>
+  const sortBtn = document.getElementById('sort-btn');
+  const sortDropdown = document.getElementById('sort-dropdown');
+  const sortLabel = document.getElementById('sort-label');
+  const sortOptions = document.querySelectorAll('.sort-option');
+  const grid = document.getElementById('product-grid');
+
+  sortBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    sortDropdown?.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', () => sortDropdown?.classList.add('hidden'));
+
+  sortOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      const sort = (opt as HTMLElement).dataset.sort;
+      sortOptions.forEach(o => {
+        o.classList.remove('font-medium', 'text-text-primary');
+        o.classList.add('text-text-secondary');
+      });
+      opt.classList.add('font-medium', 'text-text-primary');
+      opt.classList.remove('text-text-secondary');
+
+      if (sortLabel) {
+        const labelPrefix = sortLabel.textContent?.split(':')[0];
+        sortLabel.textContent = `${labelPrefix}: ${opt.textContent?.trim()}`;
+      }
+
+      if (grid) {
+        const cards = Array.from(grid.children) as HTMLElement[];
+        cards.sort((a, b) => {
+          const wA = Number(a.dataset.wattage);
+          const wB = Number(b.dataset.wattage);
+          const rA = Number(a.dataset.reviews);
+          const rB = Number(b.dataset.reviews);
+
+          if (sort === 'power-asc') return wA - wB;
+          if (sort === 'power-desc') return wB - wA;
+          return rB - rA; // popular
+        });
+        cards.forEach(card => grid.appendChild(card));
+      }
+
+      sortDropdown?.classList.add('hidden');
+    });
+  });
+</script>

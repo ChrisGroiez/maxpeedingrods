@@ -1,0 +1,10 @@
+{
+  "countries": [
+    { "locale": "fr", "tag": "MONTAG-FR-21", "domain": "amazon.fr", "baseUrl": "https://www.amazon.fr" },
+    { "locale": "en", "tag": "MONTAG-UK-21", "domain": "amazon.co.uk", "baseUrl": "https://www.amazon.co.uk" },
+    { "locale": "de", "tag": "MONTAG-DE-21", "domain": "amazon.de", "baseUrl": "https://www.amazon.de" },
+    { "locale": "es", "tag": "MONTAG-ES-21", "domain": "amazon.es", "baseUrl": "https://www.amazon.es" },
+    { "locale": "it", "tag": "MONTAG-IT-21", "domain": "amazon.it", "baseUrl": "https://www.amazon.it" },
+    { "locale": "nl", "tag": "MONTAG-NL-21", "domain": "amazon.nl", "baseUrl": "https://www.amazon.nl" }
+  ]
+}

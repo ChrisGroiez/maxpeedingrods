@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/layout/Breadcrumb.astro';
+import ProductCard from '../../../components/product/ProductCard.astro';
+import FilterSidebar from '../../../components/category/FilterSidebar.astro';
+import SortDropdown from '../../../components/category/SortDropdown.astro';
+import { locales, type Locale, t } from '../../../i18n/utils';
+import { getAllProducts } from '../../../utils/products';
+import { categorySEO } from '../../../config/seo';
+import { getHomeUrl, getCategoryUrl } from '../../../utils/url';
+
+export function getStaticPaths() {
+  return locales.map(lang => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const locale = lang as Locale;
+const seo = categorySEO[locale];
+const products = getAllProducts();
+
+const breadcrumbs = [
+  { label: t(locale, 'nav.home'), href: getHomeUrl(locale) },
+  { label: t(locale, 'nav.generators') },
+];
+
+const powerRanges = [
+  { label: '1000W - 2000W', min: 1000, max: 2000 },
+  { label: '2000W - 3500W', min: 2000, max: 3500 },
+  { label: '3500W - 5000W', min: 3500, max: 5000 },
+  { label: '5000W+', min: 5000, max: 99999 },
+];
+
+const seoTexts: Record<string, string> = {
+  fr: "Les groupes électrogènes Maxpeedingrods combinent technologie inverter de pointe et robustesse industrielle. Du petit générateur de camping MXR1500 au puissant MXR5500 capable d'alimenter une maison entière, chaque modèle est conçu pour offrir une alimentation électrique stable et silencieuse. Les moteurs 4 temps OHV garantissent une longue durée de vie et une consommation optimisée, tandis que la technologie inverter protège vos appareils électroniques sensibles. Que ce soit pour le camping, le bricolage, les situations d'urgence ou une utilisation professionnelle sur chantier, Maxpeedingrods propose le générateur adapté à chaque besoin et chaque budget.",
+  en: "Maxpeedingrods generators combine cutting-edge inverter technology with industrial-grade durability. From the compact MXR1500 camping generator to the powerful MXR5500 capable of powering an entire house, each model is designed to deliver stable, quiet electrical power. The 4-stroke OHV engines ensure long service life and optimised fuel consumption, while inverter technology protects your sensitive electronics. Whether for camping, DIY, emergency backup, or professional job site use, Maxpeedingrods offers the right generator for every need and budget.",
+  de: "Maxpeedingrods Stromerzeuger vereinen modernste Inverter-Technologie mit industrieller Robustheit. Vom kompakten Camping-Generator MXR1500 bis zum leistungsstarken MXR5500, der ein ganzes Haus versorgen kann — jedes Modell liefert stabile und leise Stromversorgung. Die 4-Takt-OHV-Motoren garantieren lange Lebensdauer und optimierten Verbrauch, während die Inverter-Technologie empfindliche Elektronik schützt. Ob für Camping, Heimwerken, Notfälle oder professionellen Einsatz — Maxpeedingrods bietet den passenden Generator für jeden Bedarf.",
+  es: "Los generadores Maxpeedingrods combinan tecnología inverter de vanguardia con durabilidad de grado industrial. Desde el compacto MXR1500 para camping hasta el potente MXR5500 capaz de alimentar una casa entera, cada modelo está diseñado para ofrecer energía eléctrica estable y silenciosa. Los motores de 4 tiempos OHV garantizan larga vida útil y consumo optimizado, mientras la tecnología inverter protege tus dispositivos electrónicos sensibles. Para camping, bricolaje, emergencias o uso profesional en obra, Maxpeedingrods ofrece el generador adecuado para cada necesidad.",
+  it: "I generatori Maxpeedingrods combinano tecnologia inverter all'avanguardia con robustezza industriale. Dal compatto MXR1500 per il campeggio al potente MXR5500 in grado di alimentare un'intera casa, ogni modello è progettato per fornire energia elettrica stabile e silenziosa. I motori 4 tempi OHV garantiscono lunga durata e consumi ottimizzati, mentre la tecnologia inverter protegge i dispositivi elettronici sensibili. Per campeggio, fai-da-te, emergenze o uso professionale in cantiere, Maxpeedingrods offre il generatore giusto per ogni esigenza.",
+  nl: "Maxpeedingrods generatoren combineren geavanceerde inverter-technologie met industriële duurzaamheid. Van de compacte MXR1500 camping generator tot de krachtige MXR5500 die een heel huis van stroom kan voorzien — elk model is ontworpen voor stabiele, stille stroomvoorziening. De 4-takt OHV-motoren garanderen een lange levensduur en geoptimaliseerd verbruik, terwijl de inverter-technologie uw gevoelige elektronica beschermt. Of het nu gaat om kamperen, klussen, noodstroom of professioneel gebruik op de bouwplaats — Maxpeedingrods biedt de juiste generator voor elke behoefte.",
+};
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  locale={locale}
+  canonicalPath={getCategoryUrl(locale)}
+>
+  <Breadcrumb items={breadcrumbs} locale={locale} />
+
+  <section class="container-main pb-12 md:pb-16">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-primary">
+        {t(locale, 'category.title')}
+      </h1>
+      <p class="text-text-secondary mt-2 text-base max-w-2xl">
+        {t(locale, 'category.intro')}
+      </p>
+    </div>
+
+    <!-- Toolbar: Sort -->
+    <div class="flex items-center justify-between mb-6">
+      <FilterSidebar locale={locale} powerRanges={powerRanges} />
+      <div class="ml-auto">
+        <SortDropdown locale={locale} />
+      </div>
+    </div>
+
+    <div class="flex gap-8">
+      <!-- Sidebar (desktop, injected by FilterSidebar script) -->
+      <div id="filter-sidebar-slot"></div>
+
+      <!-- Product Grid -->
+      <div class="flex-1">
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map(product => (
+            <div data-wattage={product.specs.rated_power_w} data-reviews={product.reviewCount}>
+              <ProductCard product={product} locale={locale} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Text -->
+    <div class="mt-12 pt-8 border-t border-ui-border">
+      <p class="text-text-secondary text-sm leading-relaxed max-w-4xl">
+        {seoTexts[locale] || seoTexts.fr}
+      </p>
+    </div>
+  </section>
+</BaseLayout>

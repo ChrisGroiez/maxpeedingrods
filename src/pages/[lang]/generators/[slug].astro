@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/layout/Breadcrumb.astro';
+import ProductGallery from '../../../components/product/ProductGallery.astro';
+import ProductSpecs from '../../../components/product/ProductSpecs.astro';
+import AffiliateButton from '../../../components/product/AffiliateButton.astro';
+import ReviewStars from '../../../components/product/ReviewStars.astro';
+import StickyMobileCTA from '../../../components/product/StickyMobileCTA.astro';
+import ReviewSummary from '../../../components/reviews/ReviewSummary.astro';
+import ReviewList from '../../../components/reviews/ReviewList.astro';
+import ReviewForm from '../../../components/reviews/ReviewForm.astro';
+import ProductCard from '../../../components/product/ProductCard.astro';
+import StructuredData from '../../../components/seo/StructuredData.astro';
+import { locales, type Locale, t } from '../../../i18n/utils';
+import { getAllProducts, getProductBySlug, getSimilarProducts, getProductAsin } from '../../../utils/products';
+import { getHomeUrl, getCategoryUrl, getProductUrl } from '../../../utils/url';
+import { siteConfig } from '../../../config/site';
+
+export function getStaticPaths() {
+  const products = getAllProducts();
+  const paths = [];
+  for (const lang of locales) {
+    for (const product of products) {
+      paths.push({ params: { lang, slug: product.slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.params;
+const locale = lang as Locale;
+const product = getProductBySlug(slug!);
+
+if (!product) {
+  return Astro.redirect(`/${locale}/generators/`);
+}
+
+const asin = getProductAsin(product, locale);
+const similar = getSimilarProducts(product.slug, 3);
+
+// Load reviews
+let reviews: any[] = [];
+try {
+  const reviewModules = import.meta.glob('../../../data/reviews/*.json', { eager: true });
+  const reviewFile = reviewModules[`../../../data/reviews/${product.slug}.json`] as any;
+  if (reviewFile?.reviews) {
+    reviews = reviewFile.reviews;
+  } else if (reviewFile?.default?.reviews) {
+    reviews = reviewFile.default.reviews;
+  }
+} catch (e) {
+  // No reviews file
+}
+
+const breadcrumbs = [
+  { label: t(locale, 'nav.home'), href: getHomeUrl(locale) },
+  { label: t(locale, 'nav.generators'), href: getCategoryUrl(locale) },
+  { label: `${product.brand} ${product.model}` },
+];
+
+const pageTitle = `${product.brand} ${product.model} — ${product.specs.inverter ? t(locale, 'product.category_badge') : 'Générateur'} ${product.specs.rated_power_w}W | ${siteConfig.name}`;
+const pageDesc = `${product.brand} ${product.model}: ${product.specs.rated_power_w}W, ${product.specs.noise_level_db} dB, ${product.specs.weight_kg} kg. ${product.specs.inverter ? 'Inverter' : ''} ${product.specs.runtime_hours}h ${t(locale, 'product.runtime').toLowerCase()}.`;
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: `${product.brand} ${product.model} - ${product.specs.inverter ? 'Inverter Generator' : 'Generator'} ${product.specs.rated_power_w}W`,
+  brand: { '@type': 'Brand', name: product.brand },
+  image: product.images.map(img => `${siteConfig.url}${img}`),
+  description: pageDesc,
+  sku: product.model,
+  mpn: product.model,
+  offers: {
+    '@type': 'Offer',
+    url: `${siteConfig.url}${getProductUrl(product.slug, locale)}`,
+    availability: 'https://schema.org/InStock',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: String(product.rating),
+    bestRating: '5',
+    reviewCount: String(product.reviewCount),
+  },
+};
+
+const descTexts: Record<string, Record<string, string>> = {
+  mxr1500: {
+    fr: "Le Maxpeedingrods MXR1500 est le compagnon idéal pour vos aventures en plein air. Ultra-compact et léger, ce générateur inverter de 1200W se transporte facilement partout. Sa technologie inverter produit un courant stable et propre, adapté aux appareils électroniques sensibles comme les smartphones, ordinateurs portables et équipements photo. Avec un niveau sonore de seulement 52 dB, il est l'un des générateurs les plus silencieux du marché — à peine plus fort qu'une conversation normale.",
+    en: "The Maxpeedingrods MXR1500 is the perfect companion for your outdoor adventures. Ultra-compact and lightweight, this 1200W inverter generator is easy to carry anywhere. Its inverter technology produces stable, clean power suitable for sensitive electronics like smartphones, laptops, and camera equipment. With a noise level of just 52 dB, it's one of the quietest generators available — barely louder than a normal conversation.",
+    de: "Der Maxpeedingrods MXR1500 ist der ideale Begleiter für Ihre Outdoor-Abenteuer. Ultrakompakt und leicht lässt sich dieser 1200W Inverter-Stromerzeuger problemlos überallhin mitnehmen. Seine Inverter-Technologie erzeugt stabilen, sauberen Strom, der für empfindliche Elektronik wie Smartphones, Laptops und Kameraausrüstung geeignet ist. Mit nur 52 dB Geräuschpegel gehört er zu den leisesten Stromerzeugern auf dem Markt.",
+    es: "El Maxpeedingrods MXR1500 es el compañero perfecto para tus aventuras al aire libre. Ultracompacto y ligero, este generador inverter de 1200W se transporta fácilmente a cualquier lugar. Su tecnología inverter produce corriente estable y limpia, adecuada para dispositivos electrónicos sensibles como smartphones, portátiles y equipos fotográficos. Con un nivel de ruido de solo 52 dB, es uno de los generadores más silenciosos del mercado.",
+    it: "Il Maxpeedingrods MXR1500 è il compagno ideale per le tue avventure all'aperto. Ultracompatto e leggero, questo generatore inverter da 1200W si trasporta facilmente ovunque. La tecnologia inverter produce corrente stabile e pulita, adatta a dispositivi elettronici sensibili come smartphone, laptop e attrezzature fotografiche. Con un livello di rumore di soli 52 dB, è uno dei generatori più silenziosi sul mercato.",
+    nl: "De Maxpeedingrods MXR1500 is de perfecte metgezel voor uw buitenactiviteiten. Ultra-compact en lichtgewicht, deze 1200W inverter generator is overal makkelijk mee te nemen. De inverter-technologie produceert stabiele, schone stroom die geschikt is voor gevoelige elektronica zoals smartphones, laptops en camera-apparatuur. Met een geluidsniveau van slechts 52 dB is het een van de stilste generatoren op de markt.",
+  },
+  mxr3500: {
+    fr: "Le Maxpeedingrods MXR3500 offre l'équilibre parfait entre puissance et portabilité. Avec 3300W de puissance nominale, ce générateur inverter peut alimenter la plupart des appareils ménagers essentiels : réfrigérateur, micro-ondes, climatiseur portable et bien plus. Son moteur 4 temps de 212cc est à la fois puissant et économe en carburant, offrant jusqu'à 8,5 heures d'autonomie. La technologie inverter garantit un courant propre pour vos appareils sensibles.",
+    en: "The Maxpeedingrods MXR3500 offers the perfect balance between power and portability. With 3300W rated power, this inverter generator can run most essential household appliances: fridge, microwave, portable air conditioner, and more. Its 212cc 4-stroke engine is both powerful and fuel-efficient, providing up to 8.5 hours of runtime. Inverter technology ensures clean power for your sensitive devices.",
+    de: "Der Maxpeedingrods MXR3500 bietet die perfekte Balance zwischen Leistung und Tragbarkeit. Mit 3300W Nennleistung kann dieser Inverter-Stromerzeuger die meisten wichtigen Haushaltsgeräte betreiben: Kühlschrank, Mikrowelle, tragbare Klimaanlage und mehr. Sein 212cc 4-Takt-Motor ist leistungsstark und sparsam zugleich und bietet bis zu 8,5 Stunden Laufzeit.",
+    es: "El Maxpeedingrods MXR3500 ofrece el equilibrio perfecto entre potencia y portabilidad. Con 3300W de potencia nominal, este generador inverter puede alimentar la mayoría de electrodomésticos esenciales: frigorífico, microondas, aire acondicionado portátil y más. Su motor de 4 tiempos de 212cc es potente y eficiente, ofreciendo hasta 8,5 horas de autonomía.",
+    it: "Il Maxpeedingrods MXR3500 offre il perfetto equilibrio tra potenza e trasportabilità. Con 3300W di potenza nominale, questo generatore inverter può alimentare la maggior parte degli elettrodomestici essenziali: frigorifero, microonde, condizionatore portatile e altro. Il motore 4 tempi da 212cc è potente ed efficiente, offrendo fino a 8,5 ore di autonomia.",
+    nl: "De Maxpeedingrods MXR3500 biedt de perfecte balans tussen vermogen en draagbaarheid. Met 3300W nominaal vermogen kan deze inverter generator de meeste essentiële huishoudelijke apparaten voeden: koelkast, magnetron, draagbare airco en meer. De 212cc 4-takt motor is krachtig en zuinig, met tot 8,5 uur looptijd.",
+  },
+};
+
+const defaultDesc: Record<string, string> = {
+  fr: `Le ${product.brand} ${product.model} est un générateur ${product.specs.inverter ? 'inverter ' : ''}de ${product.specs.rated_power_w}W conçu pour offrir une alimentation fiable et performante. Équipé d'un moteur ${product.specs.engine_type} de ${product.specs.engine_displacement_cc}cc, il offre jusqu'à ${product.specs.runtime_hours} heures d'autonomie avec un réservoir de ${product.specs.fuel_tank_l}L. Son niveau sonore de ${product.specs.noise_level_db} dB en fait une solution adaptée aussi bien au camping qu'à l'utilisation domestique ou professionnelle.`,
+  en: `The ${product.brand} ${product.model} is a ${product.specs.rated_power_w}W ${product.specs.inverter ? 'inverter ' : ''}generator designed for reliable, high-performance power delivery. Equipped with a ${product.specs.engine_displacement_cc}cc ${product.specs.engine_type} engine, it provides up to ${product.specs.runtime_hours} hours of runtime from a ${product.specs.fuel_tank_l}L fuel tank. At ${product.specs.noise_level_db} dB, it's suitable for camping, home backup, and professional use.`,
+  de: `Der ${product.brand} ${product.model} ist ein ${product.specs.rated_power_w}W ${product.specs.inverter ? 'Inverter-' : ''}Stromerzeuger für zuverlässige, leistungsstarke Stromversorgung. Mit einem ${product.specs.engine_displacement_cc}cc ${product.specs.engine_type} Motor bietet er bis zu ${product.specs.runtime_hours} Stunden Laufzeit bei einem ${product.specs.fuel_tank_l}L Tank. Mit ${product.specs.noise_level_db} dB eignet er sich für Camping, Zuhause und professionellen Einsatz.`,
+  es: `El ${product.brand} ${product.model} es un generador ${product.specs.inverter ? 'inverter ' : ''}de ${product.specs.rated_power_w}W diseñado para ofrecer energía fiable y de alto rendimiento. Equipado con un motor ${product.specs.engine_type} de ${product.specs.engine_displacement_cc}cc, ofrece hasta ${product.specs.runtime_hours} horas de autonomía. Con ${product.specs.noise_level_db} dB, es ideal para camping, hogar y uso profesional.`,
+  it: `Il ${product.brand} ${product.model} è un generatore ${product.specs.inverter ? 'inverter ' : ''}da ${product.specs.rated_power_w}W progettato per fornire energia affidabile e ad alte prestazioni. Dotato di un motore ${product.specs.engine_type} da ${product.specs.engine_displacement_cc}cc, offre fino a ${product.specs.runtime_hours} ore di autonomia. Con ${product.specs.noise_level_db} dB, è adatto per campeggio, casa e uso professionale.`,
+  nl: `De ${product.brand} ${product.model} is een ${product.specs.rated_power_w}W ${product.specs.inverter ? 'inverter ' : ''}generator ontworpen voor betrouwbare, krachtige stroomvoorziening. Uitgerust met een ${product.specs.engine_displacement_cc}cc ${product.specs.engine_type} motor biedt hij tot ${product.specs.runtime_hours} uur looptijd. Met ${product.specs.noise_level_db} dB is hij geschikt voor kamperen, thuisgebruik en professioneel gebruik.`,
+};
+
+const description = descTexts[product.slug]?.[locale] || defaultDesc[locale] || defaultDesc.fr;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDesc}
+  locale={locale}
+  canonicalPath={getProductUrl(product.slug, locale)}
+  ogType="product"
+>
+  <StructuredData data={productSchema} />
+  <Breadcrumb items={breadcrumbs} locale={locale} />
+
+  <article class="container-main pb-12 md:pb-16">
+    <!-- Product Main Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+      <!-- Gallery (60%) -->
+      <div class="lg:col-span-3">
+        <ProductGallery images={product.images} productName={`${product.brand} ${product.model}`} />
+      </div>
+
+      <!-- Product Info / CTA (40%) -->
+      <div class="lg:col-span-2">
+        <div class="lg:sticky lg:top-24">
+          <!-- Category badge -->
+          <span class="inline-block px-3 py-1 text-xs font-medium bg-brand-yellow/10 text-brand-yellow rounded-full mb-3">
+            {product.specs.inverter ? t(locale, 'product.category_badge') : 'Générateur'}
+          </span>
+
+          <!-- Title -->
+          <h1 class="font-heading font-bold text-2xl md:text-3xl lg:text-[32px] text-text-primary leading-tight">
+            {product.brand} {product.model}
+            <span class="block text-xl md:text-2xl font-semibold text-text-secondary mt-1">
+              {product.specs.inverter ? 'Inverter' : ''} {product.specs.rated_power_w}W
+            </span>
+          </h1>
+
+          <!-- Rating -->
+          <div class="mt-3">
+            <a href="#reviews" class="inline-flex">
+              <ReviewStars rating={product.rating} count={product.reviewCount} size="md" />
+            </a>
+          </div>
+
+          <!-- Stock -->
+          <div class="mt-4 flex items-center gap-2 text-status-success text-sm font-medium">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            {t(locale, 'product.in_stock')}
+          </div>
+
+          <!-- Key specs -->
+          <ul class="mt-5 space-y-2.5">
+            <li class="flex items-center gap-3 text-sm">
+              <span class="text-text-muted w-1/3">{t(locale, 'product.rated_power')}</span>
+              <span class="text-text-primary font-medium">{product.specs.rated_power_w}W</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <span class="text-text-muted w-1/3">{t(locale, 'product.runtime')}</span>
+              <span class="text-text-primary font-medium">{product.specs.runtime_hours}h</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <span class="text-text-muted w-1/3">{t(locale, 'product.weight')}</span>
+              <span class="text-text-primary font-medium">{product.specs.weight_kg} kg</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <span class="text-text-muted w-1/3">{t(locale, 'product.noise_level')}</span>
+              <span class="text-text-primary font-medium">{product.specs.noise_level_db} dB</span>
+            </li>
+            {product.specs.inverter && (
+              <li class="flex items-center gap-3 text-sm">
+                <span class="text-text-muted w-1/3">{t(locale, 'product.inverter')}</span>
+                <span class="text-text-primary font-medium">{t(locale, 'product.yes')}</span>
+              </li>
+            )}
+          </ul>
+
+          <!-- CTA Button -->
+          <div class="mt-8">
+            <AffiliateButton locale={locale} asin={asin} fullWidth={true} size="large" />
+            <p class="text-xs text-text-muted mt-3 text-center">
+              {t(locale, 'product.redirect_notice')}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="mt-12 lg:mt-16" id="product-tabs">
+      <div class="flex border-b border-ui-border gap-8">
+        <button type="button" class="tab-btn tab-active pb-3 text-sm font-heading font-semibold" data-tab="description">
+          {t(locale, 'product.description')}
+        </button>
+        <button type="button" class="tab-btn tab-inactive pb-3 text-sm font-heading font-semibold" data-tab="specs">
+          {t(locale, 'product.specifications')}
+        </button>
+        <button type="button" class="tab-btn tab-inactive pb-3 text-sm font-heading font-semibold" data-tab="reviews">
+          {t(locale, 'product.reviews')} ({product.reviewCount})
+        </button>
+      </div>
+
+      <!-- Tab: Description -->
+      <div id="tab-description" class="tab-content py-6">
+        <div class="prose max-w-none text-text-secondary leading-relaxed">
+          <p>{description}</p>
+        </div>
+      </div>
+
+      <!-- Tab: Specs -->
+      <div id="tab-specs" class="tab-content py-6 hidden">
+        <ProductSpecs specs={product.specs} locale={locale} />
+      </div>
+
+      <!-- Tab: Reviews -->
+      <div id="tab-reviews" class="tab-content py-6 hidden">
+        <div class="space-y-6" id="reviews">
+          <ReviewSummary rating={product.rating} count={product.reviewCount} locale={locale} />
+          <ReviewList reviews={reviews} locale={locale} />
+          <ReviewForm locale={locale} productSlug={product.slug} />
+        </div>
+      </div>
+    </div>
+
+    <!-- Similar Products -->
+    <section class="mt-12 lg:mt-16 pt-8 border-t border-ui-border">
+      <h2 class="font-heading font-bold text-xl md:text-2xl text-text-primary mb-6">
+        {t(locale, 'product.similar_products')}
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {similar.map(p => (
+          <ProductCard product={p} locale={locale} />
+        ))}
+      </div>
+    </section>
+  </article>
+
+  <!-- Sticky Mobile CTA -->
+  <StickyMobileCTA locale={locale} asin={asin} productName={`${product.brand} ${product.model}`} />
+</BaseLayout>
+
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tab = (btn as HTMLElement).dataset.tab;
+
+      tabBtns.forEach(b => {
+        b.classList.remove('tab-active');
+        b.classList.add('tab-inactive');
+      });
+      btn.classList.remove('tab-inactive');
+      btn.classList.add('tab-active');
+
+      tabContents.forEach(content => {
+        content.classList.add('hidden');
+      });
+      document.getElementById(`tab-${tab}`)?.classList.remove('hidden');
+    });
+  });
+
+  // Handle hash link to reviews
+  if (window.location.hash === '#reviews') {
+    const reviewBtn = document.querySelector('[data-tab="reviews"]') as HTMLElement;
+    reviewBtn?.click();
+  }
+</script>

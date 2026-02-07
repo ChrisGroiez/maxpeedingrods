@@ -1,0 +1,65 @@
+---
+import type { Product } from '../../utils/products';
+import type { Locale } from '../../i18n/utils';
+import { t } from '../../i18n/utils';
+import { getProductUrl } from '../../utils/url';
+import { getProductAsin } from '../../utils/products';
+import ReviewStars from './ReviewStars.astro';
+import AffiliateButton from './AffiliateButton.astro';
+
+interface Props {
+  product: Product;
+  locale: Locale;
+}
+
+const { product, locale } = Astro.props;
+const productUrl = getProductUrl(product.slug, locale);
+const asin = getProductAsin(product, locale);
+---
+
+<article class="product-card flex flex-col h-full">
+  <!-- Image -->
+  <a href={productUrl} class="block p-4 bg-gray-50 rounded-t-xl">
+    <div class="aspect-[4/3] flex items-center justify-center overflow-hidden">
+      <img
+        src={product.images[0]}
+        alt={`${product.brand} ${product.model}`}
+        width="400"
+        height="300"
+        loading="lazy"
+        class="object-contain w-full h-full product-image-hover"
+      />
+    </div>
+  </a>
+
+  <!-- Content -->
+  <div class="flex flex-col flex-1 p-4 lg:p-5">
+    <a href={productUrl} class="group">
+      <h3 class="font-heading font-semibold text-text-primary text-lg group-hover:text-brand-yellow transition-colors">
+        {product.brand} {product.model}
+      </h3>
+      <p class="text-text-secondary text-sm mt-1">
+        {product.specs.inverter ? t(locale, 'product.category_badge') : 'Générateur'} {product.specs.rated_power_w}W
+      </p>
+    </a>
+
+    <!-- Stars -->
+    <div class="mt-2.5">
+      <ReviewStars rating={product.rating} count={product.reviewCount} size="sm" />
+    </div>
+
+    <!-- Quick specs -->
+    <div class="flex flex-wrap gap-x-3 gap-y-1 mt-3 text-xs text-text-muted">
+      <span>{product.specs.rated_power_w}W</span>
+      <span>&middot;</span>
+      <span>{product.specs.noise_level_db} dB</span>
+      <span>&middot;</span>
+      <span>{product.specs.weight_kg} kg</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-auto pt-4">
+      <AffiliateButton locale={locale} asin={asin} fullWidth={true} />
+    </div>
+  </div>
+</article>

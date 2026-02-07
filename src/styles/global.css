@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-body text-text-primary bg-ui-light;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .product-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100
+           hover:shadow-lg hover:scale-[1.02] hover:border-brand-yellow/30
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-cta {
+    @apply bg-cta text-cta-text font-heading font-bold
+           py-4 px-8 rounded-lg text-lg
+           shadow-md hover:shadow-xl hover:bg-cta-hover
+           active:bg-cta-active active:scale-[0.98]
+           transition-all duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-cta-sm {
+    @apply bg-cta text-cta-text font-heading font-bold
+           py-2.5 px-5 rounded-lg text-sm
+           shadow-sm hover:shadow-md hover:bg-cta-hover
+           active:bg-cta-active active:scale-[0.98]
+           transition-all duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  .product-image-hover {
+    @apply transition-transform duration-500 ease-out hover:scale-105;
+  }
+
+  .tab-active {
+    @apply border-b-2 border-brand-yellow text-text-primary font-medium;
+  }
+
+  .tab-inactive {
+    @apply border-b-2 border-transparent text-text-secondary hover:text-text-primary hover:border-gray-300 transition-colors duration-200;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
