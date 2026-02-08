@@ -47,11 +47,12 @@
     "thank_you": "Bedankt voor je beoordeling!"
   },
   "home": {
-    "hero_title": "Maxpeedingrods Generatoren",
-    "hero_subtitle": "Draagbaar vermogen, professionele kwaliteit. Ontdek de beste invertergeneratoren voor de scherpste prijs.",
+    "hero_title": "Maxpeedingrods Draagbare Inverter Generatoren",
+    "hero_subtitle": "Het complete assortiment Maxpeedingrods generatoren, van 1200W tot 5500W. Betrouwbaar, krachtig en fluisterstil.",
     "hero_cta": "Bekijk generatoren",
     "featured_title": "Onze populairste generatoren",
     "why_title": "Waarom kiezen voor Maxpeedingrods?",
+    "why_intro": "Maxpeedingrods is een vertrouwd merk gespecialiseerd in auto-onderdelen en energie-apparatuur, gebruikt door duizenden klanten in Nederland en Europa. Ontdek waarom onze generatoren opvallen.",
     "why_quality": "Topkwaliteit",
     "why_quality_desc": "Professionele componenten, getest onder de zwaarste omstandigheden.",
     "why_price": "Beste prijs-kwaliteitverhouding",
@@ -59,7 +60,13 @@
     "why_warranty": "Fabrieksgarantie",
     "why_warranty_desc": "Snelle klantenservice en volledige fabrieksgarantie op alle producten.",
     "why_shipping": "Snelle levering",
-    "why_shipping_desc": "Snel verzonden, bezorgd binnen 24 tot 48 uur."
+    "why_shipping_desc": "Snel verzonden, bezorgd binnen 24 tot 48 uur.",
+    "reviews_title": "Maxpeedingrods Reviews & Ervaringen",
+    "reviews_subtitle": "Wat onze klanten zeggen over Maxpeedingrods generatoren",
+    "trust_rating": "Gem. beoordeling",
+    "trust_customers": "Klanten",
+    "trust_countries": "Europese landen",
+    "trust_models": "modellen beschikbaar"
   },
   "category": {
     "title": "Maxpeedingrods Generatoren",

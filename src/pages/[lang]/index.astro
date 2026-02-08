@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/home/Hero.astro';
+import TrustBanner from '../../components/home/TrustBanner.astro';
 import FeaturedProducts from '../../components/home/FeaturedProducts.astro';
 import WhyChoose from '../../components/home/WhyChoose.astro';
+import HomeReviews from '../../components/home/HomeReviews.astro';
 import StructuredData from '../../components/seo/StructuredData.astro';
 import { locales, type Locale } from '../../i18n/utils';
 import { homeSEO } from '../../config/seo';
@@ -16,13 +18,19 @@ const { lang } = Astro.params;
 const locale = lang as Locale;
 const seo = homeSEO[locale];
 
+// SEO texts — 200-250 words, unique per language, targeting remaining secondary keywords
 const seoTexts: Record<string, string> = {
-  fr: "Maxpeedingrods.lu est votre guide indépendant pour les générateurs portables Maxpeedingrods. Nos experts analysent chaque modèle — du compact MXR1500 idéal pour le camping au puissant MXR5500 pour les chantiers — afin de vous aider à choisir le groupe électrogène adapté à vos besoins. Technologie inverter, faible consommation et fiabilité éprouvée : découvrez pourquoi des milliers d'utilisateurs en Europe font confiance à Maxpeedingrods.",
-  en: "Maxpeedingrods.lu is your independent guide to Maxpeedingrods portable generators. Our experts review every model — from the compact MXR1500 perfect for camping to the powerful MXR5500 for job sites — to help you choose the right generator for your needs. Inverter technology, fuel efficiency, and proven reliability: discover why thousands of users across Europe trust Maxpeedingrods.",
-  de: "Maxpeedingrods.lu ist Ihr unabhängiger Ratgeber für tragbare Maxpeedingrods Stromerzeuger. Unsere Experten analysieren jedes Modell — vom kompakten MXR1500 ideal für Camping bis zum leistungsstarken MXR5500 für Baustellen — um Ihnen bei der Wahl des richtigen Notstromaggregats zu helfen. Inverter-Technologie, Sparsamkeit und bewährte Zuverlässigkeit: Entdecken Sie, warum tausende Nutzer in Europa auf Maxpeedingrods vertrauen.",
-  es: "Maxpeedingrods.lu es su guía independiente de generadores portátiles Maxpeedingrods. Nuestros expertos analizan cada modelo — desde el compacto MXR1500 ideal para acampar hasta el potente MXR5500 para obras — para ayudarle a elegir el grupo electrógeno adecuado. Tecnología inverter, bajo consumo y fiabilidad probada: descubra por qué miles de usuarios en Europa confían en Maxpeedingrods.",
-  it: "Maxpeedingrods.lu è la vostra guida indipendente ai generatori portatili Maxpeedingrods. I nostri esperti analizzano ogni modello — dal compatto MXR1500 ideale per il campeggio al potente MXR5500 per i cantieri — per aiutarvi a scegliere il gruppo elettrogeno giusto. Tecnologia inverter, basso consumo e affidabilità comprovata: scoprite perché migliaia di utenti in Europa scelgono Maxpeedingrods.",
-  nl: "Maxpeedingrods.lu is uw onafhankelijke gids voor draagbare Maxpeedingrods generatoren. Onze experts beoordelen elk model — van de compacte MXR1500 ideaal voor kamperen tot de krachtige MXR5500 voor bouwplaatsen — om u te helpen de juiste generator te kiezen. Inverter-technologie, zuinig verbruik en bewezen betrouwbaarheid: ontdek waarom duizenden gebruikers in Europa vertrouwen op Maxpeedingrods.",
+  fr: "Bienvenue sur Maxpeedingrods.lu, votre guide indépendant dédié aux groupes électrogènes Maxpeedingrods en France. Notre mission est simple : vous aider à trouver le générateur inverter portable idéal parmi une gamme allant de 1200W à 5500W. Que vous recherchiez une alimentation de secours fiable pour votre maison, un groupe électrogène silencieux pour le camping ou le camping-car, ou une source d'énergie robuste pour un chantier, les générateurs Maxpeedingrods répondent à tous les besoins. La technologie inverter garantit un courant stable et propre, parfait pour alimenter vos appareils électroniques sensibles — ordinateurs, téléphones ou équipements médicaux. Chaque modèle de la gamme Maxpeedingrods se distingue par son excellent rapport qualité-prix, sa faible consommation de carburant et un niveau sonore réduit. Les avis de nos clients confirment la fiabilité et la durabilité de ces générateurs, plébiscités par des milliers d'utilisateurs à travers la France et l'Europe. Du compact MXR1500 au puissant MXR5500, en passant par le très populaire MXR3500, chaque groupe électrogène Maxpeedingrods est conçu pour offrir des performances professionnelles accessibles à tous. Consultez nos fiches produits détaillées, comparez les caractéristiques techniques et découvrez les meilleures offres disponibles dès maintenant.",
+
+  en: "Welcome to Maxpeedingrods.lu, your independent guide to Maxpeedingrods generators in the UK. We help you find the perfect portable inverter generator from a range spanning 1200W to 5500W. Whether you need reliable backup power for your home, a quiet generator for camping and caravanning, or a rugged power source for outdoor events, Maxpeedingrods generators deliver on every front. But are Maxpeedingrods any good? Our customer reviews speak for themselves — thousands of satisfied users across the UK and Europe rate these generators highly for their build quality, fuel efficiency and whisper-quiet operation. The inverter technology produces clean, stable power that is safe for sensitive electronics like laptops, phones and medical equipment. From the ultra-portable MXR1500 to the powerful MXR5500, every Maxpeedingrods generator is engineered for outstanding value without compromising on performance. The MXR3500 and MXR4500i remain our bestsellers, loved for their perfect balance of power and portability. Browse our detailed product pages, compare specifications and read honest reviews to find the best deal on your next generator. Maxpeedingrods is a good brand that delivers professional-grade reliability at prices that make sense.",
+
+  de: "Willkommen auf Maxpeedingrods.lu, Ihrem unabhängigen Ratgeber für Maxpeedingrods Stromerzeuger in Deutschland. Wir helfen Ihnen, den idealen Inverter Generator aus einer Leistungsspanne von 1200W bis 5500W zu finden. Ob als zuverlässiges Notstromaggregat für Ihr Zuhause, als leiser Stromerzeuger beim Camping oder Wohnmobil-Urlaub, oder als robuste Energiequelle auf der Baustelle — die Maxpeedingrods Generatoren überzeugen in jeder Situation. Die Erfahrungen unserer Kunden bestätigen die hervorragende Qualität dieser Marke. Die Inverter-Technologie liefert sauberen, stabilen Strom, der empfindliche Elektronik wie Laptops, Smartphones und medizinische Geräte sicher versorgt. Jedes Modell zeichnet sich durch niedrigen Kraftstoffverbrauch, geringe Lautstärke und ein ausgezeichnetes Preis-Leistungs-Verhältnis aus. Von dem kompakten MXR1500 über den beliebten MXR3500 bis hin zum leistungsstarken MXR5500 bietet Maxpeedingrods für jeden Bedarf die passende Lösung. Die Bewertungen und Erfahrungsberichte tausender zufriedener Nutzer in Deutschland und Europa sprechen für sich. Entdecken Sie jetzt unsere detaillierten Produktseiten, vergleichen Sie die technischen Daten und finden Sie den besten Preis für Ihren neuen Maxpeedingrods Inverter Stromerzeuger — jetzt in Deutschland verfügbar.",
+
+  es: "Bienvenido a Maxpeedingrods.lu, tu guía independiente de generadores Maxpeedingrods en España. Te ayudamos a encontrar el generador inverter portátil perfecto dentro de una gama que va de 1200W a 5500W. ¿Es Maxpeedingrods una buena marca? Las opiniones de nuestros clientes no dejan lugar a dudas: miles de usuarios en España y Europa valoran estos generadores por su calidad de construcción, eficiencia de combustible y funcionamiento silencioso. Ya necesites una fuente de energía de emergencia para tu hogar, un generador silencioso para camping o un equipo robusto para una obra, los generadores Maxpeedingrods cumplen con creces. La tecnología inverter proporciona corriente limpia y estable, ideal para dispositivos electrónicos sensibles como portátiles, móviles y equipos médicos. Desde el compacto MXR1500 hasta el potente generador eléctrico de gasolina MXR5500, pasando por el popular inverter generador portátil MXR3500 de 3300W y el MXR3500S de 3500W, cada modelo ofrece un rendimiento profesional a un precio accesible. El MXR4500i es especialmente popular entre nuestros clientes españoles por su equilibrio perfecto entre potencia y portabilidad. Consulta nuestras fichas de producto detalladas, compara especificaciones y encuentra las mejores ofertas disponibles ahora mismo.",
+
+  it: "Benvenuti su Maxpeedingrods.lu, la vostra guida indipendente ai generatori Maxpeedingrods in Italia. Vi aiutiamo a trovare il generatore inverter portatile ideale in una gamma che spazia da 1200W a 5500W. Che abbiate bisogno di un gruppo elettrogeno affidabile per le emergenze domestiche, di un generatore silenzioso per il campeggio o di una fonte di energia robusta per il cantiere, i generatori Maxpeedingrods soddisfano ogni esigenza. Le recensioni dei nostri clienti confermano l'eccellente qualità di questo marchio. La tecnologia inverter garantisce corrente pulita e stabile, sicura per dispositivi elettronici sensibili come computer portatili, smartphone e apparecchiature medicali. Ogni modello si distingue per il basso consumo di carburante, la silenziosità e un ottimo rapporto qualità-prezzo. Dal compatto MXR1500 al potente MXR5500, passando per i popolari MXR 3500 da 3300W e MXR4500i, Maxpeedingrods offre soluzioni professionali accessibili a tutti. Le opinioni e le recensioni di migliaia di clienti soddisfatti in Italia e in Europa parlano chiaro. Scoprite le nostre schede prodotto dettagliate, confrontate le specifiche tecniche e trovate le migliori offerte disponibili per il vostro nuovo generatore Maxpeedingrods.",
+
+  nl: "Welkom op Maxpeedingrods.lu, uw onafhankelijke gids voor Maxpeedingrods generatoren in Nederland. Wij helpen u de perfecte draagbare inverter generator te vinden uit een assortiment van 1200W tot 5500W. Of u nu op zoek bent naar betrouwbare noodstroom voor thuis, een stille generator voor camping of een robuuste stroombron voor de bouw, de Maxpeedingrods generatoren leveren in elke situatie. De reviews van onze klanten bevestigen de uitstekende kwaliteit van dit merk. De invertertechnologie levert schone, stabiele stroom die veilig is voor gevoelige elektronica zoals laptops, smartphones en medische apparatuur. Elk model onderscheidt zich door een laag brandstofverbruik, weinig geluid en een uitstekende prijs-kwaliteitverhouding. Van de compacte MXR1500 tot de krachtige MXR5500, via de populaire MXR3500 en MXR3500S van 3500W, biedt Maxpeedingrods voor ieder wat wils. De ervaringen en beoordelingen van duizenden tevreden gebruikers in Nederland en Europa spreken voor zich. Bekijk onze gedetailleerde productpagina's, vergelijk specificaties en vind de beste aanbiedingen voor uw nieuwe Maxpeedingrods inverter generator.",
 };
 
 const websiteSchema = {
@@ -41,16 +49,28 @@ const websiteSchema = {
   canonicalPath={`/${locale}/`}
 >
   <StructuredData data={websiteSchema} />
+
+  <!-- 1. HERO — SEO-optimized H1 per language -->
   <Hero locale={locale} />
+
+  <!-- 2. TRUST BANNER — 4 key trust figures -->
+  <TrustBanner locale={locale} />
+
+  <!-- 3. FEATURED PRODUCTS — Popular generators -->
   <FeaturedProducts locale={locale} />
+
+  <!-- 4. WHY MAXPEEDINGRODS — enriched with intro paragraph -->
   <WhyChoose locale={locale} />
 
-  <!-- SEO Text -->
+  <!-- 5. HOME REVIEWS — Customer reviews section -->
+  <HomeReviews locale={locale} />
+
+  <!-- 6. SEO TEXT — 200-250 words, unique per language -->
   <section class="py-12 bg-ui-light">
     <div class="container-main">
-      <p class="text-text-secondary text-sm leading-relaxed max-w-4xl mx-auto">
-        {seoTexts[locale] || seoTexts.fr}
-      </p>
+      <div class="prose prose-sm max-w-4xl mx-auto text-text-secondary leading-relaxed">
+        <p>{seoTexts[locale] || seoTexts.fr}</p>
+      </div>
     </div>
   </section>
 </BaseLayout>

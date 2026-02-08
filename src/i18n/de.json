@@ -47,11 +47,12 @@
     "thank_you": "Vielen Dank für Ihre Bewertung!"
   },
   "home": {
-    "hero_title": "Maxpeedingrods Stromerzeuger",
-    "hero_subtitle": "Tragbare Leistung in Profiqualität. Entdecken Sie die besten Inverter-Stromerzeuger zum besten Preis.",
+    "hero_title": "Maxpeedingrods Inverter Stromerzeuger",
+    "hero_subtitle": "Das komplette Sortiment tragbarer Maxpeedingrods Generatoren, von 1200W bis 5500W. Jetzt in Deutschland verfügbar.",
     "hero_cta": "Stromerzeuger entdecken",
     "featured_title": "Unsere beliebtesten Stromerzeuger",
     "why_title": "Warum Maxpeedingrods?",
+    "why_intro": "Maxpeedingrods ist eine bewährte Marke für Kfz-Teile und Energieausrüstung, der Tausende von Kunden in Deutschland und Europa vertrauen. Erfahren Sie, warum unsere Stromerzeuger überzeugen.",
     "why_quality": "Erstklassige Qualität",
     "why_quality_desc": "Professionelle Komponenten, getestet unter anspruchsvollsten Bedingungen.",
     "why_price": "Bestes Preis-Leistungs-Verhältnis",
@@ -59,7 +60,13 @@
     "why_warranty": "Herstellergarantie",
     "why_warranty_desc": "Schneller Kundenservice und volle Herstellergarantie auf alle Produkte.",
     "why_shipping": "Schnelle Lieferung",
-    "why_shipping_desc": "Zügig versandt, Lieferung innerhalb von 24 bis 48 Stunden."
+    "why_shipping_desc": "Zügig versandt, Lieferung innerhalb von 24 bis 48 Stunden.",
+    "reviews_title": "Maxpeedingrods Erfahrungen & Bewertungen",
+    "reviews_subtitle": "Was unsere Kunden über Maxpeedingrods Stromerzeuger sagen",
+    "trust_rating": "Ø Bewertung",
+    "trust_customers": "Kunden",
+    "trust_countries": "europäische Länder",
+    "trust_models": "Modelle verfügbar"
   },
   "category": {
     "title": "Maxpeedingrods Stromerzeuger",

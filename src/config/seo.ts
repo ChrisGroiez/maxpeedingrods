@@ -8,28 +8,28 @@ interface SEOMeta {
 
 export const homeSEO: Record<Locale, SEOMeta> = {
   fr: {
-    title: 'Maxpeedingrods | Générateurs Portables Inverter — Groupes Électrogènes',
-    description: 'Découvrez les générateurs portables Maxpeedingrods : inverter silencieux, du 1200W au 5500W. Qualité professionnelle au meilleur prix.',
+    title: 'Maxpeedingrods — Groupes Électrogènes & Générateurs Inverter Portables | Avis & Comparatif',
+    description: 'Découvrez les générateurs Maxpeedingrods : groupes électrogènes inverter portables de 1200W à 5500W. Avis clients, caractéristiques et meilleures offres. Livraison en France.',
   },
   en: {
-    title: 'Maxpeedingrods | Portable Inverter Generators — Power Generators',
-    description: 'Discover Maxpeedingrods portable generators: quiet inverter technology, from 1200W to 5500W. Professional quality at the best price.',
+    title: 'Maxpeedingrods UK — Portable Inverter Generators | Reviews & Best Deals',
+    description: 'Shop Maxpeedingrods generators in the UK: portable inverter generators from 1200W to 5500W. Read customer reviews, compare specs and find the best deals.',
   },
   de: {
-    title: 'Maxpeedingrods | Tragbare Inverter Stromerzeuger — Notstromaggregate',
-    description: 'Entdecken Sie die tragbaren Maxpeedingrods Stromerzeuger: leise Inverter-Technologie, von 1200W bis 5500W. Professionelle Qualität zum besten Preis.',
+    title: 'Maxpeedingrods Deutschland — Inverter Stromerzeuger & Generatoren | Erfahrungen & Test',
+    description: 'Maxpeedingrods Inverter Stromerzeuger von 1200W bis 5500W. Erfahrungen, Testberichte und Bewertungen. Tragbare Generatoren zum besten Preis in Deutschland.',
   },
   es: {
-    title: 'Maxpeedingrods | Generadores Portátiles Inverter — Grupos Electrógenos',
-    description: 'Descubre los generadores portátiles Maxpeedingrods: tecnología inverter silenciosa, de 1200W a 5500W. Calidad profesional al mejor precio.',
+    title: 'Maxpeedingrods España — Generadores Inverter Portátiles | Opiniones y Ofertas',
+    description: 'Generadores Maxpeedingrods: generadores inverter portátiles de gasolina de 1200W a 5500W. Opiniones de clientes, especificaciones y mejores ofertas en España.',
   },
   it: {
-    title: 'Maxpeedingrods | Generatori Portatili Inverter — Gruppi Elettrogeni',
-    description: 'Scopri i generatori portatili Maxpeedingrods: tecnologia inverter silenziosa, da 1200W a 5500W. Qualità professionale al miglior prezzo.',
+    title: 'Maxpeedingrods Italia — Generatori Inverter Portatili | Recensioni e Offerte',
+    description: 'Scopri i generatori Maxpeedingrods: generatori inverter portatili da 1200W a 5500W. Recensioni clienti, schede tecniche e migliori offerte in Italia.',
   },
   nl: {
-    title: 'Maxpeedingrods | Draagbare Inverter Generatoren — Stroomgeneratoren',
-    description: 'Ontdek de draagbare Maxpeedingrods generatoren: stille inverter technologie, van 1200W tot 5500W. Professionele kwaliteit voor de beste prijs.',
+    title: 'Maxpeedingrods Nederland — Draagbare Inverter Generatoren | Reviews & Aanbiedingen',
+    description: 'Ontdek Maxpeedingrods generatoren: draagbare inverter generatoren van 1200W tot 5500W. Klantreviews, specificaties en de beste aanbiedingen in Nederland.',
   },
 };
 

@@ -47,11 +47,12 @@
     "thank_you": "Merci pour votre avis !"
   },
   "home": {
-    "hero_title": "Générateurs Maxpeedingrods",
-    "hero_subtitle": "Puissance portable, qualité professionnelle. Découvrez les meilleurs générateurs inverter au meilleur prix.",
+    "hero_title": "Générateurs & Groupes Électrogènes Maxpeedingrods",
+    "hero_subtitle": "La gamme complète de générateurs inverter portables Maxpeedingrods, de 1200W à 5500W. Fiabilité, puissance et silence au rendez-vous.",
     "hero_cta": "Découvrir les générateurs",
     "featured_title": "Nos générateurs les plus populaires",
     "why_title": "Pourquoi choisir Maxpeedingrods ?",
+    "why_intro": "Maxpeedingrods est une marque spécialisée dans les pièces et équipements automobiles et énergétiques, reconnue par des milliers de clients en France et en Europe. Voici pourquoi nos générateurs se démarquent.",
     "why_quality": "Qualité premium",
     "why_quality_desc": "Composants de grade professionnel, testés dans les conditions les plus exigeantes.",
     "why_price": "Meilleur rapport qualité-prix",
@@ -59,7 +60,13 @@
     "why_warranty": "Garantie fabricant",
     "why_warranty_desc": "Service client réactif et garantie constructeur sur tous les produits.",
     "why_shipping": "Livraison rapide",
-    "why_shipping_desc": "Expédié rapidement, livraison en 24 à 48h."
+    "why_shipping_desc": "Expédié rapidement, livraison en 24 à 48h.",
+    "reviews_title": "Avis clients Maxpeedingrods",
+    "reviews_subtitle": "Ce que nos clients pensent des générateurs Maxpeedingrods",
+    "trust_rating": "Note moy.",
+    "trust_customers": "Clients",
+    "trust_countries": "pays européens",
+    "trust_models": "modèles disponibles"
   },
   "category": {
     "title": "Générateurs Maxpeedingrods",

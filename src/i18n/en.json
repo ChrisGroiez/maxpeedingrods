@@ -47,11 +47,12 @@
     "thank_you": "Thank you for your review!"
   },
   "home": {
-    "hero_title": "Maxpeedingrods Generators",
-    "hero_subtitle": "Portable power, professional quality. Discover the best inverter generators at unbeatable prices.",
+    "hero_title": "Maxpeedingrods Generators UK",
+    "hero_subtitle": "The full range of Maxpeedingrods portable inverter generators, from 1200W to 5500W. Reliable, powerful and whisper-quiet.",
     "hero_cta": "Browse generators",
     "featured_title": "Our most popular generators",
     "why_title": "Why choose Maxpeedingrods?",
+    "why_intro": "Maxpeedingrods is a trusted brand specialising in automotive parts and power equipment, used by thousands of customers across the UK and Europe. Here's why our generators stand out.",
     "why_quality": "Premium quality",
     "why_quality_desc": "Professional-grade components, tested under the most demanding conditions.",
     "why_price": "Outstanding value for money",
@@ -59,7 +60,13 @@
     "why_warranty": "Manufacturer warranty",
     "why_warranty_desc": "Responsive customer service and full manufacturer warranty on every product.",
     "why_shipping": "Fast delivery",
-    "why_shipping_desc": "Dispatched promptly, delivered within 24 to 48 hours."
+    "why_shipping_desc": "Dispatched promptly, delivered within 24 to 48 hours.",
+    "reviews_title": "Maxpeedingrods Reviews",
+    "reviews_subtitle": "What our customers say about Maxpeedingrods generators",
+    "trust_rating": "Avg. rating",
+    "trust_customers": "Customers",
+    "trust_countries": "European countries",
+    "trust_models": "models available"
   },
   "category": {
     "title": "Maxpeedingrods Generators",
