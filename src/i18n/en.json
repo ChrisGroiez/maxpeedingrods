@@ -61,12 +61,14 @@
     "why_warranty_desc": "Responsive customer service and full manufacturer warranty on every product.",
     "why_shipping": "Fast delivery",
     "why_shipping_desc": "Dispatched promptly, delivered within 24 to 48 hours.",
-    "reviews_title": "Maxpeedingrods Reviews",
-    "reviews_subtitle": "What our customers say about Maxpeedingrods generators",
     "trust_rating": "Avg. rating",
     "trust_customers": "Customers",
     "trust_countries": "European countries",
-    "trust_models": "models available"
+    "trust_models": "models available",
+    "reviews_title": "Maxpeedingrods Reviews",
+    "reviews_subtitle": "What our customers say about Maxpeedingrods generators",
+    "reviews_based_on": "Based on {count} reviews",
+    "reviews_see_all": "See all reviews"
   },
   "category": {
     "title": "Maxpeedingrods Generators",
@@ -85,9 +87,7 @@
     "about_title": "About",
     "about_text": "Maxpeedingrods.lu is an independent comparison site specialising in portable generators. We help you find the right product at the best price.",
     "legal": "Legal notice",
-    "privacy": "Privacy policy",
-    "affiliate_disclaimer": "As an Amazon Associate, we earn from qualifying purchases.",
-    "copyright": "© {year} maxpeedingrods.lu — Independent site, not affiliated with Maxpeedingrods Inc."
+    "privacy": "Privacy policy"
   },
   "common": {
     "back_to_home": "Back to home",

@@ -329,9 +329,12 @@ Chaque produit = un fichier JSON dans `src/data/products/` :
   "category": "generators",
   "slug": "mxr3500",
   "wattage": 3300,
-  "images": {
-    "main": "/images/products/mxr3500/mxr3500-main.avif"
-  },
+  "images": [
+    "/images/products/mxr3500/main.webp",
+    "/images/products/mxr3500/side.webp",
+    "/images/products/mxr3500/panel.webp",
+    "/images/products/mxr3500/detail.webp"
+  ],
   "specs": {
     "rated_power_w": 3300,
     "max_power_w": 3500,
@@ -365,70 +368,57 @@ Chaque produit = un fichier JSON dans `src/data/products/` :
 
 Le site est multilingue et certaines images contiennent du texte (visuels marketing, callouts de features, etc.). La convention est la suivante :
 
-**Règles de nommage** :
-- **`-main`** = photo principale du produit. **Universelle**, utilisée dans toutes les langues. Il y a **une seule** photo `-main` par produit.
-- **`-fr`, `-en`, `-de`, `-es`, `-it`, `-nl`** = toutes les autres photos. Chaque image est associée à une langue via son suffixe.
+**Règle** : les images **sans texte** n'ont pas de suffixe de langue. Les images **avec texte** (visuels marketing, annotations, infographies) ont un suffixe `-fr`, `-en`, `-de`, etc.
 
 ```
 public/images/products/mxr3500/
-├── mxr3500-main.avif          ← Photo principale (UNIVERSELLE — toutes les langues)
-├── mxr3500-fr.avif            ← Photo spécifique marché français
-├── mxr3500-fr-2.avif          ← Deuxième photo marché français
-├── mxr3500-fr-3.avif          ← Troisième photo marché français
-├── mxr3500-en.avif            ← Photo spécifique marché UK
-├── mxr3500-en-2.avif          ← Deuxième photo marché UK
-├── mxr3500-de.avif            ← Photo spécifique marché allemand
-├── mxr3500-de-2.avif          ← Deuxième photo marché allemand
-├── mxr3500-es.avif            ← Photo spécifique marché espagnol
-├── mxr3500-it.avif            ← Photo spécifique marché italien
-└── mxr3500-nl.avif            ← Photo spécifique marché néerlandais
+├── main.webp                ← Photo produit, fond blanc (universelle — pas de suffixe)
+├── side.webp                ← Vue latérale (universelle)
+├── panel.webp               ← Détail panneau de prises (universelle)
+├── detail.webp              ← Détail moteur/poignée (universelle)
+├── features-fr.webp         ← Visuel marketing avec texte en français
+├── features-en.webp         ← Même visuel, texte en anglais
+├── features-de.webp         ← Même visuel, texte en allemand
+├── features-es.webp         ← Même visuel, texte en espagnol
+├── features-it.webp         ← Même visuel, texte en italien
+└── features-nl.webp         ← Même visuel, texte en néerlandais
 ```
 
-**Comment le code sélectionne les images** :
+**Comment le code sélectionne la bonne image** :
 
-Dans le JSON produit, seule la photo `-main` est déclarée. Les autres photos sont détectées automatiquement par le composant `ProductGallery.astro` en fonction de la locale active.
+Dans le JSON produit, les images universelles sont listées normalement. Les images localisées utilisent un placeholder `{lang}` :
 
 ```json
 {
-  "images": {
-    "main": "/images/products/mxr3500/mxr3500-main.avif"
-  }
+  "images": [
+    "/images/products/mxr3500/main.webp",
+    "/images/products/mxr3500/side.webp",
+    "/images/products/mxr3500/panel.webp",
+    "/images/products/mxr3500/features-{lang}.webp"
+  ]
 }
 ```
 
-Le composant `ProductGallery.astro` affiche :
-1. L'image `-main` (toujours, en premier, dans toutes les langues)
-2. Puis toutes les images trouvées avec le suffixe de la langue active (`-fr`, `-fr-2`, `-fr-3`, etc.)
+Le composant `ProductGallery.astro` remplace `{lang}` par la locale active (`fr`, `en`, `de`, etc.) au moment du rendu. Si une image localisée n'existe pas pour une langue donnée, fallback vers la version `-en` (anglais).
 
 **Helper à créer** dans `src/utils/images.ts` :
 
 ```typescript
-/**
- * Retourne la photo principale (universelle) d'un produit.
- */
-export function getMainImage(slug: string): string {
-  return `/images/products/${slug}/${slug}-main.avif`;
+export function resolveImage(path: string, locale: string): string {
+  if (path.includes('{lang}')) {
+    return path.replace('{lang}', locale);
+  }
+  return path;
 }
 
-/**
- * Retourne toutes les images d'un produit pour une locale donnée.
- * Inclut la photo -main (universelle) en premier, puis les photos localisées.
- * Les photos localisées suivent le pattern : {slug}-{lang}.avif, {slug}-{lang}-2.avif, etc.
- */
-export function getProductImages(slug: string, locale: string): string[] {
-  const main = getMainImage(slug);
-  // Scanner le dossier public/images/products/{slug}/ pour trouver
-  // tous les fichiers matchant {slug}-{locale}*.avif
-  // Retourner [main, ...localisées] triées par nom
-  return [main, /* ...images localisées */];
+export function resolveImages(paths: string[], locale: string): string[] {
+  return paths.map(p => resolveImage(p, locale));
 }
 ```
 
-> Note : Comme Astro est un SSG, le scan de fichiers se fait au build time (via `import.meta.glob` ou `fs.readdirSync`), pas au runtime. Les images sont donc résolues statiquement.
+**Dans Decap CMS** (`config.yml`), les images localisées sont gérées via le widget image standard. L'utilisateur upload manuellement les variantes avec le bon suffixe de langue.
 
-**Dans Decap CMS** (`config.yml`), le champ image produit ne gère que la photo `-main`. Les autres photos sont uploadées manuellement dans le bon dossier avec le bon suffixe de langue.
-
-**Alt text** : Toujours traduit par le système i18n, jamais incrusté dans l'image. Chaque image a un alt text descriptif stocké dans les traductions (ex: `product.alt_main`, `product.alt_gallery`).
+**Alt text** : Toujours traduit par le système i18n, jamais incrusté dans l'image. Chaque image a un alt text descriptif stocké dans les traductions (ex: `product.alt_main`, `product.alt_features`).
 
 ---
 
@@ -456,8 +446,8 @@ maxpeedingrods.lu/
 │   │   ├── index.html                     # Page admin (charge l'interface Decap)
 │   │   └── config.yml                     # Configuration des collections et champs
 │   ├── images/
-│   │   ├── products/[slug]/              # Images AVIF par produit (voir convention de nommage ci-dessous)
-│   │   ├── brand/                        # Logo, favicon, og-default.avif
+│   │   ├── products/[slug]/              # Images WebP par produit (voir convention de nommage ci-dessous)
+│   │   ├── brand/                        # Logo, favicon, og-default.webp
 │   │   └── ui/                           # Icônes SVG
 │   ├── favicon.ico
 │   ├── favicon.svg
@@ -587,7 +577,7 @@ Le site doit **ranker correctement** sur tous les marchés. Voici tout ce qui do
 - [ ] **robots.txt** avec lien vers sitemap, Disallow /api/ et /admin/
 - [ ] **Trailing slashes** sur toutes les URLs
 - [ ] **Balise `<html lang="xx">`** dynamique selon la page
-- [ ] **Images optimisées** : AVIF, dimensions explicites (width/height), alt text descriptif par langue (via i18n). Photo `-main` universelle, autres photos avec suffixe de langue (`-fr`, `-en`, etc.) détectées automatiquement via `getProductImages()`
+- [ ] **Images optimisées** : WebP, dimensions explicites (width/height), alt text descriptif par langue (via i18n, pas dans l'image). Images localisées sélectionnées via `resolveImage()` avec placeholder `{lang}`
 - [ ] **Lazy loading** sur toutes images sauf LCP (hero, image principale produit)
 - [ ] **Preconnect** vers Google Fonts
 - [ ] **Font-display: swap** pour les polices
@@ -617,7 +607,7 @@ Le site doit **ranker correctement** sur tous les marchés. Voici tout ce qui do
   "@type": "Product",
   "name": "Maxpeedingrods MXR3500 - Générateur Inverter Portable 3300W",
   "brand": { "@type": "Brand", "name": "Maxpeedingrods" },
-  "image": ["https://maxpeedingrods.lu/images/products/mxr3500/mxr3500-main.avif"],
+  "image": ["https://maxpeedingrods.lu/images/products/mxr3500/main.webp"],
   "description": "...",
   "sku": "MXR3500",
   "mpn": "MXR3500",
@@ -829,11 +819,10 @@ collections:
       - { label: "Catégorie", name: "category", widget: "hidden", default: "generators" }
       - { label: "Slug URL", name: "slug", widget: "string" }
       - { label: "Puissance (W)", name: "wattage", widget: "number", value_type: "int" }
-      - label: "Image principale"
+      - label: "Images"
         name: "images"
-        widget: "object"
-        fields:
-          - { label: "Photo principale (-main)", name: "main", widget: "image", hint: "Photo universelle utilisée dans toutes les langues. Nommer : slug-main.avif" }
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
       - label: "Spécifications techniques"
         name: "specs"
         widget: "object"
@@ -1024,9 +1013,9 @@ Après chaque étape, vérifie `npm run build` avant de continuer.
 ### Étape 2 — Données
 1. Scraper les specs des 7 générateurs depuis maxpeedingrods.com
 2. Créer les 7 JSON produits
-3. Télécharger images → AVIF → `public/images/products/[slug]/` (nommage : `slug-main.avif` pour la photo principale universelle, `slug-fr.avif`, `slug-en.avif`, etc. pour les photos localisées)
+3. Télécharger images → WebP → `public/images/products/[slug]/` (convention de nommage : pas de suffixe si universelle, suffixe `-fr`, `-en`, etc. si texte localisé)
 4. Créer les reviews réalistes (5-8 par produit par langue)
-5. Créer helpers : products.ts, images.ts (getMainImage, getProductImages), url.ts
+5. Créer helpers : products.ts, images.ts (resolveImage), url.ts
 
 ### Étape 3 — i18n
 1. Créer les 6 fichiers de traduction complets
@@ -1086,8 +1075,8 @@ Après chaque étape, vérifie `npm run build` avant de continuer.
 1. **JAMAIS "Amazon"** visible sauf disclaimer footer (obligation légale Partenaires Amazon)
 2. **Pas de panier, pas de checkout** — Site d'AFFILIATION uniquement. CTA = "Voir l'offre"
 3. **`rel="nofollow noopener sponsored"`** sur TOUS les liens d'affiliation
-4. **Toutes images en AVIF** avec width/height explicites
-5. **Image `-main`** = universelle (toutes langues). **Toutes les autres images** ont un suffixe de langue (`-fr`, `-en`, `-de`, etc.). Pas d'image sans suffixe sauf `-main`.
+4. **Toutes images en WebP** avec width/height explicites
+5. **Images sans texte = pas de suffixe** (universelles). **Images avec texte = suffixe `-fr`, `-en`, etc.** Fallback vers `-en` si une variante manque.
 5. **Lazy loading** sauf LCP
 6. **Mobile-first** — Design responsive irréprochable
 7. **CTA sticky mobile** sur les fiches produits

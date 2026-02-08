@@ -10,34 +10,55 @@ interface Props {
 
 const { specs, locale } = Astro.props;
 
+const yesLabel = t(locale, 'product.yes');
+const noLabel = t(locale, 'product.no');
+
 const rows = [
-  { key: 'rated_power', value: `${specs.rated_power_w}W` },
-  { key: 'max_power', value: `${specs.max_power_w}W` },
-  { key: 'engine_type', value: specs.engine_type },
-  { key: 'engine_displacement', value: `${specs.engine_displacement_cc} cc` },
-  { key: 'fuel_type', value: specs.fuel_type },
-  { key: 'fuel_tank', value: `${specs.fuel_tank_l} L` },
-  { key: 'runtime', value: `${specs.runtime_hours}h` },
-  { key: 'noise_level', value: `${specs.noise_level_db} dB` },
-  { key: 'weight', value: `${specs.weight_kg} kg` },
-  { key: 'dimensions', value: specs.dimensions_cm },
-  { key: 'outlets', value: specs.outlets.join(', ') },
-  { key: 'inverter', value: specs.inverter ? t(locale, 'product.yes') : t(locale, 'product.no') },
-  { key: 'electric_start', value: specs.electric_start ? t(locale, 'product.yes') : t(locale, 'product.no') },
-  { key: 'parallel_ready', value: specs.parallel_ready ? t(locale, 'product.yes') : t(locale, 'product.no') },
+  { key: 'rated_power', value: `${specs.rated_power_w}W`, isBool: false },
+  { key: 'max_power', value: `${specs.max_power_w}W`, isBool: false },
+  { key: 'engine_type', value: specs.engine_type, isBool: false },
+  { key: 'engine_displacement', value: `${specs.engine_displacement_cc} cc`, isBool: false },
+  { key: 'fuel_type', value: specs.fuel_type, isBool: false },
+  { key: 'fuel_tank', value: `${specs.fuel_tank_l} L`, isBool: false },
+  { key: 'runtime', value: `${specs.runtime_hours}h`, isBool: false },
+  { key: 'noise_level', value: `${specs.noise_level_db} dB`, isBool: false },
+  { key: 'weight', value: `${specs.weight_kg} kg`, isBool: false },
+  { key: 'dimensions', value: specs.dimensions_cm, isBool: false },
+  { key: 'outlets', value: specs.outlets.join(', '), isBool: false },
+  { key: 'inverter', value: specs.inverter ? yesLabel : noLabel, isBool: true, boolVal: specs.inverter },
+  { key: 'electric_start', value: specs.electric_start ? yesLabel : noLabel, isBool: true, boolVal: specs.electric_start },
+  { key: 'parallel_ready', value: specs.parallel_ready ? yesLabel : noLabel, isBool: true, boolVal: specs.parallel_ready },
 ];
 ---
 
-<div class="overflow-hidden rounded-xl border border-ui-border">
+<div class="overflow-hidden rounded-2xl border border-gray-100" style="box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
   <table class="w-full text-sm">
     <tbody>
       {rows.map((row, index) => (
-        <tr class={index % 2 === 0 ? 'bg-ui-light' : 'bg-white'}>
-          <td class="px-4 py-3 font-body font-medium text-text-secondary w-2/5">
+        <tr class={index % 2 === 0 ? 'spec-row-even' : 'spec-row-odd'}>
+          <td class="px-5 py-3.5 font-body font-medium text-text-secondary w-2/5">
             {t(locale, `product.${row.key}`)}
           </td>
-          <td class="px-4 py-3 font-body text-text-primary">
-            {row.value}
+          <td class="px-5 py-3.5 font-body text-text-primary">
+            {row.isBool ? (
+              row.boolVal ? (
+                <span class="spec-badge-yes">
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  {row.value}
+                </span>
+              ) : (
+                <span class="spec-badge-no">
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                  {row.value}
+                </span>
+              )
+            ) : (
+              <span class="font-medium">{row.value}</span>
+            )}
           </td>
         </tr>
       ))}

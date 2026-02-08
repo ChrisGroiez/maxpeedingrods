@@ -10,15 +10,17 @@ const mainImage = images[0];
 
 <div class="product-gallery" id="product-gallery">
   <!-- Main image -->
-  <div class="bg-gray-50 rounded-xl overflow-hidden aspect-square flex items-center justify-center p-6">
-    <img
-      id="gallery-main-img"
-      src={mainImage}
-      alt={productName}
-      width="600"
-      height="600"
-      class="object-contain w-full h-full"
-    />
+  <div class="relative rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);">
+    <div class="aspect-square flex items-center justify-center p-8">
+      <img
+        id="gallery-main-img"
+        src={mainImage}
+        alt={productName}
+        width="600"
+        height="600"
+        class="object-contain w-full h-full transition-transform duration-500"
+      />
+    </div>
   </div>
 
   <!-- Thumbnails -->
@@ -28,8 +30,8 @@ const mainImage = images[0];
         <button
           type="button"
           class:list={[
-            'gallery-thumb w-16 h-16 lg:w-20 lg:h-20 rounded-lg overflow-hidden border-2 p-1.5 bg-gray-50 transition-all duration-200 hover:border-brand-yellow',
-            index === 0 ? 'border-brand-yellow' : 'border-gray-200',
+            'gallery-thumb w-16 h-16 lg:w-20 lg:h-20 rounded-xl overflow-hidden p-1.5 transition-all duration-200 hover:ring-2 hover:ring-brand-yellow/50',
+            index === 0 ? 'ring-2 ring-brand-yellow bg-white scale-105' : 'ring-1 ring-gray-200 bg-gray-50',
           ]}
           data-src={img}
           data-index={index}
@@ -57,8 +59,13 @@ const mainImage = images[0];
       const src = (thumb as HTMLElement).dataset.src;
       if (mainImg && src) {
         mainImg.src = src;
-        thumbs.forEach(t => t.classList.replace('border-brand-yellow', 'border-gray-200'));
-        thumb.classList.replace('border-gray-200', 'border-brand-yellow');
+        thumbs.forEach(t => {
+          t.classList.remove('ring-brand-yellow', 'bg-white', 'scale-105');
+          t.classList.remove('ring-2');
+          t.classList.add('ring-1', 'ring-gray-200', 'bg-gray-50');
+        });
+        thumb.classList.remove('ring-1', 'ring-gray-200', 'bg-gray-50');
+        thumb.classList.add('ring-2', 'ring-brand-yellow', 'bg-white', 'scale-105');
       }
     });
   });

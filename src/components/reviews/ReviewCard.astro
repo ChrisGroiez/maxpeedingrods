@@ -26,11 +26,18 @@ const dateFormatted = new Date(review.date).toLocaleDateString(locale, {
 });
 ---
 
-<article class="bg-white rounded-xl p-5 border border-ui-border">
+<article class="relative bg-white rounded-2xl p-5 border border-gray-100 transition-all duration-300 hover:border-brand-yellow/15" style="box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+  <!-- Decorative quote -->
+  <div class="absolute top-3 right-4 text-brand-yellow/8 pointer-events-none" aria-hidden="true">
+    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
+    </svg>
+  </div>
+
   <div class="flex items-start justify-between gap-4">
     <div>
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-full bg-brand-yellow/10 flex items-center justify-center text-brand-yellow font-heading font-bold text-sm">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center ring-2 ring-brand-yellow/20 text-brand-yellow font-heading font-bold text-sm" style="background: linear-gradient(135deg, rgba(245,166,35,0.15) 0%, rgba(245,166,35,0.05) 100%);">
           {review.author.charAt(0).toUpperCase()}
         </div>
         <div>

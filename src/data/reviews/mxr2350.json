@@ -1,0 +1,305 @@
+{
+  "slug": "mxr2350",
+  "reviews": [
+    {
+      "id": "rev-mxr2350-fr-1",
+      "author": "Thierry",
+      "date": "2025-06-14",
+      "rating": 5,
+      "title": "Ultra léger et silencieux",
+      "content": "Je l'ai acheté pour le camping et je suis bluffé par sa légèreté. 15 kg seulement, on le transporte comme une valise. Le bruit est très contenu, même le soir au camping personne ne se plaint. L'écran digital est un vrai plus pour surveiller la conso.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-fr-2",
+      "author": "Sandrine",
+      "date": "2025-03-22",
+      "rating": 4,
+      "title": "Parfait pour notre caravane",
+      "content": "On l'utilise dans notre caravane depuis 3 mois. Il alimente sans problème le frigo, les lumières et la recharge des téléphones. L'autonomie de 4-5h est un peu juste pour la nuit complète, mais en mode éco ça passe bien. Bon rapport qualité-prix.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-fr-3",
+      "author": "Marc",
+      "date": "2024-11-05",
+      "rating": 5,
+      "title": "Compact et efficace",
+      "content": "Format valise très pratique, il se range facilement dans le coffre. Je l'utilise pour mes sorties pêche et camping. Le démarrage est facile et il tourne de manière stable. L'affichage numérique permet de tout contrôler en un coup d'œil.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-fr-4",
+      "author": "Aurélie",
+      "date": "2025-08-30",
+      "rating": 4,
+      "title": "Bon générateur d'appoint",
+      "content": "Acheté comme solution de secours en cas de coupure de courant. Il fait tourner l'essentiel : box internet, éclairage LED et recharge des appareils. Ne vous attendez pas à alimenter un chauffage électrique avec, mais pour le reste c'est impeccable.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-fr-5",
+      "author": "Rémi",
+      "date": "2024-09-18",
+      "rating": 3,
+      "title": "Correct mais autonomie limitée",
+      "content": "Le générateur fonctionne bien et il est vraiment léger. Mon seul bémol c'est l'autonomie : avec un réservoir de 2,4L on ne va pas très loin sous charge. Il faut prévoir de le remplir régulièrement. Pour des sessions courtes c'est très bien.",
+      "lang": "fr",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-en-1",
+      "author": "James",
+      "date": "2025-07-08",
+      "rating": 5,
+      "title": "Brilliant for camping trips",
+      "content": "Took this on a week-long camping trip in Scotland and it was fantastic. Powered the fridge, lights and charged all our devices without any issues. At just 15 kg, it's easy to carry and the suitcase design is really clever. Very quiet too.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-en-2",
+      "author": "Sarah",
+      "date": "2025-04-15",
+      "rating": 4,
+      "title": "Great value for a portable generator",
+      "content": "We use it for our caravan and it does the job well. The digital display is handy for keeping track of runtime and voltage. Wish the fuel tank were a bit bigger for longer trips, but for weekend getaways it's perfect.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-en-3",
+      "author": "Michael",
+      "date": "2024-12-20",
+      "rating": 5,
+      "title": "Impressed with the build quality",
+      "content": "For the price, the build quality is exceptional. Solid construction, smooth engine, and proper inverter technology that keeps my electronics safe. I've used it to power my laptop, camera equipment and lighting on outdoor shoots. Never had an issue.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-en-4",
+      "author": "Emma",
+      "date": "2025-10-02",
+      "rating": 4,
+      "title": "Lightweight and easy to use",
+      "content": "I can actually carry this myself without struggling, which was my main requirement. It's straightforward to start and the eco mode really does reduce the noise. Good for powering essentials during power cuts at home.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-en-5",
+      "author": "Tom",
+      "date": "2024-08-12",
+      "rating": 3,
+      "title": "Decent but limited runtime",
+      "content": "It works well enough for light loads but the small tank means you're refuelling fairly often. Fine for a few hours at a festival or campsite but not great for overnight use. The parallel feature is nice if you need more power though.",
+      "lang": "en",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-de-1",
+      "author": "Stefan",
+      "date": "2025-05-19",
+      "rating": 5,
+      "title": "Perfekt für unterwegs",
+      "content": "Das Kofferformat ist genial — einfach greifen und los. Wiegt nur 15 kg und lässt sich problemlos im Auto verstauen. Nutze ihn beim Camping und im Garten. Der Motor läuft ruhig und das digitale Display zeigt alle wichtigen Daten an.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-de-2",
+      "author": "Petra",
+      "date": "2025-01-28",
+      "rating": 4,
+      "title": "Leicht und handlich",
+      "content": "Als Frau kann ich diesen Generator problemlos alleine tragen — das war mir wichtig. Er versorgt im Wohnwagen Kühlschrank und Beleuchtung zuverlässig. Der Eco-Modus spart Benzin und ist merklich leiser. Gutes Gerät für den Preis.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-de-3",
+      "author": "Klaus",
+      "date": "2024-10-30",
+      "rating": 5,
+      "title": "Überraschend leise",
+      "content": "Ich bin beeindruckt, wie leise dieser kleine Generator läuft. Im Eco-Modus hört man ihn kaum noch. Die Inverter-Technologie schützt meine empfindlichen Geräte und die USB-Anschlüsse sind praktisch zum Laden von Handys und Tablets.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-de-4",
+      "author": "Heike",
+      "date": "2025-09-14",
+      "rating": 4,
+      "title": "Guter Notstromaggregat",
+      "content": "Als Notstromversorgung für Stromausfälle angeschafft. Funktioniert einwandfrei für Router, Beleuchtung und Handyladung. Für schwere Verbraucher wie Heizlüfter reicht die Leistung nicht, aber das war auch nicht der Zweck.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-de-5",
+      "author": "Wolfgang",
+      "date": "2024-07-25",
+      "rating": 3,
+      "title": "Solide Basis, kleiner Tank",
+      "content": "Die Verarbeitung und Leistung sind für diese Preisklasse gut. Einziger Kritikpunkt ist der relativ kleine Tank von 2,4 Litern — bei mittlerer Last muss man alle paar Stunden nachtanken. Für kurze Einsätze aber völlig ausreichend.",
+      "lang": "de",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-es-1",
+      "author": "Carlos",
+      "date": "2025-04-06",
+      "rating": 5,
+      "title": "Perfecto para la autocaravana",
+      "content": "Lo compramos para nuestros viajes en autocaravana y estamos encantados. Es tan ligero que lo muevo yo solo sin esfuerzo. La pantalla digital es muy útil y el ruido es mínimo. Alimenta nevera, luces y cargadores sin problema.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-es-2",
+      "author": "Marta",
+      "date": "2025-11-12",
+      "rating": 4,
+      "title": "Compacto y eficiente",
+      "content": "Me sorprendió lo compacto que es. Parece una maleta y pesa muy poco. Lo uso para acampadas y funciona perfectamente para lo básico. El modo eco ahorra bastante gasolina. Solo echo en falta un depósito más grande.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-es-3",
+      "author": "Pablo",
+      "date": "2024-10-15",
+      "rating": 5,
+      "title": "Silencioso y potente",
+      "content": "Para ser un generador de 2000W es increíblemente silencioso. Lo he usado en festivales y nadie se quejó del ruido. La tecnología inverter protege mis dispositivos electrónicos y los puertos USB son muy prácticos para cargar móviles.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-es-4",
+      "author": "Ana",
+      "date": "2025-06-28",
+      "rating": 4,
+      "title": "Buena relación calidad-precio",
+      "content": "Lo tengo como respaldo para cortes de luz en casa. Alimenta lo esencial sin problemas: router, luces LED y carga de dispositivos. Es fácil de arrancar y el diseño tipo maleta facilita guardarlo en cualquier sitio.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-es-5",
+      "author": "Luis",
+      "date": "2024-08-20",
+      "rating": 3,
+      "title": "Bien para uso ligero",
+      "content": "Funciona correctamente para cargas ligeras. Si necesitas alimentar herramientas eléctricas potentes, quédate corto. Pero para camping, caravanas y uso doméstico básico cumple bien. El depósito pequeño obliga a repostar con frecuencia.",
+      "lang": "es",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-it-1",
+      "author": "Marco",
+      "date": "2025-05-25",
+      "rating": 5,
+      "title": "Leggero e silenzioso",
+      "content": "Solo 15 kg! Lo porto ovunque senza fatica. Lo uso per il campeggio e per alimentare il mio camper. Il display digitale è comodo per tenere sotto controllo i consumi. Il rumore è davvero contenuto, anche di sera in campeggio.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-it-2",
+      "author": "Giulia",
+      "date": "2025-02-10",
+      "rating": 4,
+      "title": "Ottimo per il camper",
+      "content": "Lo usiamo nel nostro camper da qualche mese e siamo soddisfatti. Alimenta frigorifero, luci e ricarica dei dispositivi senza problemi. Il formato a valigetta è molto pratico per riporlo. Avrei preferito un serbatoio più capiente.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-it-3",
+      "author": "Luca",
+      "date": "2024-11-18",
+      "rating": 5,
+      "title": "Qualità eccellente per il prezzo",
+      "content": "Non mi aspettavo una qualità così buona. Il motore gira fluido, la tecnologia inverter protegge i dispositivi elettronici e le porte USB sono comodissime. Perfetto per le mie uscite in montagna e per le emergenze a casa.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-it-4",
+      "author": "Francesca",
+      "date": "2025-08-05",
+      "rating": 4,
+      "title": "Compatto e pratico",
+      "content": "Il design a valigetta è geniale: si trasporta facilmente e si ripone ovunque. Lo uso come generatore di emergenza a casa e per il campeggio estivo. Facile da avviare, anche per chi non ha esperienza con questi apparecchi.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-it-5",
+      "author": "Davide",
+      "date": "2024-09-02",
+      "rating": 3,
+      "title": "Buono ma serbatoio piccolo",
+      "content": "Come generatore funziona bene ed è davvero leggero. Il punto debole è il serbatoio da 2,4 litri che limita l'autonomia. Per sessioni di 3-4 ore va benissimo, ma per un utilizzo prolungato bisogna fare rifornimento spesso.",
+      "lang": "it",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-nl-1",
+      "author": "Pieter",
+      "date": "2025-06-30",
+      "rating": 5,
+      "title": "Super licht en stil",
+      "content": "Met slechts 15 kg is dit het lichtste aggregaat dat ik ooit heb gehad. Het kofferdesign is heel handig en hij past makkelijk in de auto. Gebruik hem op de camping en het geluidsniveau is echt laag. Het digitale display is een mooie bonus.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-nl-2",
+      "author": "Anneke",
+      "date": "2025-03-08",
+      "rating": 4,
+      "title": "Ideaal voor de caravan",
+      "content": "Wij gebruiken hem bij onze caravan en hij doet precies wat we nodig hebben. Koelkast, verlichting en telefoons opladen gaat prima. De eco-modus bespaart flink wat benzine. Enige minpunt is het kleine tankje.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-nl-3",
+      "author": "Joost",
+      "date": "2024-12-05",
+      "rating": 5,
+      "title": "Indrukwekkend stil",
+      "content": "Ik ben verbaasd hoe stil deze generator is. In de eco-modus hoor je hem nauwelijks. De inverter technologie levert schone stroom voor mijn laptop en camera-apparatuur. Perfecte metgezel voor mijn outdoor fotoshoots.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-nl-4",
+      "author": "Lotte",
+      "date": "2025-09-20",
+      "rating": 4,
+      "title": "Handig noodaggregaat",
+      "content": "Gekocht als noodstroom voor stroomstoringen. Hij is licht genoeg om makkelijk te verplaatsen en levert voldoende stroom voor router, verlichting en het opladen van apparaten. Simpel te starten, ook voor een beginner.",
+      "lang": "nl",
+      "verified": true
+    },
+    {
+      "id": "rev-mxr2350-nl-5",
+      "author": "Henk",
+      "date": "2024-07-15",
+      "rating": 3,
+      "title": "Goed maar beperkte tank",
+      "content": "Het apparaat werkt prima en is echt licht. Het tankje van 2,4 liter is wel aan de kleine kant — bij gemiddeld gebruik moet je om de paar uur bijvullen. Voor korte sessies op de camping of in de tuin is het prima.",
+      "lang": "nl",
+      "verified": true
+    }
+  ]
+}

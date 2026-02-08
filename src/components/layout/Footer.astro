@@ -11,13 +11,16 @@ const { locale } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-ui-dark text-text-inverse">
+<footer class="relative text-text-inverse" style="background: linear-gradient(180deg, #111827 0%, #0b0f1a 100%);">
+  <!-- Top decorative gradient line -->
+  <div class="h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #F5A623 25%, #FDB940 50%, #F5A623 75%, transparent 100%);"></div>
+
   <div class="container-main py-12 lg:py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
       <!-- About -->
       <div class="lg:col-span-2">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="text-brand-yellow font-heading font-bold text-xl">MXR</span>
+        <div class="flex items-center gap-2.5 mb-4">
+          <span class="text-2xl font-heading font-bold gradient-text">MXR</span>
           <span class="font-heading font-semibold text-lg">Maxpeedingrods</span>
         </div>
         <p class="text-gray-400 text-sm leading-relaxed max-w-md">
@@ -27,16 +30,22 @@ const year = new Date().getFullYear();
 
       <!-- Navigation -->
       <div>
-        <h3 class="font-heading font-semibold text-base mb-4">Navigation</h3>
-        <ul class="space-y-2.5">
+        <h3 class="font-heading font-semibold text-base mb-4 text-white">Navigation</h3>
+        <ul class="space-y-3">
           <li>
-            <a href={getHomeUrl(locale)} class="text-gray-400 hover:text-brand-yellow text-sm transition-colors">
-              {t(locale, 'nav.home')}
+            <a href={getHomeUrl(locale)} class="group flex items-center gap-2 text-gray-400 hover:text-brand-yellow text-sm transition-all duration-200">
+              <svg class="w-4 h-4 text-brand-yellow/50 group-hover:text-brand-yellow transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              <span class="group-hover:translate-x-0.5 transition-transform duration-200">{t(locale, 'nav.home')}</span>
             </a>
           </li>
           <li>
-            <a href={getCategoryUrl(locale)} class="text-gray-400 hover:text-brand-yellow text-sm transition-colors">
-              {t(locale, 'nav.generators')}
+            <a href={getCategoryUrl(locale)} class="group flex items-center gap-2 text-gray-400 hover:text-brand-yellow text-sm transition-all duration-200">
+              <svg class="w-4 h-4 text-brand-yellow/50 group-hover:text-brand-yellow transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span class="group-hover:translate-x-0.5 transition-transform duration-200">{t(locale, 'nav.generators')}</span>
             </a>
           </li>
         </ul>
@@ -44,28 +53,33 @@ const year = new Date().getFullYear();
 
       <!-- Legal -->
       <div>
-        <h3 class="font-heading font-semibold text-base mb-4">{t(locale, 'footer.about_title')}</h3>
-        <ul class="space-y-2.5">
+        <h3 class="font-heading font-semibold text-base mb-4 text-white">{t(locale, 'footer.about_title')}</h3>
+        <ul class="space-y-3">
           <li>
-            <span class="text-gray-400 text-sm">{t(locale, 'footer.legal')}</span>
+            <span class="flex items-center gap-2 text-gray-400 text-sm">
+              <svg class="w-4 h-4 text-brand-yellow/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              {t(locale, 'footer.legal')}
+            </span>
           </li>
           <li>
-            <span class="text-gray-400 text-sm">{t(locale, 'footer.privacy')}</span>
+            <span class="flex items-center gap-2 text-gray-400 text-sm">
+              <svg class="w-4 h-4 text-brand-yellow/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              {t(locale, 'footer.privacy')}
+            </span>
           </li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom bar -->
-    <div class="border-t border-ui-border-dark mt-10 pt-8">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-text-muted text-xs text-center md:text-left">
-          {t(locale, 'footer.copyright').replace('{year}', String(year))}
-        </p>
-        <p class="text-text-muted text-[11px] text-center md:text-right max-w-md leading-relaxed">
-          {t(locale, 'footer.affiliate_disclaimer')}
-        </p>
-      </div>
+    <div class="border-t border-white/10 mt-10 pt-8">
+      <p class="text-gray-500 text-xs text-center">
+        &copy; {year} maxpeedingrods.lu
+      </p>
     </div>
   </div>
 </footer>

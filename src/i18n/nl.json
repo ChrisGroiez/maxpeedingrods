@@ -61,12 +61,14 @@
     "why_warranty_desc": "Snelle klantenservice en volledige fabrieksgarantie op alle producten.",
     "why_shipping": "Snelle levering",
     "why_shipping_desc": "Snel verzonden, bezorgd binnen 24 tot 48 uur.",
-    "reviews_title": "Maxpeedingrods Reviews & Ervaringen",
-    "reviews_subtitle": "Wat onze klanten zeggen over Maxpeedingrods generatoren",
     "trust_rating": "Gem. beoordeling",
     "trust_customers": "Klanten",
     "trust_countries": "Europese landen",
-    "trust_models": "modellen beschikbaar"
+    "trust_models": "modellen beschikbaar",
+    "reviews_title": "Maxpeedingrods Reviews & Ervaringen",
+    "reviews_subtitle": "Wat onze klanten zeggen over Maxpeedingrods generatoren",
+    "reviews_based_on": "Gebaseerd op {count} beoordelingen",
+    "reviews_see_all": "Bekijk alle reviews"
   },
   "category": {
     "title": "Maxpeedingrods Generatoren",
@@ -85,9 +87,7 @@
     "about_title": "Over ons",
     "about_text": "Maxpeedingrods.lu is een onafhankelijke vergelijkingssite gespecialiseerd in draagbare generatoren. Wij helpen je het beste product te vinden voor de beste prijs.",
     "legal": "Juridische informatie",
-    "privacy": "Privacybeleid",
-    "affiliate_disclaimer": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.",
-    "copyright": "© {year} maxpeedingrods.lu — Onafhankelijke website, niet verbonden aan Maxpeedingrods Inc."
+    "privacy": "Privacybeleid"
   },
   "common": {
     "back_to_home": "Terug naar home",

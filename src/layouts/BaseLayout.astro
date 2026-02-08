@@ -34,8 +34,12 @@ const currentPath = Astro.url.pathname;
 </head>
 <body class="min-h-screen flex flex-col bg-ui-light">
   <Header locale={locale} currentPath={currentPath} />
-  <main class="flex-1">
-    <slot />
+  <main class="flex-1 relative">
+    <!-- Subtle dot pattern overlay -->
+    <div class="absolute inset-0 bg-dot-pattern opacity-[0.35] pointer-events-none" aria-hidden="true"></div>
+    <div class="relative">
+      <slot />
+    </div>
   </main>
   <Footer locale={locale} />
 </body>

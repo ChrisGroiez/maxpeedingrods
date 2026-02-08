@@ -61,12 +61,14 @@
     "why_warranty_desc": "Schneller Kundenservice und volle Herstellergarantie auf alle Produkte.",
     "why_shipping": "Schnelle Lieferung",
     "why_shipping_desc": "Zügig versandt, Lieferung innerhalb von 24 bis 48 Stunden.",
-    "reviews_title": "Maxpeedingrods Erfahrungen & Bewertungen",
-    "reviews_subtitle": "Was unsere Kunden über Maxpeedingrods Stromerzeuger sagen",
-    "trust_rating": "Ø Bewertung",
+    "trust_rating": "Durchschn. Bewertung",
     "trust_customers": "Kunden",
     "trust_countries": "europäische Länder",
-    "trust_models": "Modelle verfügbar"
+    "trust_models": "Modelle verfügbar",
+    "reviews_title": "Maxpeedingrods Erfahrungen & Bewertungen",
+    "reviews_subtitle": "Was unsere Kunden über Maxpeedingrods Stromerzeuger sagen",
+    "reviews_based_on": "Basierend auf {count} Bewertungen",
+    "reviews_see_all": "Alle Bewertungen ansehen"
   },
   "category": {
     "title": "Maxpeedingrods Stromerzeuger",
@@ -85,9 +87,7 @@
     "about_title": "Über uns",
     "about_text": "Maxpeedingrods.lu ist ein unabhängiges Vergleichsportal für tragbare Stromerzeuger. Wir helfen Ihnen, das richtige Produkt zum besten Preis zu finden.",
     "legal": "Impressum",
-    "privacy": "Datenschutzerklärung",
-    "affiliate_disclaimer": "Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.",
-    "copyright": "© {year} maxpeedingrods.lu — Unabhängige Website, nicht verbunden mit Maxpeedingrods Inc."
+    "privacy": "Datenschutzerklärung"
   },
   "common": {
     "back_to_home": "Zurück zur Startseite",

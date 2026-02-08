@@ -1,0 +1,43 @@
+{
+  "id": "mxr2350",
+  "model": "MXR2350",
+  "brand": "Maxpeedingrods",
+  "category": "generators",
+  "slug": "mxr2350",
+  "wattage": 2000,
+  "images": [
+    "/images/products/mxr2350/main.svg",
+    "/images/products/mxr2350/side.svg",
+    "/images/products/mxr2350/detail.svg"
+  ],
+  "specs": {
+    "rated_power_w": 1800,
+    "max_power_w": 2000,
+    "engine_type": "4-stroke OHV",
+    "engine_displacement_cc": 80,
+    "fuel_type": "Gasoline",
+    "fuel_tank_l": 2.4,
+    "runtime_hours": 4.8,
+    "noise_level_db": 58,
+    "weight_kg": 15,
+    "dimensions_cm": "48x29x44",
+    "outlets": [
+      "1x 230V AC",
+      "1x 12V DC",
+      "2x USB"
+    ],
+    "inverter": true,
+    "electric_start": false,
+    "parallel_ready": true
+  },
+  "asins": {
+    "fr": "B0DHRGY75J",
+    "en": "B0DHRGY75J",
+    "de": "B0DHRGY75J",
+    "es": "B0DHRGY75J",
+    "it": "B0DHRGY75J",
+    "nl": "B0DHRGY75J"
+  },
+  "rating": 4.4,
+  "reviewCount": 58
+}

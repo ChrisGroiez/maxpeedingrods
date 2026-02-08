@@ -13,47 +13,72 @@ const features = [
     titleKey: 'home.why_quality',
     descKey: 'home.why_quality_desc',
     icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+    gradient: 'from-amber-500/20 to-orange-500/10',
   },
   {
     titleKey: 'home.why_price',
     descKey: 'home.why_price_desc',
     icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    gradient: 'from-green-500/20 to-emerald-500/10',
   },
   {
     titleKey: 'home.why_warranty',
     descKey: 'home.why_warranty_desc',
     icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+    gradient: 'from-blue-500/20 to-cyan-500/10',
   },
   {
     titleKey: 'home.why_shipping',
     descKey: 'home.why_shipping_desc',
     icon: 'M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0',
+    gradient: 'from-purple-500/20 to-violet-500/10',
   },
 ];
 ---
 
-<section class="py-12 md:py-16 lg:py-20 bg-white">
-  <div class="container-main">
-    <h2 class="font-heading font-bold text-2xl md:text-3xl text-text-primary text-center">
-      {t(locale, 'home.why_title')}
-    </h2>
+<section class="py-16 md:py-20 lg:py-24 relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);">
+  <!-- Decorative background elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full opacity-[0.03]" style="background: radial-gradient(circle, #F5A623 0%, transparent 70%);"></div>
+    <div class="absolute -bottom-20 -left-20 w-60 h-60 rounded-full opacity-[0.03]" style="background: radial-gradient(circle, #F5A623 0%, transparent 70%);"></div>
+  </div>
 
-    <p class="mt-4 text-text-secondary text-center max-w-3xl mx-auto leading-relaxed">
-      {t(locale, 'home.why_intro')}
-    </p>
+  <div class="container-main relative">
+    <!-- Section header -->
+    <div class="text-center mb-12 md:mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-yellow/15 bg-brand-yellow/5 mb-4">
+        <div class="w-1 h-1 rounded-full bg-brand-yellow"></div>
+        <span class="text-brand-yellow text-xs font-medium uppercase tracking-wider">Maxpeedingrods</span>
+      </div>
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-primary">
+        {t(locale, 'home.why_title')}
+      </h2>
+      <p class="mt-4 text-text-secondary text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+        {t(locale, 'home.why_intro')}
+      </p>
+    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-8 md:mt-12">
-      {features.map(feature => (
-        <div class="text-center p-6">
-          <div class="w-14 h-14 mx-auto rounded-full bg-brand-yellow/10 flex items-center justify-center mb-4">
+    <!-- Feature cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
+      {features.map((feature, idx) => (
+        <div
+          class="group relative rounded-2xl p-6 bg-white border border-gray-100 transition-all duration-300 hover:border-brand-yellow/20"
+          style={`animation: fadeInUp 0.5s ease-out ${idx * 100 + 100}ms both; box-shadow: 0 1px 3px rgba(0,0,0,0.03);`}
+        >
+          <!-- Top accent bar -->
+          <div class="absolute top-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-brand-yellow/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          <!-- Icon -->
+          <div class={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
             <svg class="w-7 h-7 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={feature.icon} />
             </svg>
           </div>
-          <h3 class="font-heading font-semibold text-text-primary text-lg">
+
+          <h3 class="font-heading font-semibold text-text-primary text-lg mb-2">
             {t(locale, feature.titleKey)}
           </h3>
-          <p class="text-text-secondary text-sm mt-2 leading-relaxed">
+          <p class="text-text-secondary text-sm leading-relaxed">
             {t(locale, feature.descKey)}
           </p>
         </div>

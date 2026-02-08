@@ -61,12 +61,14 @@
     "why_warranty_desc": "Service client réactif et garantie constructeur sur tous les produits.",
     "why_shipping": "Livraison rapide",
     "why_shipping_desc": "Expédié rapidement, livraison en 24 à 48h.",
-    "reviews_title": "Avis clients Maxpeedingrods",
-    "reviews_subtitle": "Ce que nos clients pensent des générateurs Maxpeedingrods",
     "trust_rating": "Note moy.",
     "trust_customers": "Clients",
     "trust_countries": "pays européens",
-    "trust_models": "modèles disponibles"
+    "trust_models": "modèles disponibles",
+    "reviews_title": "Avis clients Maxpeedingrods",
+    "reviews_subtitle": "Ce que nos clients pensent des générateurs Maxpeedingrods",
+    "reviews_based_on": "Basé sur {count} avis",
+    "reviews_see_all": "Voir tous les avis"
   },
   "category": {
     "title": "Générateurs Maxpeedingrods",
@@ -85,9 +87,7 @@
     "about_title": "À propos",
     "about_text": "Maxpeedingrods.lu est un site comparateur indépendant spécialisé dans les générateurs portables. Nous vous aidons à trouver le meilleur produit au meilleur prix.",
     "legal": "Mentions légales",
-    "privacy": "Politique de confidentialité",
-    "affiliate_disclaimer": "En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.",
-    "copyright": "© {year} maxpeedingrods.lu — Site indépendant, non affilié à Maxpeedingrods Inc."
+    "privacy": "Politique de confidentialité"
   },
   "common": {
     "back_to_home": "Retour à l'accueil",

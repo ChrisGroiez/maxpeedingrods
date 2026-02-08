@@ -12,13 +12,22 @@ const { locale } = Astro.props;
 const featured = getFeaturedProducts();
 ---
 
-<section class="py-12 md:py-16 lg:py-20">
+<section class="py-16 md:py-20 lg:py-24 relative">
   <div class="container-main">
-    <h2 class="font-heading font-bold text-2xl md:text-3xl text-text-primary text-center">
-      {t(locale, 'home.featured_title')}
-    </h2>
+    <!-- Section header -->
+    <div class="text-center mb-10 md:mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-yellow/15 bg-brand-yellow/5 mb-4">
+        <svg class="w-4 h-4 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <span class="text-brand-yellow text-xs font-medium uppercase tracking-wider">Best-sellers</span>
+      </div>
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-primary">
+        {t(locale, 'home.featured_title')}
+      </h2>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-8 md:mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {featured.map(product => (
         <ProductCard product={product} locale={locale} />
       ))}

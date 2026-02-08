@@ -12,13 +12,18 @@ interface Props {
 const { locale, currentPath } = Astro.props;
 ---
 
-<header class="bg-ui-dark sticky top-0 z-50 shadow-lg">
+<header class="sticky top-0 z-50" style="background: linear-gradient(180deg, #0f1724 0%, #111827 100%); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
   <div class="container-main">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href={getHomeUrl(locale)} class="flex items-center gap-2 shrink-0">
-        <span class="text-brand-yellow font-heading font-bold text-xl lg:text-2xl">MXR</span>
-        <span class="text-text-inverse font-heading font-semibold text-lg lg:text-xl hidden sm:inline">Maxpeedingrods</span>
+      <a href={getHomeUrl(locale)} class="flex items-center shrink-0">
+        <img
+          src="/images/brand/logo-horizontal.png"
+          alt="Maxpeedingrods"
+          width="600"
+          height="120"
+          class="h-8 lg:h-10 w-auto"
+        />
       </a>
 
       <!-- Desktop Nav -->
@@ -26,24 +31,30 @@ const { locale, currentPath } = Astro.props;
         <a
           href={getHomeUrl(locale)}
           class:list={[
-            'font-heading font-semibold text-[15px] lg:text-base transition-colors duration-200',
+            'font-heading font-semibold text-[15px] lg:text-base transition-all duration-200 relative py-1',
             currentPath === getHomeUrl(locale)
               ? 'text-brand-yellow'
               : 'text-text-inverse hover:text-brand-yellow',
           ]}
         >
           {t(locale, 'nav.home')}
+          {currentPath === getHomeUrl(locale) && (
+            <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-yellow rounded-full"></span>
+          )}
         </a>
         <a
           href={getCategoryUrl(locale)}
           class:list={[
-            'font-heading font-semibold text-[15px] lg:text-base transition-colors duration-200',
+            'font-heading font-semibold text-[15px] lg:text-base transition-all duration-200 relative py-1',
             currentPath.includes('/generators/')
               ? 'text-brand-yellow'
               : 'text-text-inverse hover:text-brand-yellow',
           ]}
         >
           {t(locale, 'nav.generators')}
+          {currentPath.includes('/generators/') && (
+            <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-yellow rounded-full"></span>
+          )}
         </a>
       </nav>
 
@@ -69,14 +80,14 @@ const { locale, currentPath } = Astro.props;
     <!-- Mobile Nav -->
     <nav
       id="mobile-menu"
-      class="md:hidden hidden pb-4 border-t border-ui-border-dark mt-2 pt-4"
+      class="md:hidden hidden pb-4 border-t border-white/10 mt-2 pt-4"
     >
       <a
         href={getHomeUrl(locale)}
         class:list={[
-          'block py-3 px-2 font-heading font-semibold text-base rounded-lg transition-colors',
+          'block py-3 px-3 font-heading font-semibold text-base rounded-lg transition-all duration-200',
           currentPath === getHomeUrl(locale)
-            ? 'text-brand-yellow bg-white/5'
+            ? 'text-brand-yellow bg-brand-yellow/5'
             : 'text-text-inverse hover:text-brand-yellow hover:bg-white/5',
         ]}
       >
@@ -85,9 +96,9 @@ const { locale, currentPath } = Astro.props;
       <a
         href={getCategoryUrl(locale)}
         class:list={[
-          'block py-3 px-2 font-heading font-semibold text-base rounded-lg transition-colors',
+          'block py-3 px-3 font-heading font-semibold text-base rounded-lg transition-all duration-200',
           currentPath.includes('/generators/')
-            ? 'text-brand-yellow bg-white/5'
+            ? 'text-brand-yellow bg-brand-yellow/5'
             : 'text-text-inverse hover:text-brand-yellow hover:bg-white/5',
         ]}
       >
@@ -95,6 +106,9 @@ const { locale, currentPath } = Astro.props;
       </a>
     </nav>
   </div>
+
+  <!-- Bottom accent gradient line -->
+  <div class="h-[2px]" style="background: linear-gradient(90deg, transparent 0%, #F5A623 30%, #FDB940 50%, #F5A623 70%, transparent 100%);"></div>
 </header>
 
 <script>
