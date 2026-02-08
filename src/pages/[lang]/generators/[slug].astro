@@ -10,10 +10,12 @@ import ReviewSummary from '../../../components/reviews/ReviewSummary.astro';
 import ReviewList from '../../../components/reviews/ReviewList.astro';
 import ReviewForm from '../../../components/reviews/ReviewForm.astro';
 import ProductCard from '../../../components/product/ProductCard.astro';
+import ProductFeatures from '../../../components/product/ProductFeatures.astro';
 import StructuredData from '../../../components/seo/StructuredData.astro';
 import { locales, type Locale, t } from '../../../i18n/utils';
 import { getAllProducts, getProductBySlug, getSimilarProducts, getProductAsin } from '../../../utils/products';
 import { getHomeUrl, getCategoryUrl, getProductUrl } from '../../../utils/url';
+import { resolveImages } from '../../../utils/images';
 import { siteConfig } from '../../../config/site';
 
 export function getStaticPaths() {
@@ -36,6 +38,7 @@ if (!product) {
 }
 
 const asin = getProductAsin(product, locale);
+const productImages = resolveImages(product.images, locale);
 const similar = getSimilarProducts(product.slug, 3);
 
 let reviews: any[] = [];
@@ -57,15 +60,36 @@ const breadcrumbs = [
   { label: `${product.brand} ${product.model}` },
 ];
 
-const pageTitle = `${product.brand} ${product.model} — ${product.specs.inverter ? t(locale, 'product.category_badge') : 'Générateur'} ${product.specs.rated_power_w}W | ${siteConfig.name}`;
-const pageDesc = `${product.brand} ${product.model}: ${product.specs.rated_power_w}W, ${product.specs.noise_level_db} dB, ${product.specs.weight_kg} kg. ${product.specs.inverter ? 'Inverter' : ''} ${product.specs.runtime_hours}h ${t(locale, 'product.runtime').toLowerCase()}.`;
+const seoTitles: Record<string, Record<string, string>> = {
+  mxr2350: {
+    fr: `Maxpeedingrods MXR2350 2000W — Avis, Prix & Fiche Technique | Seulement 15 kg`,
+    en: `Maxpeedingrods MXR2350 2000W — Reviews, Price & Specs | Just 15 kg`,
+    de: `Maxpeedingrods MXR2350 2000W — Test, Preis & Daten | Nur 15 kg`,
+    es: `Maxpeedingrods MXR2350 2000W — Opiniones, Precio y Ficha Técnica | Solo 15 kg`,
+    it: `Maxpeedingrods MXR2350 2000W — Recensioni, Prezzo e Scheda Tecnica | Solo 15 kg`,
+    nl: `Maxpeedingrods MXR2350 2000W — Reviews, Prijs & Specs | Slechts 15 kg`,
+  },
+};
+const seoDescs: Record<string, Record<string, string>> = {
+  mxr2350: {
+    fr: `Le MXR2350 de Maxpeedingrods : générateur inverter 2000W ultra-léger (15 kg). Silencieux (58 dB), écran digital, cuivre pur. ★ ${product.rating}/5 (${product.reviewCount} avis). Découvrez le meilleur prix.`,
+    en: `Maxpeedingrods MXR2350: 2000W inverter generator, ultra-light (15 kg). Whisper-quiet (58 dB), digital display, pure copper. ★ ${product.rating}/5 (${product.reviewCount} reviews). Find the best deal.`,
+    de: `Maxpeedingrods MXR2350: 2000W Inverter-Stromerzeuger, ultraleicht (15 kg). Flüsterleise (58 dB), Digitaldisplay, Reinkupfer. ★ ${product.rating}/5 (${product.reviewCount} Bewertungen). Besten Preis entdecken.`,
+    es: `Maxpeedingrods MXR2350: generador inverter 2000W ultraligero (15 kg). Silencioso (58 dB), pantalla digital, cobre puro. ★ ${product.rating}/5 (${product.reviewCount} opiniones). Descubre el mejor precio.`,
+    it: `Maxpeedingrods MXR2350: generatore inverter 2000W ultraleggero (15 kg). Silenzioso (58 dB), display digitale, rame puro. ★ ${product.rating}/5 (${product.reviewCount} recensioni). Scopri il miglior prezzo.`,
+    nl: `Maxpeedingrods MXR2350: 2000W inverter generator, ultralicht (15 kg). Fluisterstil (58 dB), digitaal display, zuiver koper. ★ ${product.rating}/5 (${product.reviewCount} reviews). Ontdek de beste prijs.`,
+  },
+};
+
+const pageTitle = seoTitles[product.slug]?.[locale] || `${product.brand} ${product.model} — ${product.specs.inverter ? t(locale, 'product.category_badge') : 'Générateur'} ${product.specs.rated_power_w}W | ${siteConfig.name}`;
+const pageDesc = seoDescs[product.slug]?.[locale] || `${product.brand} ${product.model}: ${product.specs.rated_power_w}W, ${product.specs.noise_level_db} dB, ${product.specs.weight_kg} kg. ${product.specs.inverter ? 'Inverter' : ''} ${product.specs.runtime_hours}h ${t(locale, 'product.runtime').toLowerCase()}.`;
 
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: `${product.brand} ${product.model} - ${product.specs.inverter ? 'Inverter Generator' : 'Generator'} ${product.specs.rated_power_w}W`,
   brand: { '@type': 'Brand', name: product.brand },
-  image: product.images.map(img => `${siteConfig.url}${img}`),
+  image: productImages.map(img => `${siteConfig.url}${img}`),
   description: pageDesc,
   sku: product.model,
   mpn: product.model,
@@ -83,6 +107,85 @@ const productSchema = {
 };
 
 const descTexts: Record<string, Record<string, string>> = {
+  mxr2350: {
+    fr: `<strong>Vous cherchez un générateur portable fiable sans vous ruiner le dos ?</strong> Le Maxpeedingrods MXR2350 est la réponse. Avec seulement 15 kg et un design format valise, c'est le générateur inverter le plus léger de sa catégorie — vous le transportez d'une seule main.
+
+<strong>2000W de puissance crête, 1800W en continu</strong> — suffisant pour alimenter votre réfrigérateur, votre éclairage, votre box internet et recharger tous vos appareils. La technologie Inverter garantit un courant sinusoïdal pur : vos smartphones, ordinateurs et appareils photo sont protégés à 100%.
+
+<strong>Pourquoi des milliers de clients lui font confiance :</strong>
+• <strong>Silencieux</strong> — 58 dB seulement, à peine plus fort qu'une conversation normale
+• <strong>Bobinage cuivre pur</strong> — plus durable et plus efficace que les moteurs en aluminium
+• <strong>Écran digital</strong> — tension, fréquence et temps de fonctionnement en temps réel
+• <strong>Compatible parallèle</strong> — doublez votre puissance avec un second générateur
+• <strong>Garantie 2 ans</strong> — SAV gratuit à vie, vous n'êtes jamais seul
+
+<strong>Idéal pour :</strong> le camping, la caravane, le camping-car, les festivals, les coupures de courant, le travail en extérieur et les food trucks.`,
+
+    en: `<strong>Looking for a reliable portable generator that won't break your back?</strong> The Maxpeedingrods MXR2350 is the answer. At just 15 kg with a suitcase design, it's the lightest inverter generator in its class — carry it with one hand.
+
+<strong>2000W peak power, 1800W continuous</strong> — enough to run your fridge, lights, broadband router and charge all your devices. Inverter technology delivers a pure sine wave: your smartphones, laptops and cameras are 100% protected.
+
+<strong>Why thousands of customers trust it:</strong>
+• <strong>Whisper-quiet</strong> — just 58 dB, barely louder than a normal conversation
+• <strong>Pure copper winding</strong> — more durable and efficient than aluminium motors
+• <strong>Digital display</strong> — real-time voltage, frequency and runtime monitoring
+• <strong>Parallel capable</strong> — double your power with a second unit
+• <strong>2-year warranty</strong> — free lifetime technical support, you're never on your own
+
+<strong>Perfect for:</strong> camping, caravanning, motorhomes, festivals, power cuts, outdoor work and food trucks.`,
+
+    de: `<strong>Sie suchen einen zuverlässigen tragbaren Generator, der Ihren Rücken schont?</strong> Der Maxpeedingrods MXR2350 ist die Antwort. Mit nur 15 kg und Kofferdesign ist er der leichteste Inverter-Stromerzeuger seiner Klasse — tragbar mit einer Hand.
+
+<strong>2000W Spitzenleistung, 1800W Dauerleistung</strong> — genug für Kühlschrank, Beleuchtung, Router und das Laden aller Geräte. Die Inverter-Technologie liefert eine reine Sinuswelle: Ihre Smartphones, Laptops und Kameras sind zu 100% geschützt.
+
+<strong>Warum Tausende Kunden ihm vertrauen:</strong>
+• <strong>Flüsterleise</strong> — nur 58 dB, kaum lauter als ein normales Gespräch
+• <strong>Reinkupfer-Wicklung</strong> — langlebiger und effizienter als Aluminiummotoren
+• <strong>Digitales Display</strong> — Spannung, Frequenz und Laufzeit in Echtzeit
+• <strong>Parallelbetrieb möglich</strong> — verdoppeln Sie Ihre Leistung mit einem zweiten Gerät
+• <strong>2 Jahre Garantie</strong> — kostenloser technischer Support auf Lebenszeit
+
+<strong>Perfekt für:</strong> Camping, Wohnwagen, Wohnmobil, Festivals, Stromausfälle, Gartenarbeit und mobile Gastronomie.`,
+
+    es: `<strong>¿Buscas un generador portátil fiable que no te rompa la espalda?</strong> El Maxpeedingrods MXR2350 es la respuesta. Con solo 15 kg y diseño tipo maleta, es el generador inverter más ligero de su categoría — lo llevas con una sola mano.
+
+<strong>2000W de potencia pico, 1800W continuos</strong> — suficiente para alimentar tu nevera, iluminación, router y cargar todos tus dispositivos. La tecnología Inverter genera una onda sinusoidal pura: tus smartphones, portátiles y cámaras están protegidos al 100%.
+
+<strong>Por qué miles de clientes confían en él:</strong>
+• <strong>Ultrasilencioso</strong> — solo 58 dB, apenas más fuerte que una conversación normal
+• <strong>Bobinado de cobre puro</strong> — más duradero y eficiente que los motores de aluminio
+• <strong>Pantalla digital</strong> — voltaje, frecuencia y tiempo de funcionamiento en tiempo real
+• <strong>Compatible en paralelo</strong> — duplica tu potencia con una segunda unidad
+• <strong>Garantía de 2 años</strong> — soporte técnico gratuito de por vida
+
+<strong>Ideal para:</strong> camping, autocaravana, festivales, cortes de luz, trabajo al aire libre y food trucks.`,
+
+    it: `<strong>Cerchi un generatore portatile affidabile che non ti spezzi la schiena?</strong> Il Maxpeedingrods MXR2350 è la risposta. Con soli 15 kg e design a valigetta, è il generatore inverter più leggero della sua categoria — lo trasporti con una mano sola.
+
+<strong>2000W di potenza di picco, 1800W continui</strong> — sufficienti per alimentare frigorifero, illuminazione, router e ricaricare tutti i tuoi dispositivi. La tecnologia Inverter produce un'onda sinusoidale pura: smartphone, laptop e fotocamere sono protetti al 100%.
+
+<strong>Perché migliaia di clienti si fidano:</strong>
+• <strong>Silenziosissimo</strong> — solo 58 dB, appena più forte di una conversazione normale
+• <strong>Avvolgimento in rame puro</strong> — più duraturo ed efficiente dei motori in alluminio
+• <strong>Display digitale</strong> — tensione, frequenza e tempo di funzionamento in tempo reale
+• <strong>Compatibile in parallelo</strong> — raddoppia la potenza con una seconda unità
+• <strong>Garanzia 2 anni</strong> — supporto tecnico gratuito a vita
+
+<strong>Perfetto per:</strong> campeggio, camper, festival, blackout, lavoro all'aperto e food truck.`,
+
+    nl: `<strong>Op zoek naar een betrouwbare draagbare generator die uw rug spaart?</strong> De Maxpeedingrods MXR2350 is het antwoord. Met slechts 15 kg en een kofferontwerp is het de lichtste inverter generator in zijn klasse — draag hem met één hand.
+
+<strong>2000W piekvermogen, 1800W continu</strong> — genoeg voor uw koelkast, verlichting, router en het opladen van al uw apparaten. De inverter technologie levert een zuivere sinusgolf: uw smartphones, laptops en camera's zijn 100% beschermd.
+
+<strong>Waarom duizenden klanten hem vertrouwen:</strong>
+• <strong>Fluisterstil</strong> — slechts 58 dB, nauwelijks luider dan een normaal gesprek
+• <strong>Zuiver koperen wikkeling</strong> — duurzamer en efficiënter dan aluminium motoren
+• <strong>Digitaal display</strong> — spanning, frequentie en looptijd in real-time
+• <strong>Parallel schakelbaar</strong> — verdubbel uw vermogen met een tweede unit
+• <strong>2 jaar garantie</strong> — gratis levenslange technische ondersteuning
+
+<strong>Perfect voor:</strong> kamperen, caravan, camper, festivals, stroomuitval, buitenwerk en foodtrucks.`,
+  },
   mxr1500: {
     fr: "Le Maxpeedingrods MXR1500 est le compagnon idéal pour vos aventures en plein air. Ultra-compact et léger, ce générateur inverter de 1200W se transporte facilement partout. Sa technologie inverter produit un courant stable et propre, adapté aux appareils électroniques sensibles comme les smartphones, ordinateurs portables et équipements photo. Avec un niveau sonore de seulement 52 dB, il est l'un des générateurs les plus silencieux du marché — à peine plus fort qu'une conversation normale.",
     en: "The Maxpeedingrods MXR1500 is the perfect companion for your outdoor adventures. Ultra-compact and lightweight, this 1200W inverter generator is easy to carry anywhere. Its inverter technology produces stable, clean power suitable for sensitive electronics like smartphones, laptops, and camera equipment. With a noise level of just 52 dB, it's one of the quietest generators available — barely louder than a normal conversation.",
@@ -128,7 +231,7 @@ const description = descTexts[product.slug]?.[locale] || defaultDesc[locale] || 
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
       <!-- Gallery (60%) -->
       <div class="lg:col-span-3">
-        <ProductGallery images={product.images} productName={`${product.brand} ${product.model}`} />
+        <ProductGallery images={productImages} productName={`${product.brand} ${product.model}`} />
       </div>
 
       <!-- Product Info / CTA (40%) -->
@@ -234,9 +337,8 @@ const description = descTexts[product.slug]?.[locale] || defaultDesc[locale] || 
 
       <!-- Tab: Description -->
       <div id="tab-description" class="tab-content py-4">
-        <div class="prose max-w-none text-text-secondary leading-relaxed">
-          <p>{description}</p>
-        </div>
+        <div class="prose max-w-none text-text-secondary leading-relaxed space-y-4" set:html={description.replace(/\n/g, '<br />')} />
+        <ProductFeatures slug={product.slug} locale={locale} />
       </div>
 
       <!-- Tab: Specs -->

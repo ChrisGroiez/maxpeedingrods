@@ -366,59 +366,93 @@ Chaque produit = un fichier JSON dans `src/data/products/` :
 
 ### Gestion des images — Convention de nommage multilingue
 
-Le site est multilingue et certaines images contiennent du texte (visuels marketing, callouts de features, etc.). La convention est la suivante :
+Le site est multilingue et certaines images contiennent du texte (visuels marketing, callouts de features, etc.). Voici les **3 types d'images** et leur convention de nommage :
 
-**Règle** : les images **sans texte** n'ont pas de suffixe de langue. Les images **avec texte** (visuels marketing, annotations, infographies) ont un suffixe `-fr`, `-en`, `-de`, etc.
+| Suffixe | Signification | Utilisation |
+|---------|---------------|-------------|
+| `-Main` | Photo principale du produit | **Universelle** — affichée pour TOUTES les langues |
+| `-all` | Contenu enrichi sans texte (features, détails techniques) | **Universelle** — affichée pour TOUTES les langues |
+| `-FR`, `-EN`, `-DE`, `-ES`, `-IT`, `-NL` | Image avec texte dans une langue spécifique | **Locale uniquement** — affichée UNIQUEMENT pour la langue correspondante |
+
+**⚠️ RÈGLE CRITIQUE** : Les images avec suffixe de langue (ex: `-FR`) ne doivent JAMAIS être affichées pour une autre langue. Une image `-FR` = français uniquement. Si aucune image locale n'existe pour une langue, seule l'image `-Main` est affichée.
+
+**Exemple concret** (MXR2350) :
 
 ```
-public/images/products/mxr3500/
-├── main.webp                ← Photo produit, fond blanc (universelle — pas de suffixe)
-├── side.webp                ← Vue latérale (universelle)
-├── panel.webp               ← Détail panneau de prises (universelle)
-├── detail.webp              ← Détail moteur/poignée (universelle)
-├── features-fr.webp         ← Visuel marketing avec texte en français
-├── features-en.webp         ← Même visuel, texte en anglais
-├── features-de.webp         ← Même visuel, texte en allemand
-├── features-es.webp         ← Même visuel, texte en espagnol
-├── features-it.webp         ← Même visuel, texte en italien
-└── features-nl.webp         ← Même visuel, texte en néerlandais
+public/images/products/mxr2350/
+├── mxr-2350-Main.jpg              ← Universelle (toutes langues)
+├── mxr-2350-1-FR.jpg              ← Français uniquement
+├── mxr-2350-2-FR.jpg              ← Français uniquement
+├── ...
+├── mxr-2350-8-FR.jpg              ← Français uniquement
+├── inverter-technologie-all.jpg   ← Universelle (contenu enrichi, pas de texte)
+├── bobinage-cuivre-pur-all.jpg    ← Universelle (contenu enrichi, pas de texte)
+├── portable-et-leger-all.jpg      ← Universelle (contenu enrichi, pas de texte)
+└── affichage-numerique-all.jpg    ← Universelle (contenu enrichi, pas de texte)
 ```
 
 **Comment le code sélectionne la bonne image** :
 
-Dans le JSON produit, les images universelles sont listées normalement. Les images localisées utilisent un placeholder `{lang}` :
+Dans le JSON produit, les images universelles sont listées normalement. Les images localisées utilisent un placeholder `{lang}` (en minuscules) qui sera remplacé par le code locale EN MAJUSCULES au build :
 
 ```json
 {
   "images": [
-    "/images/products/mxr3500/main.webp",
-    "/images/products/mxr3500/side.webp",
-    "/images/products/mxr3500/panel.webp",
-    "/images/products/mxr3500/features-{lang}.webp"
+    "/images/products/mxr2350/mxr-2350-Main.jpg",
+    "/images/products/mxr2350/mxr-2350-1-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-2-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-3-{lang}.jpg"
   ]
 }
 ```
 
-Le composant `ProductGallery.astro` remplace `{lang}` par la locale active (`fr`, `en`, `de`, etc.) au moment du rendu. Si une image localisée n'existe pas pour une langue donnée, fallback vers la version `-en` (anglais).
+**Résolution au build** : La fonction `resolveImages()` dans `src/utils/images.ts` :
+1. Les images sans `{lang}` passent telles quelles (universelles)
+2. Les images avec `{lang}` → le placeholder est remplacé par la locale en MAJUSCULES (ex: `{lang}` → `FR`)
+3. **Vérification d'existence** : le fichier est vérifié dans `public/` via `fs.existsSync()`. Si le fichier n'existe pas pour cette locale, l'image est **omise** (pas de fallback, pas d'image cassée)
 
-**Helper à créer** dans `src/utils/images.ts` :
+**Où la résolution se fait** : Dans `src/pages/[lang]/generators/[slug].astro`, AVANT de passer les images à `ProductGallery` :
 
 ```typescript
-export function resolveImage(path: string, locale: string): string {
-  if (path.includes('{lang}')) {
-    return path.replace('{lang}', locale);
-  }
-  return path;
+import { resolveImages } from '../../../utils/images';
+const productImages = resolveImages(product.images, locale);
+// → FR : [Main, 1-FR, 2-FR, ..., 8-FR] (9 images)
+// → EN : [Main] (1 seule image, car pas de fichiers -EN)
+```
+
+**Helper implémenté** dans `src/utils/images.ts` :
+
+```typescript
+import fs from 'node:fs';
+import path from 'node:path';
+
+export function resolveImage(imagePath: string, locale: string): string {
+  if (!imagePath.includes('{lang}')) return imagePath;
+  return imagePath.replace('{lang}', locale.toUpperCase());
 }
 
-export function resolveImages(paths: string[], locale: string): string[] {
-  return paths.map(p => resolveImage(p, locale));
+export function resolveImages(imagePaths: string[], locale: string): string[] {
+  const publicDir = path.resolve(process.cwd(), 'public');
+  const resolved: string[] = [];
+  for (const imagePath of imagePaths) {
+    if (!imagePath.includes('{lang}')) {
+      resolved.push(imagePath);
+      continue;
+    }
+    const resolvedPath = resolveImage(imagePath, locale);
+    if (fs.existsSync(path.join(publicDir, resolvedPath))) {
+      resolved.push(resolvedPath);
+    }
+  }
+  return resolved;
 }
 ```
 
-**Dans Decap CMS** (`config.yml`), les images localisées sont gérées via le widget image standard. L'utilisateur upload manuellement les variantes avec le bon suffixe de langue.
+**Quand on ajoute des images pour un nouveau marché** : Il suffit d'uploader les fichiers avec le bon suffixe (ex: `mxr-2350-1-EN.jpg`, `mxr-2350-2-EN.jpg`, etc.) dans le dossier du produit. Au prochain build, elles seront automatiquement détectées et affichées pour la langue correspondante. Aucun changement de code nécessaire.
 
-**Alt text** : Toujours traduit par le système i18n, jamais incrusté dans l'image. Chaque image a un alt text descriptif stocké dans les traductions (ex: `product.alt_main`, `product.alt_features`).
+**Images `-all` (contenu enrichi)** : Ces images sont utilisées dans le composant `ProductFeatures.astro` et sont référencées directement (pas via le JSON produit). Elles n'ont pas besoin de résolution car elles sont universelles.
+
+**Alt text** : Toujours traduit par le système i18n, jamais incrusté dans l'image.
 
 ---
 

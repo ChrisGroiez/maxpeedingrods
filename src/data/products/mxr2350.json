@@ -6,9 +6,15 @@
   "slug": "mxr2350",
   "wattage": 2000,
   "images": [
-    "/images/products/mxr2350/main.svg",
-    "/images/products/mxr2350/side.svg",
-    "/images/products/mxr2350/detail.svg"
+    "/images/products/mxr2350/mxr-2350-Main.jpg",
+    "/images/products/mxr2350/mxr-2350-1-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-2-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-3-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-4-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-5-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-6-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-7-{lang}.jpg",
+    "/images/products/mxr2350/mxr-2350-8-{lang}.jpg"
   ],
   "specs": {
     "rated_power_w": 1800,

@@ -1,0 +1,180 @@
+---
+import type { Locale } from '../../i18n/utils';
+
+interface Feature {
+  image: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  slug: string;
+  locale: Locale;
+}
+
+const { slug, locale } = Astro.props;
+
+const featuresData: Record<string, Record<string, Feature[]>> = {
+  mxr2350: {
+    fr: [
+      {
+        image: '/images/products/mxr2350/inverter-technologie-all.jpg',
+        title: 'Technologie Inverter — Courant pur et stable',
+        description: 'Fini les risques pour vos appareils. La technologie Inverter produit une onde sinusoïdale pure, identique au courant de votre maison. Rechargez votre smartphone, branchez votre ordinateur portable ou alimentez votre appareil photo en toute sérénité — aucune surtension, aucune interférence.',
+      },
+      {
+        image: '/images/products/mxr2350/bobinage-cuivre-pur-all.jpg',
+        title: 'Bobinage en cuivre pur — Durabilité maximale',
+        description: 'Là où d\'autres utilisent de l\'aluminium, Maxpeedingrods choisit le cuivre pur. Résultat : un rendement supérieur, une meilleure dissipation thermique et une durée de vie nettement plus longue. Votre générateur ne surchauffera pas, même après des heures de fonctionnement continu.',
+      },
+      {
+        image: '/images/products/mxr2350/portable-et-leger-all.jpg',
+        title: 'Seulement 15 kg — Le plus léger de sa catégorie',
+        description: 'Fini les générateurs impossibles à déplacer. Avec son format valise compact et ses 15 kg, le MXR2350 se transporte d\'une seule main. Idéal pour le camping, la caravane, les festivals ou comme solution d\'appoint à la maison. Rangez-le dans votre coffre et partez l\'esprit tranquille.',
+      },
+      {
+        image: '/images/products/mxr2350/affichage-numerique-all.jpg',
+        title: 'Écran digital — Contrôle total en temps réel',
+        description: 'Plus besoin de deviner. L\'écran numérique intégré affiche en temps réel la tension, la fréquence, le temps de fonctionnement et la durée cumulée. Vous gardez le contrôle total de votre consommation et savez exactement quand faire le plein.',
+      },
+    ],
+    en: [
+      {
+        image: '/images/products/mxr2350/inverter-technologie-all.jpg',
+        title: 'Inverter Technology — Clean, stable power',
+        description: 'No more worrying about your devices. Inverter technology delivers a pure sine wave, identical to your mains electricity. Safely charge your smartphone, power your laptop, or run sensitive camera equipment — zero surges, zero interference.',
+      },
+      {
+        image: '/images/products/mxr2350/bobinage-cuivre-pur-all.jpg',
+        title: 'Pure copper winding — Built to last',
+        description: 'While others cut corners with aluminium, Maxpeedingrods uses pure copper windings. The result: better efficiency, superior heat dissipation, and a significantly longer lifespan. Your generator won\'t overheat, even after hours of continuous operation.',
+      },
+      {
+        image: '/images/products/mxr2350/portable-et-leger-all.jpg',
+        title: 'Just 15 kg — Lightest in its class',
+        description: 'Forget about struggling with heavy generators. With its compact suitcase design and just 15 kg, the MXR2350 carries with one hand. Perfect for camping, caravanning, festivals, or home backup. Toss it in your boot and you\'re good to go.',
+      },
+      {
+        image: '/images/products/mxr2350/affichage-numerique-all.jpg',
+        title: 'Digital display — Full control at a glance',
+        description: 'No more guesswork. The built-in digital screen shows real-time voltage, frequency, single runtime and cumulative operating hours. You\'re always in control of your power usage and know exactly when to refuel.',
+      },
+    ],
+    de: [
+      {
+        image: '/images/products/mxr2350/inverter-technologie-all.jpg',
+        title: 'Inverter-Technologie — Sauberer, stabiler Strom',
+        description: 'Schluss mit Sorgen um Ihre Geräte. Die Inverter-Technologie liefert eine reine Sinuswelle, identisch mit Ihrem Hausstrom. Laden Sie Ihr Smartphone, betreiben Sie Ihren Laptop oder versorgen Sie empfindliche Kameraausrüstung — keine Spannungsspitzen, keine Störungen.',
+      },
+      {
+        image: '/images/products/mxr2350/bobinage-cuivre-pur-all.jpg',
+        title: 'Reinkupfer-Wicklung — Maximale Langlebigkeit',
+        description: 'Wo andere auf Aluminium setzen, verwendet Maxpeedingrods reines Kupfer. Das Ergebnis: höherer Wirkungsgrad, bessere Wärmeableitung und eine deutlich längere Lebensdauer. Ihr Generator überhitzt nicht, auch nach stundenlangem Dauerbetrieb.',
+      },
+      {
+        image: '/images/products/mxr2350/portable-et-leger-all.jpg',
+        title: 'Nur 15 kg — Der Leichteste seiner Klasse',
+        description: 'Vergessen Sie schwere, unhandliche Generatoren. Mit seinem kompakten Kofferdesign und nur 15 kg lässt sich der MXR2350 mit einer Hand tragen. Perfekt für Camping, Wohnwagen, Festivals oder als Notstromversorgung zu Hause.',
+      },
+      {
+        image: '/images/products/mxr2350/affichage-numerique-all.jpg',
+        title: 'Digitales Display — Volle Kontrolle in Echtzeit',
+        description: 'Kein Rätselraten mehr. Das eingebaute Digitaldisplay zeigt in Echtzeit Spannung, Frequenz, Einzellaufzeit und kumulierte Betriebsstunden an. Sie behalten stets die volle Kontrolle und wissen genau, wann nachgetankt werden muss.',
+      },
+    ],
+    es: [
+      {
+        image: '/images/products/mxr2350/inverter-technologie-all.jpg',
+        title: 'Tecnología Inverter — Energía limpia y estable',
+        description: 'Olvídate de preocuparte por tus dispositivos. La tecnología Inverter genera una onda sinusoidal pura, idéntica a la corriente de tu hogar. Carga tu smartphone, conecta tu portátil o alimenta equipos fotográficos sensibles — cero sobretensiones, cero interferencias.',
+      },
+      {
+        image: '/images/products/mxr2350/bobinage-cuivre-pur-all.jpg',
+        title: 'Bobinado de cobre puro — Durabilidad máxima',
+        description: 'Mientras otros usan aluminio, Maxpeedingrods elige cobre puro. El resultado: mayor rendimiento, mejor disipación térmica y una vida útil significativamente más larga. Tu generador no se sobrecalentará, ni siquiera tras horas de funcionamiento continuo.',
+      },
+      {
+        image: '/images/products/mxr2350/portable-et-leger-all.jpg',
+        title: 'Solo 15 kg — El más ligero de su categoría',
+        description: 'Adiós a los generadores imposibles de mover. Con su diseño tipo maleta y solo 15 kg, el MXR2350 se transporta con una sola mano. Ideal para camping, autocaravana, festivales o como respaldo en casa. Mételo en el maletero y listo.',
+      },
+      {
+        image: '/images/products/mxr2350/affichage-numerique-all.jpg',
+        title: 'Pantalla digital — Control total en tiempo real',
+        description: 'Sin más conjeturas. La pantalla digital integrada muestra en tiempo real el voltaje, la frecuencia, el tiempo de funcionamiento y las horas acumuladas. Siempre tendrás el control total de tu consumo y sabrás exactamente cuándo repostar.',
+      },
+    ],
+    it: [
+      {
+        image: '/images/products/mxr2350/inverter-technologie-all.jpg',
+        title: 'Tecnologia Inverter — Energia pulita e stabile',
+        description: 'Basta preoccuparsi per i tuoi dispositivi. La tecnologia Inverter produce un\'onda sinusoidale pura, identica alla corrente di casa. Ricarica lo smartphone, alimenta il laptop o collega attrezzature fotografiche sensibili — zero sbalzi, zero interferenze.',
+      },
+      {
+        image: '/images/products/mxr2350/bobinage-cuivre-pur-all.jpg',
+        title: 'Avvolgimento in rame puro — Durata massima',
+        description: 'Dove altri usano l\'alluminio, Maxpeedingrods sceglie il rame puro. Il risultato: rendimento superiore, migliore dissipazione del calore e una durata significativamente più lunga. Il tuo generatore non si surriscalderà, nemmeno dopo ore di funzionamento continuo.',
+      },
+      {
+        image: '/images/products/mxr2350/portable-et-leger-all.jpg',
+        title: 'Solo 15 kg — Il più leggero della sua categoria',
+        description: 'Dimentica i generatori pesanti e ingombranti. Con il suo design a valigetta e soli 15 kg, il MXR2350 si trasporta con una mano sola. Perfetto per campeggio, camper, festival o come generatore d\'emergenza a casa.',
+      },
+      {
+        image: '/images/products/mxr2350/affichage-numerique-all.jpg',
+        title: 'Display digitale — Controllo totale in tempo reale',
+        description: 'Niente più congetture. Lo schermo digitale integrato mostra in tempo reale tensione, frequenza, tempo di funzionamento e ore cumulate. Hai sempre il controllo completo dei consumi e sai esattamente quando fare rifornimento.',
+      },
+    ],
+    nl: [
+      {
+        image: '/images/products/mxr2350/inverter-technologie-all.jpg',
+        title: 'Inverter technologie — Schone, stabiele stroom',
+        description: 'Geen zorgen meer over uw apparaten. De inverter technologie levert een zuivere sinusgolf, identiek aan uw netspanning. Laad uw smartphone, sluit uw laptop aan of gebruik gevoelige camera-apparatuur — geen pieken, geen storingen.',
+      },
+      {
+        image: '/images/products/mxr2350/bobinage-cuivre-pur-all.jpg',
+        title: 'Zuiver koperen wikkeling — Maximale duurzaamheid',
+        description: 'Waar anderen aluminium gebruiken, kiest Maxpeedingrods voor zuiver koper. Het resultaat: hoger rendement, betere warmteafvoer en een aanzienlijk langere levensduur. Uw generator raakt niet oververhit, zelfs niet na uren continu gebruik.',
+      },
+      {
+        image: '/images/products/mxr2350/portable-et-leger-all.jpg',
+        title: 'Slechts 15 kg — De lichtste in zijn klasse',
+        description: 'Vergeet zware, onhandige generatoren. Met zijn compacte kofferontwerp en slechts 15 kg draagt u de MXR2350 met één hand. Perfect voor kamperen, de caravan, festivals of als noodstroom thuis. Zet hem in de kofferbak en u bent klaar.',
+      },
+      {
+        image: '/images/products/mxr2350/affichage-numerique-all.jpg',
+        title: 'Digitaal display — Volledige controle in real-time',
+        description: 'Geen giswerk meer. Het ingebouwde digitale scherm toont realtime spanning, frequentie, enkele looptijd en cumulatieve bedrijfsuren. U heeft altijd de volledige controle en weet precies wanneer u moet bijvullen.',
+      },
+    ],
+  },
+};
+
+const features = featuresData[slug]?.[locale] || [];
+---
+
+{features.length > 0 && (
+  <section class="mt-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {features.map((feature) => (
+        <div class="group rounded-2xl overflow-hidden border border-gray-100 bg-white transition-all duration-300 hover:shadow-lg hover:border-brand-yellow/20">
+          <div class="aspect-[16/10] overflow-hidden bg-gray-50">
+            <img
+              src={feature.image}
+              alt={feature.title}
+              width="600"
+              height="375"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="font-heading font-bold text-base md:text-lg text-text-primary mb-2">{feature.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{feature.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
